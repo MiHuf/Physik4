@@ -26,8 +26,9 @@
 
 # Other
 win_phy*
-Blatt*.pdf
+*_lsg.pdf
 *.asv
+
 # Fuer lokale Dateien
 *_.m
 *_.tex
