@@ -1,0 +1,33 @@
+# Latex
+*.aux
+*.cls
+*.dvi
+*.idx
+*.log
+*.toc
+*.lof
+
+# kile
+*.kilepr
+
+# Archives
+*gz
+*zip
+
+# Editors
+.kateproject
+.kateproject.d
+
+# Backups
+*~
+*.bak
+*.back
+*.backup
+
+# Other
+win_phy*
+Blatt*.pdf
+*.asv
+# Fuer lokale Dateien
+*_.m
+*_.tex
