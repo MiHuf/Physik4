@@ -33,7 +33,7 @@
 \end{align*}
 haben. Verbindet man gegenüber liegende Ecken, so ergeben die Linien $\overline{BD}, \overline{BE}, \overline{BG} \text{ und } \overline{EG}$ die Kanten eines Teraeders mit der Kantenlänge $a = \sqrt{2}$. Der Mittelpunkt des Würfels ist gleichzeitig
 Mittelpunkt des Tetraeders, er hat die Koordinaten
-$M = \{\frac{1}{2}, \frac{1}{2}, \frac{1}{2}\}$. Die Richtung der Bindungsvektoren
+$M = \left\{\frac{1}{2}, \frac{1}{2}, \frac{1}{2}\right\}$. Die Richtung der Bindungsvektoren
 von dem Atom im Mittelpunkt zu den Atomen an den Ecken ist dann gegeben durch
 \begin{align*}
 \overrightarrow{MB} &= \left[\frac{1}{2}, -\frac{1}{2}, -\frac{1}{2}\right]\\
@@ -74,15 +74,41 @@ z.B. der ersten beiden Vektoren:
   Die Koordinationszahl ist also 8.
   \item[Diamant:] Die Diamantstruktur lässt sich mit Tetraedern analog zu
   Aufgabenteil a) aufbauen, das Atom im Zentrum hat 4 nächste Nachbarn im Abstand
-  gemäß \eqref{eq-betrag} (Gitterkonstante ist $a = \sqrt{2}$).
-  Die Koordinationszahl ist somit 4.
+  gemäß \eqref{eq-betrag}. Die Koordinationszahl ist somit 4.
 \end{itemize}
 
-\subsubsection*{c)}
+\subsubsection*{c)} Wenn sich benachbarte harte Kugeln gerade berühren, muss der
+Radius $r$ der Kugeln gleich dem halben minimalen Abstand zweier Gitterpunkte sein.
+Rie Raumfüllung ergibt sich dann als Verhältnis der Summe aller $n$ Kugelvolumina
+$\frac{4}{3} \pi r^3$ zum Volumen der Elementarzelle.
+
+Die würfelförmige Elementarzelle eines \textbf{Diamantgitters} mit der Kantenlänge $a$
+lässt sich aus acht Würfeln mit der Kantenlänge $a/2$ zusammensetzen, welche
+Gitterpunkte wie im Aufgabenteil a) enthalten. Der Abstand von einem Eckpunkt zum
+nächsten Nachbarn ergibt sich aus \eqref{eq-betrag} zu
+$\frac{1}{2} \cdot \sqrt{3} \cdot \frac{a}{2} = \frac{a}{4} \cdot \sqrt{3}$. Zum
+gleichen Ergebnis kommt man, wenn man den Abstand der zwei Basistome bei $a \cdot \{0,0,0\}$
+und $a \cdot \left\{\frac{1}{4}, \frac{1}{4}, \frac{1}{4}\right\}$ berechnet.
+Damit ergibt sich der Kugelradius zu $\frac{a}{8} \cdot \sqrt{3}$.
+Diese Kugeln haben ein Volumen von $\frac{4}{3} \pi \left(\frac{a}{8} \sqrt{3}\right)^3 =
+\frac{\pi}{384} \cdot 3^{3/2} \cdot a^3$. Die Elementarzelle enthält 8 Kugeln in den
+8 Ecken, die jeweils zu 8 weiteren Würfeln gehören, ferner 6 Kugeln auf den Flächen,
+die jeweils noch zu 6 weiteren Würfeln gehören und schließlich 4 Kugeln im Inneren.
+Das ergibt $n = 8 \cdot \frac{1}{8} + 6 \cdot \frac{1}{2} + 4 = 8$ Kugeln pro Würfel.
+Diese füllen ein Volumen von $8 \cdot \frac{\pi}{384} \cdot 3^{3/2} \cdot a^3 =
+\frac{\pi}{48} \cdot 3^{3/2} \cdot a^3 = 0,34009 \cdot a^3$. Die würfelförmige
+Elementarzelle hat ein Volumen vom $a^3$, somit ergibt sich eine Raumfüllung von
+etwa 34\% für das Diamantgitter.
+
+Im \textbf{fcc-Gitter} haben die Gitterpunkte einen Abstand von
+$\frac{1}{2} \sqrt{2} \cdot a$ zum nächsten Nachbarn, der Kugelradius ist somit
+$r = \frac{1}{4} \sqrt{2} \cdot a$ und das Volumen $\frac{4}{3} \pi \left(\frac{a}{4} \sqrt{2}\right)^3 = \frac{\sqrt{2}}{24} \pi\cdot a^3$. Die Zahl der Kugeln pro
+Elementarzelle ist sich ähnlich wie im Diamantgitter, allerdings ohne die 4
+Kugeln im Inneren, sie beträgt also 4. Damit ergibt sich eine Raumfüllung von
+$\frac{\sqrt{2}}{6} \cdot \pi = 0,74048$ also etwa 74\% für das fcc-Gitter.
 
 \subsection*{Aufgabe 2}
-
-Eine Ebene in einem kubischen Kristallgitter sei beschrieben durch ihre Schnittpunkte mit den Koordinaten-Achsen: 
+Eine Ebene in einem kubischen Kristallgitter sei beschrieben durch ihre Schnittpunkte mit den Koordinaten-Achsen:
 \begin{align*}
 \vec{S_1} = 2\cdot \vec{a_1} \qquad \vec{S_2}=2\cdot\vec{a_2}\qquad
 \vec{S_3}=3\cdot\vec{a_3}
