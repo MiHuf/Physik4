@@ -82,10 +82,75 @@ z.B. der ersten beiden Vektoren:
 
 \subsection*{Aufgabe 2}
 
+Eine Ebene in einem kubischen Kristallgitter sei beschrieben durch ihre Schnittpunkte mit den Koordinaten-Achsen: 
+\begin{align*}
+\vec{S_1} = 2\cdot \vec{a_1} \qquad \vec{S_2}=2\cdot\vec{a_2}\qquad
+\vec{S_3}=3\cdot\vec{a_3}
+\end{align*}
+
+Im folgenden ist:
+\begin{align*}
+(x,y,z)=x\cdot\vec{a_1}+y\cdot\vec{a_2}+z\cdot\vec{a_3}
+\end{align*}
+
 \subsubsection*{a)}
+
+Berechnung der Miller Indices
+\begin{align*}
+h = \frac{p}{2}\qquad k = \frac{p}{2}\qquad l = \frac{p}{3}
+\end{align*}
+Da $p=kgV(2,2,3)=6$ ergibt sich:
+\begin{align*}
+h = 3\qquad k = 3\qquad l = 2
+\end{align*}
 
 \subsubsection*{b)}
 
+Beweis, dass $(h,k,l)$ senkrecht auf der Ebene steht:
+Da es sich um ein kubisches Kristallgitter handelt, gilt:
+\begin{align}
+\label{eq:orthogonal}
+\vec{a_i}\cdot\vec{a_j}\propto \delta_{ij}\qquad
+\vec{a_1}\cdot\vec{a_1}=\vec{a_2}\cdot\vec{a_2}=\vec{a_3}\cdot\vec{a_3}
+\end{align}
+Die Ebene wird aufgespannt durch:
+\begin{align*}
+(-2,2,0)
+(-2,0,3)
+\end{align*}
+Wir berechnen jeweils die Skalarprodukte mit $(h,k,l)$, wobei wegen \eqref{eq:orthogonal} $(x_1,x_2,x_3)\cdot(y_1,y_2,y_3) = x_1y_1+x_2y_2+x_3y_3$
+\begin{align*}
+(-2,2,0)\cdot(3,3,2)=-6+6+0=0\\
+(-2,0,3)\cdot(3,3,2)=-6+0+6=0
+\end{align*}
+Da $(h,k,l)$ senkrecht auf den beiden Vektoren steht, die die Ebene aufspannen, steht $(h,k,l)$ auch senkrecht auf der Ebene.
+
 \subsubsection*{c)}
 
+Beweis für die Allgemeinheit der Aussage in b) (Annahme eines kubischen Kristallgitters unverändert):
+
+Allgemeine Ebene beschrieben durch ihre Schnittpunkte mit den Koordinaten- Achsen:
+\begin{align*}
+\vec{S_1} = m_1\cdot \vec{a_1} \\
+\vec{S_2} = m_2\cdot\vec{a_2}\\
+\vec{S_3} = m_3\cdot\vec{a_3}
+\end{align*}
+
+Dabei sind die Miller-Indices:
+\begin{align*}
+h = \frac{p}{m_1}\\
+k = \frac{p}{m_2}\\
+l = \frac{p}{m_3}
+\end{align*}
+Die Ebene wird aufgespannt durch:
+ \begin{align*}
+(-m_1,m_2,0)\\
+(-m_1,0,m_3)
+\end{align*}
+Wir berechnen wieder die Skalarprodukte mit $(h,k,l)$ unter Berücksichtigung von \eqref{eq:orthogonal}:
+\begin{align*}
+(-m_1,m_2,0)\cdot(h,k,l)=(-m_1,m_2,0)\cdot\left(\frac{p}{2},\frac{p}{2},\frac{p}{3}\right)=-p+p=0\\
+(-m_1,0,m_3)\cdot(3,3,2)=(-m_1,0,m_3)\cdot\left(\frac{p}{2},\frac{p}{2},\frac{p}{3}\right)=-p+0+p=0
+\end{align*}
+$(h,k,l)$ steht wieder senkrecht auf beiden Vektoren, die die Ebene aufspannen und somit auch senkrecht auf der Ebene
 \end{document}
