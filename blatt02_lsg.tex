@@ -26,9 +26,42 @@
 \begin{document}
 \subsection*{Aufgabe 3}
 
-\subsubsection*{a)}
+\subsubsection*{a)} Die stationäre Schrödinger-Gleichung eines Elektrons im
+(als feldfrei angenommenen) Inneren eines 3-dimensionalen Potatialtopfes mit
+unendlich hohen Wändern lautet:
+\begin{align*}
+-\frac{\hbar ^2}{2 m}  \left( \frac{\partial^2}{\partial x^2} + \frac{\partial ^2}{\partial y^2}
+ + \frac{\partial^2}{\partial z^2} \right) \varPsi(x, y, z) = E \cdot \varPsi(x, y, z)
+\end{align*}
+Mit dem Koordiantenursprung in einer Ecke des Kubus lautet die Lösung welche die
+Randbedingungen $\varPsi = 0$ für alle $x, y, z \in \{0, a\}$
+(d.h. an den Wänden) erfüllt:
+\begin{align*}
+  \varPsi(x, y, z) = A \cdot \sin\left(n_x \cdot \frac{\pi x}{a}\right)
+  \cdot \sin\left(n_y \cdot \frac{\pi y}{a}\right)
+  \cdot \sin\left(n_z \cdot \frac{\pi z}{a}\right)
+  \quad \text{mit } n_x, n_y, n_z = 1, 2, 3, \cdots
+\end{align*}
+Eingesetzt in die Schrödinger-Gleichung liefert das dann die Energie-Eigenwerte:
+\begin{align*}
+  E_{n_x, n_y, n_z} &= \frac{\pi^2 \hbar^2}{2 m a^2}\left(n_x^2 + n_y^2 + n_z^2 \right)
+    \quad \text{mit } n_x, n_y, n_z = 1, 2, 3, \cdots \\
+\intertext{Damit ergeben sich die ersten Energie-Zustände zu }
+  E_{1, 1, 1} &= \frac{\pi^2 \hbar^2}{2 m a^2} \cdot 3\; ; \qquad
+  E_{1, 2, 1} = \frac{\pi^2 \hbar^2}{2 m a^2} \cdot 6\; ; \qquad
+  E_{1, 2, 2} = \frac{\pi^2 \hbar^2}{2 m a^2} \cdot 9\; ; \qquad
+\end{align*}
 
 \subsubsection*{b)}
+Die Energie-Differenz zwischen Grundzustand und erstem angeregtem Zustand ist gleich
+der Energie-Differenz zwischen dem ersten und zweiten angeregten Zustand, sie beträgt:
+\begin{align*}
+  \Delta E &= \frac{3 \pi^2 \hbar^2}{2 m a^2}
+\intertext{Damit lässt sich die Gitterkonstante $a$ berechnen:}
+a &= \sqrt{ \frac{3 \pi^2 \hbar^2}{2 m \Delta E}}
+\end{align*}
+
+
 
 \subsubsection*{c)}
 
