@@ -6,8 +6,11 @@
 \usepackage[ngerman]{babel}
 \usepackage[reqno,fleqn]{amsmath}
 \setlength\mathindent{10mm}
+\usepackage{amstext}
 \usepackage{amssymb}
 \usepackage{fancyhdr}
+% Zahlenwerte mit Einheiten mittels \unit{Zahlenwert}{Einheit}
+\usepackage[thinspace,thinqspace,squaren,textstyle]{SIunits}
 
 % FORMATIERUNG
 \usepackage[paper=a4paper,left=25mm,right=25mm,top=25mm,bottom=25mm]{geometry}
@@ -48,22 +51,46 @@ Eingesetzt in die Schrödinger-Gleichung liefert das dann die Energie-Eigenwerte
     \quad \text{mit } n_x, n_y, n_z = 1, 2, 3, \cdots \\
 \intertext{Damit ergeben sich die ersten Energie-Zustände zu }
   E_{1, 1, 1} &= \frac{\pi^2 \hbar^2}{2 m a^2} \cdot 3\; ; \qquad
-  E_{1, 2, 1} = \frac{\pi^2 \hbar^2}{2 m a^2} \cdot 6\; ; \qquad
+  E_{1, 1, 2} = \frac{\pi^2 \hbar^2}{2 m a^2} \cdot 6\; ; \qquad
   E_{1, 2, 2} = \frac{\pi^2 \hbar^2}{2 m a^2} \cdot 9\; ; \qquad
 \end{align*}
 
 \subsubsection*{b)}
 Die Energie-Differenz zwischen Grundzustand und erstem angeregtem Zustand ist gleich
 der Energie-Differenz zwischen dem ersten und zweiten angeregten Zustand, sie beträgt:
-\begin{align*}
+\begin{align}
+\label{eq1}
   \Delta E &= \frac{3 \pi^2 \hbar^2}{2 m a^2}
 \intertext{Damit lässt sich die Gitterkonstante $a$ berechnen:}
+\nonumber
 a &= \sqrt{ \frac{3 \pi^2 \hbar^2}{2 m \Delta E}}
+\end{align}
+
+\subsubsection*{c)}
+Mit \eqref{eq1} lässt die die Absortions-Wellenlänge berechnen:
+\begin{align*}
+ \hbar \omega &= h f = h \frac{c}{\lambda} = \Delta E = \frac{3 \pi^2 \hbar^2}{2 m a^2} =
+ \frac{3 \pi^2}{2 m a^2} \cdot \frac{h^2}{(2 \pi)^2} = \frac{3 h^2}{8 m a^2}\\
+ \lambda &= \frac{8 m a^2 c }{3 h}
+\end{align*}
+Das ergibt mit den Zahlenwerten $m = \unit{9,109}{\cdot 10^{-31}}{\kilogram},\;
+c = \unit{2,998}{\cdot 10^8}{\meter/\second},\;
+h = \unit{6,626}{\cdot 10^{-34}}{\kilogram \, \meter\squared / \second}$
+und $a = \unit{4}{\cdot 10^{-10}}{\meter}$\footnote{Die Einheit $\mathrm{\AA}$
+ist in DIN 1301-3 ausdrücklich als nicht mehr zugelassene Einheit aufgeführt.
+Ihre Verwendung wurde im "`Gesetz über die Einheiten im Messwesen und die
+Zeitbestimmung (Einheiten- und Zeitgesetz - EinhZeitG)"' von 1969 im
+geschäflichen Verkehr verboten und kann als Ordnungswidrigkeit mit
+Bußgeldern geahndet werden. Sie sollte daher auch im Lehrbetrieb nicht verwendet werden.}:
+\begin{align*}
+ \lambda &= \frac{8}{3}\cdot\frac{\unit{9,109}{\cdot 10^{-31}}{\kilogram} \cdot
+ (\unit{4}{\cdot 10^{-10}}{\meter})^2 \cdot \unit{2,998}{\cdot 10^8}{\meter/\second}}
+ {\unit{6,626}{\cdot 10^{-34}}{\kilogram \, \meter\squared / \second}}
+ = \unit{1,76}{\cdot 10^{-7}}{\meter} = \unit{176}{\nano\meter}
 \end{align*}
 
 
 
-\subsubsection*{c)}
 
 \subsection*{Aufgabe 4}
 
