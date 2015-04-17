@@ -67,7 +67,7 @@ a &= \sqrt{ \frac{3 \pi^2 \hbar^2}{2 m \Delta E}}
 \end{align}
 
 \subsubsection*{c)}
-Mit \eqref{eq1} lässt die die Absortions-Wellenlänge berechnen:
+Mit \eqref{eq1} lässt die die Absorptions-Wellenlänge berechnen:
 \begin{align*}
  \hbar \omega &= h f = h \frac{c}{\lambda} = \Delta E = \frac{3 \pi^2 \hbar^2}{2 m a^2} =
  \frac{3 \pi^2}{2 m a^2} \cdot \frac{h^2}{(2 \pi)^2} = \frac{3 h^2}{8 m a^2}\\
@@ -89,14 +89,47 @@ Bußgeldern geahndet werden. Sie sollte daher auch im Lehrbetrieb nicht verwende
  = \unit{1,76}{\cdot 10^{-7}}{\meter} = \unit{176}{\nano\meter}
 \end{align*}
 
-
-
-
 \subsection*{Aufgabe 4}
-
 \subsubsection*{a)}
+Mögliche Basisvektoren für ein 2-dimensionales Rechteckgitter mit den
+Kantenlängen $a$ und $3 a$ sind:
+\begin{align*}
+  &\vec a_1 = a \vec e_x\; ; \qquad \vec a_2 = 3 a  \vec e_y\; ; \qquad  \vec a_3 = \vec e_z
+\intertext{Damit wird das Volumen der Einheitszelle:}
+  V &= (\vec a_1 \times \vec a_2) \cdot \vec a_3 = 3 a^2
+\intertext{Für die Basisvektoren des reziproken Gitters ergibt sich dann:}
+\vec b_1 &= \frac{2 \pi}{3 a^2} \vec a_2 \times \vec a_3 =
+  \frac{2 \pi}{3 a^2} \cdot 3 a \cdot (\vec e_y \times \vec e_z) =
+  \frac{2 \pi}{a} \vec e_x \\
+\vec b_2 &= \frac{2 \pi}{3 a^2} \vec a_3 \times \vec a_1 =
+  \frac{2 \pi}{3 a^2}  a \cdot (\vec e_z \times \vec e_x) =
+  \frac{2 \pi}{3 a} \vec e_y
+\end{align*}
+Das reziproke Gitter ist also ein Rechteck mit den Seiten $\frac{2 \pi}{a}$ und
+$\frac{2 \pi}{3 a}$, damit wird die Brillouin-Zone ein (verschobenes)  Rechetck
+mit den gleichen Seitenlängen $\frac{2 \pi}{a}$ und $\frac{2 \pi}{3 a}$.
 
 \subsubsection*{b)}
+Wenn ein zusätzlicher Gitterpunkt im Zentrum des Rechtecks liegt, ändern sich die
+Basisvektoren, z. B. in
+\begin{align*}
+  \vec a_1 & = a \vec e_x  \; ; \quad  \text{ zum rechten Nachbarn}\\
+  \vec a_2 & = \frac{a}{2} \vec e_x + \frac{3 a}{2} \vec e_y  \; ; \; \text{ zum Zentrum}
+\intertext{Damit wird das Volumen der Einheitszelle:}
+ V &= (\vec a_1 \times \vec a_2) \cdot \vec a_3 =
+ \left(\frac{a^2}{2}(\vec e_x \times \vec e_x)  +
+ \frac{3 a^2}{2}(\vec e_x \times \vec e_y) \right) \cdot \vec e_z =
+ \frac{3 a^2}{2}
+\intertext{Die Einheitszelle ist nun ein Parallelogramm. Die Basisvektoren des
+reziproken Gitters sind dann}
+\vec b_1 &= \frac{4 \pi}{3 a^2} \vec a_2 \times \vec a_3 =
+  \frac{4 \pi}{3 a^2} \left(\frac{a}{2}\vec e_x + \frac{3 a}{2} \vec e_y \right) \times \vec e_z  =
+  \frac{2 \pi}{a} \vec e_x - \frac{2 \pi}{3 a} \vec e_y  \\
+\vec b_2 &= \frac{4 \pi}{3 a^2} \vec a_3 \times \vec a_1 =
+  \frac{4 \pi}{3 a^2} \cdot a \cdot ( \vec e_z \times \vec e_x ) =
+  \frac{4 \pi}{3 a} \vec e_y
+\end{align*}
+Sie spannen ebenfalls ein Parallelogramm auf.
 
 \subsubsection*{c)}
 
