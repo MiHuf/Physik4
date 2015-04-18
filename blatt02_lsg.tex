@@ -132,6 +132,38 @@ reziproken Gitters sind dann}
 Sie spannen ebenfalls ein Parallelogramm auf.
 
 \subsubsection*{c)}
+Der Koordinatenurspung des einfach hexagonalen Gittes (Gitterpunkte an den Ecken
+eines regelmäßigen 6-Ecks und ein weiterer Gitterpunkt im Zentrum) liege im Zentrum
+des 6-Ecks, auf der x-Achse liegen Gitterpunkte im Abstand $a$. Mögliche
+Basisvektoren sind dann:
+\begin{align*}
+  \vec a_1 &= a \cdot \vec e_x \\
+  \vec a_2 &= a \cdot \cos(60^\circ) \cdot \vec e_x  + a \cdot \sin(60^\circ) \cdot \vec e_y
+    = \frac{1}{2} a \cdot \vec e_x + \frac{\sqrt{3}}{2} a \cdot \vec e_y\\
+  \vec a_3 &= c \cdot \vec e_z
+\intertext{Die Wigner-Seitz-Zelle ist ein Prisma mit einem gleichseitigen Dreieck
+als Grundfläche. Das Volumen der Einheitszelle ist:}
+  V &= \frac{1}{2} (\vec a_1 \times \vec a_2) \cdot \vec a_3 =
+    \frac{a^2 \cdot c \cdot \sqrt{3}}{4}
+\intertext{Damit werden die Basisvektoren im reziproken Gitter:}
+  \vec b_1 &= \frac{2 \pi}{V} (\vec a_2 \times \vec a_3) =
+    \frac{2 \pi \cdot 4}{a^2 \cdot c \cdot \sqrt{3}}\cdot a c \cdot
+      \left(\frac{1}{2} \vec e_x  +
+        \frac{\sqrt{3}}{2} \vec e_y \right) \times \vec e_z =
+    \frac{4 \pi}{a} \vec e_x - \frac{4 \pi}{\sqrt{3} \cdot a} \vec e_y \\
+  \vec b_2 &= \frac{2 \pi}{V} (\vec a_3 \times \vec a_1) =
+    \frac{2 \pi \cdot 4}{a^2 \cdot c \cdot \sqrt{3}}\cdot a c \cdot
+     (\vec e_z \times \vec e_x) =  \frac{8 \pi}{\sqrt{3} \cdot a} \vec e_y \\
+  \vec b_3 &= \frac{2 \pi}{V} (\vec a_1 \times \vec a_2) =
+    \frac{2 \pi \cdot 4}{a^2 \cdot c \cdot \sqrt{3}}\cdot a^2 \cdot
+    \vec e_x \times \left(\frac{1}{2} \vec e_x + \frac{\sqrt{3}}{2} \vec e_y \right) =
+    \frac{4 \pi}{c} \vec e_z
+\end{align*}
+Da die sich Vektoren $\vec b_1, \vec b_2$ aus dem Kreuzprodukt mit den Vektoren
+$\vec a_2, \vec a_1$ berechnen, stehen sie senkrecht aufeinander, also
+$\vec b_1 \bot \vec a_2$ und $\vec b_2 \bot \vec a_1$. Das entspricht
+-- abgesehen von Skalierung und Vorzeichen --
+einer Drehung um $90^\circ$ um die $\vec e_z$-Achse.
 
 \subsection*{Aufgabe 5}
 
