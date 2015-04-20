@@ -18,197 +18,25 @@
 \pagestyle{fancy}
 \setlength\headheight{30pt}
 \lhead{Michael Hufschmidt, Mat. Nr. 6436122\\Florian Jochheim, Mat. Nr. 6508131}
-\rhead{Übungen zur Physik IV, SoSe 2015\\Blatt 02 zum 20.04.2015}
+\rhead{Übungen zur Physik IV, SoSe 2015\\Blatt 03 zum 27.04.2015}
 %MATH SHORTCUTS
 \newcommand*{\NN}{\mathbb N}
+
+
 \begin{document}
-\subsection*{Aufgabe 3}
-\subsubsection*{a)} Die stationäre Schrödinger-Gleichung eines Elektrons im
-(als feldfrei angenommenen) Inneren eines 3-dimensionalen Potatialtopfes mit
-unendlich hohen Wändern lautet:
-\begin{align*}
--\frac{\hbar ^2}{2 m} \left( \frac{\partial^2}{\partial x^2} + \frac{\partial ^2}{\partial y^2}
-+ \frac{\partial^2}{\partial z^2} \right) \varPsi(x, y, z) = E \cdot \varPsi(x, y, z)
-\end{align*}
-Mit dem Koordiantenursprung in einer Ecke des Kubus lautet die Lösung welche die
-Randbedingungen $\varPsi = 0$ für alle $x, y, z \in \{0, a\}$
-(d.h. an den Wänden) erfüllt:
-\begin{align*}
-\varPsi(x, y, z) = A \cdot \sin\left(n_x \cdot \frac{\pi x}{a}\right)
-\cdot \sin\left(n_y \cdot \frac{\pi y}{a}\right)
-\cdot \sin\left(n_z \cdot \frac{\pi z}{a}\right)
-\quad \text{mit } n_x, n_y, n_z = 1, 2, 3, \cdots
-\end{align*}
-Eingesetzt in die Schrödinger-Gleichung liefert das dann die Energie-Eigenwerte:
-\begin{align*}
-E_{n_x, n_y, n_z} &= \frac{\pi^2 \hbar^2}{2 m a^2}\left(n_x^2 + n_y^2 + n_z^2 \right)
-\quad \text{mit } n_x, n_y, n_z = 1, 2, 3, \cdots \\
-\intertext{Damit ergeben sich die ersten Energie-Zustände zu }
-E_{1, 1, 1} &= \frac{\pi^2 \hbar^2}{2 m a^2} \cdot 3\; ; \qquad
-E_{1, 1, 2} = \frac{\pi^2 \hbar^2}{2 m a^2} \cdot 6\; ; \qquad
-E_{1, 2, 2} = \frac{\pi^2 \hbar^2}{2 m a^2} \cdot 9\; ; \qquad
-\end{align*}
-\subsubsection*{b)}
-Die Energie-Differenz zwischen Grundzustand und erstem angeregtem Zustand ist gleich
-der Energie-Differenz zwischen dem ersten und zweiten angeregten Zustand, sie beträgt:
-\begin{align}
-\label{eq1}
-\Delta E &= \frac{3 \pi^2 \hbar^2}{2 m a^2}
-\intertext{Damit lässt sich die Gitterkonstante $a$ berechnen:}
-\nonumber
-a &= \sqrt{ \frac{3 \pi^2 \hbar^2}{2 m \Delta E}}
-\end{align}
-\subsubsection*{c)}
-Mit \eqref{eq1} lässt die die Absorptions-Wellenlänge berechnen:
-\begin{align*}
-\hbar \omega &= h f = h \frac{c}{\lambda} = \Delta E = \frac{3 \pi^2 \hbar^2}{2 m a^2} =
-\frac{3 \pi^2}{2 m a^2} \cdot \frac{h^2}{(2 \pi)^2} = \frac{3 h^2}{8 m a^2}\\
-\lambda &= \frac{8 m a^2 c }{3 h}
-\end{align*}
-Das ergibt mit den Zahlenwerten $m = \unit{9,109}{\cdot 10^{-31}}{\kilogram},\;
-c = \unit{2,998}{\cdot 10^8}{\meter/\second},\;
-h = \unit{6,626}{\cdot 10^{-34}}{\kilogram \, \meter\squared / \second}$
-und $a = \unit{4}{\cdot 10^{-10}}{\meter}$\footnote{Die Einheit $\mathrm{\AA}$
-ist in DIN 1301-3 ausdrücklich als nicht mehr zugelassene Einheit aufgeführt.
-Ihre Verwendung wurde im "`Gesetz über die Einheiten im Messwesen und die
-Zeitbestimmung (Einheiten- und Zeitgesetz - EinhZeitG)"' von 1969 im
-geschäflichen Verkehr verboten und kann als Ordnungswidrigkeit mit
-Bußgeldern geahndet werden. Sie sollte daher auch im Lehrbetrieb nicht verwendet werden.}:
-\begin{align*}
-\lambda &= \frac{8}{3}\cdot\frac{\unit{9,109}{\cdot 10^{-31}}{\kilogram} \cdot
-(\unit{4}{\cdot 10^{-10}}{\meter})^2 \cdot \unit{2,998}{\cdot 10^8}{\meter/\second}}
-{\unit{6,626}{\cdot 10^{-34}}{\kilogram \, \meter\squared / \second}}
-= \unit{1,76}{\cdot 10^{-7}}{\meter} = \unit{176}{\nano\meter}
-\end{align*}
-\subsection*{Aufgabe 4}
+\subsection*{Aufgabe 6}
 \subsubsection*{a)}
-Mögliche Basisvektoren für ein 2-dimensionales Rechteckgitter mit den
-Kantenlängen $a$ und $3 a$ sind:
-\begin{align*}
-&\vec a_1 = a \vec e_x\; ; \qquad \vec a_2 = 3 a \vec e_y\; ; \qquad \vec a_3 = \vec e_z
-\intertext{Damit wird das Volumen der Einheitszelle:}
-V &= (\vec a_1 \times \vec a_2) \cdot \vec a_3 = 3 a^2
-\intertext{Für die Basisvektoren des reziproken Gitters ergibt sich dann:}
-\vec b_1 &= \frac{2 \pi}{3 a^2} \vec a_2 \times \vec a_3 =
-\frac{2 \pi}{3 a^2} \cdot 3 a \cdot (\vec e_y \times \vec e_z) =
-\frac{2 \pi}{a} \vec e_x \\
-\vec b_2 &= \frac{2 \pi}{3 a^2} \vec a_3 \times \vec a_1 =
-\frac{2 \pi}{3 a^2} a \cdot (\vec e_z \times \vec e_x) =
-\frac{2 \pi}{3 a} \vec e_y
-\end{align*}
-Das reziproke Gitter ist also ein Rechteck mit den Seiten $\frac{2 \pi}{a}$ und
-$\frac{2 \pi}{3 a}$, damit wird die Brillouin-Zone ein (verschobenes) Rechteck
-mit den gleichen Seitenlängen $\frac{2 \pi}{a}$ und $\frac{2 \pi}{3 a}$.
+
 \subsubsection*{b)}
-Wenn ein zusätzlicher Gitterpunkt im Zentrum des Rechtecks liegt, ändern sich die
-Basisvektoren, z. B. in
-\begin{align*}
-\vec a_1 & = a \vec e_x \; ; \quad \text{ zum rechten Nachbarn}\\
-\vec a_2 & = \frac{a}{2} \vec e_x + \frac{3 a}{2} \vec e_y \; ; \; \text{ zum Zentrum}
-\intertext{Damit wird das Volumen der Einheitszelle:}
-V &= (\vec a_1 \times \vec a_2) \cdot \vec a_3 =
-\left(\frac{a^2}{2}(\vec e_x \times \vec e_x) +
-\frac{3 a^2}{2}(\vec e_x \times \vec e_y) \right) \cdot \vec e_z =
-\frac{3 a^2}{2}
-\intertext{Die Einheitszelle ist nun ein Parallelogramm. Die Basisvektoren des
-reziproken Gitters sind dann}
-\vec b_1 &= \frac{4 \pi}{3 a^2} \vec a_2 \times \vec a_3 =
-\frac{4 \pi}{3 a^2} \left(\frac{a}{2}\vec e_x + \frac{3 a}{2} \vec e_y \right) \times \vec e_z =
-\frac{2 \pi}{a} \vec e_x - \frac{2 \pi}{3 a} \vec e_y \\
-\vec b_2 &= \frac{4 \pi}{3 a^2} \vec a_3 \times \vec a_1 =
-\frac{4 \pi}{3 a^2} \cdot a \cdot ( \vec e_z \times \vec e_x ) =
-\frac{4 \pi}{3 a} \vec e_y
-\end{align*}
-Sie spannen ebenfalls ein Parallelogramm auf.
+
 \subsubsection*{c)}
-Der Koordinatenurspung des einfach hexagonalen Gittes (Gitterpunkte an den Ecken
-eines regelmäßigen 6-Ecks und ein weiterer Gitterpunkt im Zentrum) liege im Zentrum
-des 6-Ecks, auf der x-Achse liegen Gitterpunkte im Abstand $a$. Mögliche
-Basisvektoren sind dann:
-\begin{align*}
-\vec a_1 &= a \cdot \vec e_x \\
-\vec a_2 &= a \cdot \cos(60^\circ) \cdot \vec e_x + a \cdot \sin(60^\circ) \cdot \vec e_y
-= \frac{1}{2} a \cdot \vec e_x + \frac{\sqrt{3}}{2} a \cdot \vec e_y\\
-\vec a_3 &= c \cdot \vec e_z
-\intertext{Die Wigner-Seitz-Zelle ist ein Prisma mit einem gleichseitigen Dreieck
-als Grundfläche. Das Volumen der Einheitszelle ist:}
-V &= \frac{1}{2} (\vec a_1 \times \vec a_2) \cdot \vec a_3 =
-\frac{a^2 \cdot c \cdot \sqrt{3}}{4}
-\intertext{Damit werden die Basisvektoren im reziproken Gitter:}
-\vec b_1 &= \frac{2 \pi}{V} (\vec a_2 \times \vec a_3) =
-\frac{2 \pi \cdot 4}{a^2 \cdot c \cdot \sqrt{3}}\cdot a c \cdot
-\left(\frac{1}{2} \vec e_x +
-\frac{\sqrt{3}}{2} \vec e_y \right) \times \vec e_z =
-\frac{4 \pi}{a} \vec e_x - \frac{4 \pi}{\sqrt{3} \cdot a} \vec e_y \\
-\vec b_2 &= \frac{2 \pi}{V} (\vec a_3 \times \vec a_1) =
-\frac{2 \pi \cdot 4}{a^2 \cdot c \cdot \sqrt{3}}\cdot a c \cdot
-(\vec e_z \times \vec e_x) = \frac{8 \pi}{\sqrt{3} \cdot a} \vec e_y \\
-\vec b_3 &= \frac{2 \pi}{V} (\vec a_1 \times \vec a_2) =
-\frac{2 \pi \cdot 4}{a^2 \cdot c \cdot \sqrt{3}}\cdot a^2 \cdot
-\vec e_x \times \left(\frac{1}{2} \vec e_x + \frac{\sqrt{3}}{2} \vec e_y \right) =
-\frac{4 \pi}{c} \vec e_z
-\end{align*}
-Da die sich Vektoren $\vec b_1, \vec b_2$ aus dem Kreuzprodukt mit den Vektoren
-$\vec a_2, \vec a_1$ berechnen, stehen sie senkrecht aufeinander, also
-$\vec b_1 \bot \vec a_2$ und $\vec b_2 \bot \vec a_1$. Das entspricht
--- abgesehen von Skalierung und Vorzeichen --
-einer Drehung um $90^\circ$ um die $\vec e_z$-Achse.
-\subsection*{Aufgabe 5}
+
+\subsection*{Aufgabe 7}
 \subsubsection*{a)}
-Betrachtet wird eine $(h,k,l)$ Ebene, also jene Ebene, die definiert ist durch Ihre Schnittpunkte mit den Achsen in folgender WEise:
-\begin{align*}
-\vec{S_1}=\frac{1}{h}\vec{a_1}\\
-\vec{S_2}=\frac{1}{k}\vec{a_2}\\
-\vec{S_3}=\frac{1}{l}\vec{a_3}
-\end{align*}
-z.Z: der Reziproke Gittervektor:
-\begin{align*}
-\vec{G_{hkl}}=h\cdot\vec{b_1}+k\cdot\vec{b_2}+l\cdot\vec{b_3} = \frac{2\pi}{V_e}(k\vec{a_3}\times\vec{a_1}-l\vec{a_1}\times\vec{a_2}+h\vec{a_2}\times\vec{a_3})
-\end{align*}
-steht senkrecht auf der $(h,k,l)$ Ebene. Betrachte dazu zwei Vektoren, die die $(h,k,l)$ Ebene aufspannen:
-\begin{align*}
-\vec{u}=-\frac{1}{h}\cdot\vec{a_1}+\frac{1}{k}\cdot\vec{a_2}\\
-\vec{v}=-\frac{1}{h}\cdot\vec{a_1}+\frac{1}{l}\cdot\vec{a_3}
-\end{align*}
-und das Kreuzprodukt dieser:
-\begin{align*}
-\vec{u}\times\vec{v} &= (-\frac{1}{h}\cdot\vec{a_1}+\frac{1}{k}\cdot\vec{a_2})\times(-\frac{1}{h}\cdot\vec{a_1}+\frac{1}{l}\cdot\vec{a_3})\\
-&= -\frac{1}{h\cdot l}\vec{a_1}\times\vec{a_3}-\frac{1}{h\cdot k}\vec{a_2}\times\vec{a_1}+\frac{1}{k\cdot l}\vec{a_2}\times\vec{a_3}\\
-&= k\vec{a_3}\times\vec{a_1}+l\vec{a_1}\times\vec{a_2}+h\vec{a_2}\times\vec{a_3}\\
-&= \frac{V_e}{2\pi}\vec{G_{hkl}}
-\end{align*}
-Außerdem: z.Z.: der Abstand zweier benachbarter, paralleler Netzebenen ist:
-\begin{align*}
-d_{hkl}=\frac{2\pi}{|\vec{G_{hkl}}|}
-\end{align*}
-Eine zur $(h,k,l)$ benachbarte Ebene geht durch den Ursprung des Koordinatensystems. Daher berechnen wir den Abstand der $(h,k,l)$ Ebene zum ursprung indem wir Sie in die Hesse'sche Normalform bringen:
-\begin{align*}
-\vec{r}\cdot n_0 = d
-\end{align*}
-Dabei ist $n_0 = \frac{\vec{G_{hkl}}}{|\vec{G_{hkl}}|}$ ein normierter Normalenvektor und d ergibt sich aus dem Ortsvektor eines beliebigen Punktes auf der Ebene, z.B. $\vec{r}=\frac{1}{h}\cdot\vec{a_1}$:
-\begin{align*}
-\vec{r}\cdot n_0 &= d\\
-\rightarrow &\frac{1}{h}\cdot\vec{a_1}\cdot\frac{\vec{G_{hkl}}}{|\vec{G_{hkl}}|} = \frac{\frac{2\pi}{V_e}(k\vec{a_3}\times\vec{a_1}-l\vec{a_1}\times\vec{a_2}+h\vec{a_2}\times\vec{a_3})}{|\vec{G_{hkl}}|} = \frac{\frac{2\pi}{V_e}k\vec{a_1}\cdot(\vec{a_3}\times\vec{a_1})}{|\vec{G_{hkl}}|} = \frac{\frac{V_e 2\pi}{V_e}}{|\vec{G_{hkl}}|} =\frac{2\pi}{|\vec{G_{hkl}}|} 
-\end{align*}
+
 \subsubsection*{b)}
-z.Z: Die Laue Bedingung $\vec{G} = \vec{k}-\vec{k}'$ ist äquivalent zur Bragg Bedingung: $2d_{hkl}sin(\theta)'=n\cdot\lambda$. Dazu quadrieren wir zunächst die Laue Bedingung und benutzen:
-\begin{align*}
-|\vec{G}| = G\\
-|\vec{k}|=|\vec{k}'|=k\\
-\vec{k}\cdot\vec{k}' = k^2cos{2\theta}
-\end{align*}
-Damit lässt sich die Laue Bedingung quadrieren und schreiben als:
-\begin{align*}
-G^2 &= 2k^2+k^2\cos{2\theta}
-\end{align*}
-Nun formen wir ein wenig um und benutzen: $1-\cos(2\theta)=2\sin^2(\theta)$ sowie $k = \frac{2\pi}{\lambda}$ und $d_n=n\cdot\frac{2\pi}{|\vec{G_{hkl}}|}=n\cdot\frac{2\pi}{G}$ (Abstand zum n-ten Nachbar
-\begin{align*}
-&\rightarrow G^2 = 2k^2(1-\cos(2\theta))\\
-&\rightarrow G^2 = 4k^2 \sin^2(\theta)\\
-&\rightarrow G = 2k \sin(\theta)\\
-&\rightarrow G = 2\frac{2\pi}{\lambda}\sin(\theta)\\
-&\rightarrow \lambda = 2\frac{2\pi}{G}\sin(\theta)\\
-&\rightarrow \lambda \cdot n = 2d\sin(\theta)
-\end{align*}
+
+\subsubsection*{c)}
+
 \end{document}
 
