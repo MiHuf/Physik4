@@ -32,3 +32,5 @@ win_phy*
 # Fuer lokale Dateien
 *_.m
 *_.tex
+blatt02_lsg.blg
+*.bbl
