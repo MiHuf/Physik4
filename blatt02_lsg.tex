@@ -153,6 +153,7 @@ $\vec a_2, \vec a_1$ berechnen, stehen sie senkrecht aufeinander, also
 $\vec b_1 \bot \vec a_2$ und $\vec b_2 \bot \vec a_1$. Das entspricht
 -- abgesehen von Skalierung und Vorzeichen --
 einer Drehung um $90^\circ$ um die $\vec e_z$-Achse.
+
 \subsection*{Aufgabe 5}
 \subsubsection*{a)}
 Betrachtet wird eine $(h,k,l)$ Ebene, also jene Ebene, die definiert ist durch Ihre Schnittpunkte mit den Achsen in folgender WEise:
@@ -161,7 +162,7 @@ Betrachtet wird eine $(h,k,l)$ Ebene, also jene Ebene, die definiert ist durch I
 \vec{S_2}=\frac{1}{k}\vec{a_2}\\
 \vec{S_3}=\frac{1}{l}\vec{a_3}
 \end{align*}
-z.Z: der Reziproke Gittervektor:
+z.Z: der reziproke Gittervektor:
 \begin{align*}
 \vec{G_{hkl}}=h\cdot\vec{b_1}+k\cdot\vec{b_2}+l\cdot\vec{b_3} = \frac{2\pi}{V_e}(k\vec{a_3}\times\vec{a_1}-l\vec{a_1}\times\vec{a_2}+h\vec{a_2}\times\vec{a_3})
 \end{align*}
@@ -188,7 +189,7 @@ Eine zur $(h,k,l)$ benachbarte Ebene geht durch den Ursprung des Koordinatensyst
 Dabei ist $n_0 = \frac{\vec{G_{hkl}}}{|\vec{G_{hkl}}|}$ ein normierter Normalenvektor und d ergibt sich aus dem Ortsvektor eines beliebigen Punktes auf der Ebene, z.B. $\vec{r}=\frac{1}{h}\cdot\vec{a_1}$:
 \begin{align*}
 \vec{r}\cdot n_0 &= d\\
-\rightarrow &\frac{1}{h}\cdot\vec{a_1}\cdot\frac{\vec{G_{hkl}}}{|\vec{G_{hkl}}|} = \frac{\frac{2\pi}{V_e}(k\vec{a_3}\times\vec{a_1}-l\vec{a_1}\times\vec{a_2}+h\vec{a_2}\times\vec{a_3})}{|\vec{G_{hkl}}|} = \frac{\frac{2\pi}{V_e}k\vec{a_1}\cdot(\vec{a_3}\times\vec{a_1})}{|\vec{G_{hkl}}|} = \frac{\frac{V_e 2\pi}{V_e}}{|\vec{G_{hkl}}|} =\frac{2\pi}{|\vec{G_{hkl}}|} 
+\rightarrow &\frac{1}{h}\cdot\vec{a_1}\cdot\frac{\vec{G_{hkl}}}{|\vec{G_{hkl}}|} = \frac{\frac{2\pi}{V_e}(k\vec{a_3}\times\vec{a_1}-l\vec{a_1}\times\vec{a_2}+h\vec{a_2}\times\vec{a_3})}{|\vec{G_{hkl}}|} = \frac{\frac{2\pi}{V_e}k\vec{a_1}\cdot(\vec{a_3}\times\vec{a_1})}{|\vec{G_{hkl}}|} = \frac{\frac{V_e 2\pi}{V_e}}{|\vec{G_{hkl}}|} =\frac{2\pi}{|\vec{G_{hkl}}|}
 \end{align*}
 \subsubsection*{b)}
 z.Z: Die Laue Bedingung $\vec{G} = \vec{k}-\vec{k}'$ ist äquivalent zur Bragg Bedingung: $2d_{hkl}sin(\theta)'=n\cdot\lambda$. Dazu quadrieren wir zunächst die Laue Bedingung und benutzen:
@@ -201,7 +202,7 @@ Damit lässt sich die Laue Bedingung quadrieren und schreiben als:
 \begin{align*}
 G^2 &= 2k^2+k^2\cos{2\theta}
 \end{align*}
-Nun formen wir ein wenig um und benutzen: $1-\cos(2\theta)=2\sin^2(\theta)$ sowie $k = \frac{2\pi}{\lambda}$ und $d_n=n\cdot\frac{2\pi}{|\vec{G_{hkl}}|}=n\cdot\frac{2\pi}{G}$ (Abstand zum n-ten Nachbar
+Nun formen wir ein wenig um und benutzen: $1-\cos(2\theta)=2\sin^2(\theta)$ sowie $k = \frac{2\pi}{\lambda}$ und $d_n=n\cdot\frac{2\pi}{|\vec{G_{hkl}}|}=n\cdot\frac{2\pi}{G}$ (Abstand zum n-ten Nachbarn)
 \begin{align*}
 &\rightarrow G^2 = 2k^2(1-\cos(2\theta))\\
 &\rightarrow G^2 = 4k^2 \sin^2(\theta)\\
