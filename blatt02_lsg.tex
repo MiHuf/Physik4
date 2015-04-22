@@ -168,15 +168,15 @@ z.Z: der reziproke Gittervektor:
 \end{align*}
 steht senkrecht auf der $(h,k,l)$ Ebene. Betrachte dazu zwei Vektoren, die die $(h,k,l)$ Ebene aufspannen:
 \begin{align*}
-\vec{u}=\frac{1}{h}\cdot\vec{a_1}+\frac{1}{k}\cdot\vec{a_2}\\
-\vec{v}=\frac{1}{h}\cdot\vec{a_1}+\frac{1}{l}\cdot\vec{a_3}
+\vec{u}= - \frac{1}{h}\cdot\vec{a_1}+\frac{1}{k}\cdot\vec{a_2}\\
+\vec{v}= - \frac{1}{h}\cdot\vec{a_1}+\frac{1}{l}\cdot\vec{a_3}
 \end{align*}
-und das Kreuzprodukt dieser:
+und deren Kreuzprodukt:
 \begin{align*}
-\vec{u}\times\vec{v} &= (\frac{1}{h}\cdot\vec{a_1}+\frac{1}{k}\cdot\vec{a_2})\times(\frac{1}{h}\cdot\vec{a_1}+\frac{1}{l}\cdot\vec{a_3})\\
-&= \frac{1}{h\cdot l}\vec{a_1}\times\vec{a_3}+\frac{1}{h\cdot k}\vec{a_2}\times\vec{a_1}+\frac{1}{k\cdot l}\vec{a_2}\times\vec{a_3}\\
+\vec{u}\times\vec{v} &= ( -\frac{1}{h}\cdot\vec{a_1}+\frac{1}{k}\cdot\vec{a_2})\times(-\frac{1}{h}\cdot\vec{a_1}+\frac{1}{l}\cdot\vec{a_3})\\
+&= \frac{-1}{h\cdot l}\vec{a_1}\times\vec{a_3}+\frac{-1}{h\cdot k}\vec{a_2}\times\vec{a_1}+\frac{1}{k\cdot l}\vec{a_2}\times\vec{a_3}\\
 &= \frac{1}{hkl}\left(h\vec{a_2}\times\vec{a_3}+k\vec{a_3}\times\vec{a_1}+l\vec{a_1}\times\vec{a_2}\right)
-&\propto \vec G_{hkl}
+\propto \vec G_{hkl}
 \end{align*}
 Also ist $\vec G_{hkl}$ parallel zu $\vec{u}\times\vec{v}$
 und steht somit senkrecht zu der durch $\vec u$ und $\vec v$ aufgespannten Ebene.
