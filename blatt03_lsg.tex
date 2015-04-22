@@ -26,6 +26,43 @@
 \begin{document}
 \subsection*{Aufgabe 6}
 \subsubsection*{a)}
+Bei der Steuung an Kristallen ist die Streuamplitude $A$ gegeben durch
+$A \propto N_E \cdot S_{\vec G}$ mit $N_E$ als Zahl der Elementarzellen und
+dem Strukturfaktor $S_{\vec G}$. Dieser ergibt sich durch Integration über die
+Elektronendichte $\rho_A^j$ des $j$-ten Atoms einer Elementarzelle und durch
+Summation über die Atome einer Elementarzelle gemäß
+\begin{align*}
+  S_{\vec G} = \sum_{j} e^{i \vec G \cdot \vec r_j} \cdot \underbrace{
+  \left[ \int_{\text{Atom}}\rho_A^j (\vec r') d^3 r'  \right] }_{= f_j} =
+  \sum_{j} f_j \cdot e^{i \vec G \cdot \vec r_j}
+\end{align*}
+Da bei einem Elementkristall alle Atome identisch sind, sind auch alle $f_j$
+identisch $= f$. Der Vektor $\vec r_j$ zeigt stets auf einen Punkt
+im Bravais-Gitter: $\vec r = u_j \vec a_1 + v_j \vec a_2 + w_j \vec a_3$ mit
+ganzen Zahlen $u_j, v_j, w_j$. Die Laue-Bedingung bedeutet, dass
+$\Delta \vec k = \vec G = h \vec b_1 + k \vec b_2 + l \vec b_3$ ein Gitterpunkt
+im reziproken Gitter ist. Mit der Definition der Basisvektoren des reziproken
+Gitters bedeutet das $\vec G \cdot \vec r_j =  (u_j \vec a_1 + v_j \vec a_2 + w_j \vec a_3)
+\cdot (h \vec b_1 + k \vec b_2 + l \vec b_3) = 2 \pi (h u_j + k v_j + l w_j)$
+Die Elementarzelle im kubisch flächenzetrierten Gitter hat Gitterpunkte bei
+$(u_j,v_j,w_j) = (0,0,0); (0,\frac{1}{2},\frac{1}{2}); (\frac{1}{2}, 0, \frac{1}{2});
+(\frac{1}{2},\frac{1}{2}, 0)$. Damit wird
+\begin{align*}
+  S_{\vec G} = f \cdot \sum_{j}  e^{i \vec G \cdot \vec r_j} =
+  f \cdot \left(1 + e^{i \pi (h + k)} + e^{i \pi (h + l)} +e^{i \pi (k + l)} \right)
+  \text{ mit } h, k, l \in \NN
+\end{align*}
+Die Exponentialfunktionen haben entweder den Wert $+1$ oder $-1$, insgesamt wird dann
+wenn alle $h, k, l$ gerade oder alle ungerade sind $S_{\vec G} = 4 f$, ansonsten gilt
+$S_{\vec G} = 0$.
+
+Da im Streuspektrum Linien gerader und ungerader Ebenen gemischt vorkommen
+(1,1,0) und (2,1,1), kann es sich nicht um einen fcc-Kristall handeln,
+gemäß Aufgabenstellung bleibt dann nur noch eine gcc-Struktur für das Gitter übrig.
+
+
+
+
 
 \subsubsection*{b)}
 
