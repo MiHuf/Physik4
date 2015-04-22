@@ -66,7 +66,7 @@ Mit \eqref{eq1} lässt die die Absorptions-Wellenlänge berechnen:
 \lambda &= \frac{8 m a^2 c }{3 h}
 \end{align*}
 Das ergibt mit den Zahlenwerten $m = \unit{9,109}{\cdot 10^{-31}}{\kilogram},\;
-c = \unit{2,998}{\cdot 10^8}{\meter/\second},\;
+c = \unit{2,998}{\cdot 10^8}{\meter/\second},\\
 h = \unit{6,626}{\cdot 10^{-34}}{\kilogram \, \meter\squared / \second}$
 und $a = \unit{4}{\cdot 10^{-10}}{\meter}$\footnote{Die Einheit $\mathrm{\AA}$
 ist in DIN 1301-3 ausdrücklich als nicht mehr zugelassene Einheit aufgeführt.
@@ -156,7 +156,7 @@ einer Drehung um $90^\circ$ um die $\vec e_z$-Achse.
 
 \subsection*{Aufgabe 5}
 \subsubsection*{a)}
-Betrachtet wird eine $(h,k,l)$ Ebene, also jene Ebene, die definiert ist durch Ihre Schnittpunkte mit den Achsen in folgender WEise:
+Betrachtet wird eine $(h,k,l)$ Ebene, also jene Ebene, die definiert ist durch Ihre Schnittpunkte mit den Achsen in folgender Weise:
 \begin{align*}
 \vec{S_1}=\frac{1}{h}\vec{a_1}\\
 \vec{S_2}=\frac{1}{k}\vec{a_2}\\
@@ -164,32 +164,38 @@ Betrachtet wird eine $(h,k,l)$ Ebene, also jene Ebene, die definiert ist durch I
 \end{align*}
 z.Z: der reziproke Gittervektor:
 \begin{align*}
-\vec{G_{hkl}}=h\cdot\vec{b_1}+k\cdot\vec{b_2}+l\cdot\vec{b_3} = \frac{2\pi}{V_e}(k\vec{a_3}\times\vec{a_1}-l\vec{a_1}\times\vec{a_2}+h\vec{a_2}\times\vec{a_3})
+\vec G_{hkl}=h\cdot\vec{b_1}+k\cdot\vec{b_2}+l\cdot\vec{b_3} = \frac{2\pi}{V_e}(h\vec{a_2}\times\vec{a_3}+k\vec{a_3}\times\vec{a_1}+l\vec{a_1}\times\vec{a_2})
 \end{align*}
 steht senkrecht auf der $(h,k,l)$ Ebene. Betrachte dazu zwei Vektoren, die die $(h,k,l)$ Ebene aufspannen:
 \begin{align*}
-\vec{u}=-\frac{1}{h}\cdot\vec{a_1}+\frac{1}{k}\cdot\vec{a_2}\\
-\vec{v}=-\frac{1}{h}\cdot\vec{a_1}+\frac{1}{l}\cdot\vec{a_3}
+\vec{u}=\frac{1}{h}\cdot\vec{a_1}+\frac{1}{k}\cdot\vec{a_2}\\
+\vec{v}=\frac{1}{h}\cdot\vec{a_1}+\frac{1}{l}\cdot\vec{a_3}
 \end{align*}
 und das Kreuzprodukt dieser:
 \begin{align*}
-\vec{u}\times\vec{v} &= (-\frac{1}{h}\cdot\vec{a_1}+\frac{1}{k}\cdot\vec{a_2})\times(-\frac{1}{h}\cdot\vec{a_1}+\frac{1}{l}\cdot\vec{a_3})\\
-&= -\frac{1}{h\cdot l}\vec{a_1}\times\vec{a_3}-\frac{1}{h\cdot k}\vec{a_2}\times\vec{a_1}+\frac{1}{k\cdot l}\vec{a_2}\times\vec{a_3}\\
-&= k\vec{a_3}\times\vec{a_1}+l\vec{a_1}\times\vec{a_2}+h\vec{a_2}\times\vec{a_3}\\
-&= \frac{V_e}{2\pi}\vec{G_{hkl}}
+\vec{u}\times\vec{v} &= (\frac{1}{h}\cdot\vec{a_1}+\frac{1}{k}\cdot\vec{a_2})\times(\frac{1}{h}\cdot\vec{a_1}+\frac{1}{l}\cdot\vec{a_3})\\
+&= \frac{1}{h\cdot l}\vec{a_1}\times\vec{a_3}+\frac{1}{h\cdot k}\vec{a_2}\times\vec{a_1}+\frac{1}{k\cdot l}\vec{a_2}\times\vec{a_3}\\
+&= \frac{1}{hkl}\left(h\vec{a_2}\times\vec{a_3}+k\vec{a_3}\times\vec{a_1}+l\vec{a_1}\times\vec{a_2}\right)
+&\propto \vec G_{hkl}
 \end{align*}
+Also ist $\vec G_{hkl}$ parallel zu $\vec{u}\times\vec{v}$
+und steht somit senkrecht zu der durch $\vec u$ und $\vec v$ aufgespannten Ebene.
+
 Außerdem: z.Z.: der Abstand zweier benachbarter, paralleler Netzebenen ist:
 \begin{align*}
 d_{hkl}=\frac{2\pi}{|\vec{G_{hkl}}|}
 \end{align*}
-Eine zur $(h,k,l)$ benachbarte Ebene geht durch den Ursprung des Koordinatensystems. Daher berechnen wir den Abstand der $(h,k,l)$ Ebene zum ursprung indem wir Sie in die Hesse'sche Normalform bringen:
+Eine zur $(h,k,l)$ benachbarte Ebene geht durch den Ursprung des Koordinatensystems. Daher berechnen wir den Abstand der $(h,k,l)$ Ebene zum Ursprung indem wir Sie in die Hesse'sche Normalform bringen:
 \begin{align*}
-\vec{r}\cdot n_0 = d
+\vec{r}\cdot \vec n_0 = d
 \end{align*}
-Dabei ist $n_0 = \frac{\vec{G_{hkl}}}{|\vec{G_{hkl}}|}$ ein normierter Normalenvektor und d ergibt sich aus dem Ortsvektor eines beliebigen Punktes auf der Ebene, z.B. $\vec{r}=\frac{1}{h}\cdot\vec{a_1}$:
+Dabei ist $ \vec n_0 = \frac{\vec{G_{hkl}}}{|\vec{G_{hkl}}|}$ ein normierter Normalenvektor und d ergibt sich aus dem Ortsvektor eines beliebigen Punktes auf der Ebene, z.B. $\vec{r}=\frac{1}{h}\cdot\vec{a_1}$:
 \begin{align*}
-\vec{r}\cdot n_0 &= d\\
-\rightarrow &\frac{1}{h}\cdot\vec{a_1}\cdot\frac{\vec{G_{hkl}}}{|\vec{G_{hkl}}|} = \frac{\frac{2\pi}{V_e}(k\vec{a_3}\times\vec{a_1}-l\vec{a_1}\times\vec{a_2}+h\vec{a_2}\times\vec{a_3})}{|\vec{G_{hkl}}|} = \frac{\frac{2\pi}{V_e}k\vec{a_1}\cdot(\vec{a_3}\times\vec{a_1})}{|\vec{G_{hkl}}|} = \frac{\frac{V_e 2\pi}{V_e}}{|\vec{G_{hkl}}|} =\frac{2\pi}{|\vec{G_{hkl}}|}
+d &= \vec{r}\cdot \vec n_0
+= \frac{1}{h}\vec{a_1}\cdot\frac{\vec{G_{hkl}}}{|\vec{G_{hkl}}|}
+= \frac{1}{h}\vec{a_1}\cdot\frac{\frac{2\pi}{V_e}(h\vec{a_2}\times\vec{a_3}+k\vec{a_3}\times\vec{a_1}+l\vec{a_1}\times\vec{a_2})}{|\vec{G_{hkl}}|}\\
+&= \frac{2\pi}{V_e} \cdot \frac{\frac{1}{h}\vec{a_1}\cdot(h \vec{a_2}\times\vec{a_3})}{|\vec{G_{hkl}}|} =
+\frac{2\pi}{V_e} \cdot \frac{V_e}{|\vec{G_{hkl}}|} =\frac{2\pi}{|\vec{G_{hkl}}|}
 \end{align*}
 \subsubsection*{b)}
 z.Z: Die Laue Bedingung $\vec{G} = \vec{k}-\vec{k}'$ ist äquivalent zur Bragg Bedingung: $2d_{hkl}sin(\theta)'=n\cdot\lambda$. Dazu quadrieren wir zunächst die Laue Bedingung und benutzen:
