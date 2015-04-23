@@ -29,12 +29,12 @@
 Bei der Steuung an Kristallen ist die Streuamplitude $A$ gegeben durch
 $A \propto N_E \cdot S_{\vec G}$ mit $N_E$ als Zahl der Elementarzellen und
 dem Strukturfaktor $S_{\vec G}$. Dieser ergibt sich durch Integration über die
-Elektronendichte $\rho_A^j$ des $j$-ten Atoms einer Elementarzelle und durch
-Summation über die Atome einer Elementarzelle gemäß
+Elektronendichte $\rho_A^j$ des $j$-ten Atoms einer Wigner-Seitz-Zelle (WS)
+und durch Summation über die Atome der Wigner-Seitz-Zelle gemäß
 \begin{align*}
-  S_{\vec G} = \sum_{j} e^{i \vec G \cdot \vec r_j} \cdot \underbrace{
-  \left[ \int_{\text{Atom}}\rho_A^j (\vec r') d^3 r'  \right] }_{= f_j} =
-  \sum_{j} f_j \cdot e^{i \vec G \cdot \vec r_j}
+  S_{\vec G} = \sum_{j \in \text{WS}} e^{i \vec G \cdot \vec r_j} \cdot \underbrace{
+   \int \limits_{\text{Atom}}\rho_A^j (\vec r') d^3 r'}_{= f_j} =
+   \sum_{j \in \text{WS}} f_j \cdot e^{i \vec G \cdot \vec r_j}
 \end{align*}
 Da bei einem Elementkristall alle Atome identisch sind, sind auch alle $f_j$
 identisch $= f$. Der Vektor $\vec r_j$ zeigt stets auf einen Punkt
@@ -58,7 +58,7 @@ $S_{\vec G} = 0$.
 
 Da im Streuspektrum Linien gerader und ungerader Ebenen gemischt vorkommen
 (1,1,0) und (2,1,1), kann es sich nicht um einen fcc-Kristall handeln,
-gemäß Aufgabenstellung bleibt dann nur noch eine gcc-Struktur für das Gitter übrig.
+gemäß Aufgabenstellung bleibt dann nur noch eine bcc-Struktur für das Gitter übrig.
 
 \subsubsection*{b)}
 Die Netzebenenabstände lassen sich aus der Bragg-Bedingung
