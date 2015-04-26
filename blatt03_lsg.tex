@@ -32,9 +32,9 @@ dem Strukturfaktor $S_{\vec G}$. Dieser ergibt sich durch Integration über die
 Elektronendichte $\rho_A^j$ des $j$-ten Atoms einer Wigner-Seitz-Zelle (WS)
 und durch Summation über die Atome der Wigner-Seitz-Zelle gemäß
 \begin{align*}
-  S_{\vec G} = \sum_{j \in \text{WS}} e^{i \vec G \cdot \vec r_j} \cdot \underbrace{
+  S_{\vec G} = \sum_{j \in \text{WS}} \mathrm e^{i \vec G \cdot \vec r_j} \cdot \underbrace{
    \int \limits_{\text{Atom}}\rho_A^j (\vec r') d^3 r'}_{= f_j} =
-   \sum_{j \in \text{WS}} f_j \cdot e^{i \vec G \cdot \vec r_j}
+   \sum_{j \in \text{WS}} f_j \cdot \mathrm e^{i \vec G \cdot \vec r_j}
 \end{align*}
 Da bei einem Elementkristall alle Atome identisch sind, sind auch alle $f_j$
 identisch $= f$. Der Vektor $\vec r_j$ zeigt stets auf einen Punkt
@@ -49,7 +49,7 @@ $(u_j,v_j,w_j) = (0,0,0); (0,\frac{1}{2},\frac{1}{2}); (\frac{1}{2}, 0, \frac{1}
 (\frac{1}{2},\frac{1}{2}, 0)$. Damit wird
 \begin{align*}
   S_{\vec G} = f \cdot \sum_{j}  e^{i \vec G \cdot \vec r_j} =
-  f \cdot \left(1 + e^{i \pi (h + k)} + e^{i \pi (h + l)} +e^{i \pi (k + l)} \right)
+  f \cdot \left(1 + \mathrm e^{i \pi (h + k)} + \mathrm e^{i \pi (h + l)} + \mathrm e^{i \pi (k + l)} \right)
   \text{ mit } h, k, l \in \NN
 \end{align*}
 Die Exponentialfunktionen haben entweder den Wert $+1$ oder $-1$, insgesamt wird dann
@@ -96,7 +96,7 @@ $a = \unit{286,6}{\pico \meter}$, es handelt sich also vermutlich um
 
 \subsection*{Aufgabe 7}
 \subsubsection*{a)}
-Ein $C_{60}$ Molekül mit Radius $R$ besitzt die Gesamtladung: $Q=60\cdot 6e=360e$.
+Ein $C_{60}$ Molekül mit Radius $R$ besitzt die Gesamtladung: $Q=60\cdot 6 \cdot e=360 \cdot e$.
 Das ergibt sich durch Integration über die Flächenladungsdichte $q_0$ gemäß
 $q(\vec{r})=q_0\delta(R-|\vec{r}|) = q_0\delta(R-r)$:
 
@@ -105,24 +105,25 @@ $q(\vec{r})=q_0\delta(R-|\vec{r}|) = q_0\delta(R-r)$:
 Q &= \int_{V}^{} \! q(\vec{r})\, \mathrm{d}V =
   \int_{0}^{\pi} \! r^2 \sin(\theta)\, \mathrm{d}\theta\int_{0}^{2\pi} \! \, \mathrm{d}\phi \int_{0}^{\infty} \! q_0\delta(r-R)\, \mathrm{d}r  = 4 \pi R^2 q_0\\
 \label{eq-q}
-  &\Rightarrow q_0 = \frac{Q}{4\pi R^2}=\frac{360e}{4\pi R^2}
+  &\Rightarrow q_0 = \frac{Q}{4\pi R^2}=\frac{360\cdot e}{4\pi R^2}
 \end{align}
 \subsubsection*{b)}
 \begin{align*}
-f(\vec{G}) &= \int_{V}^{} \! q(\vec{r})e^{i\vec{G}\cdot\vec{r}}\, \mathrm{d}V \\
-   &=q_0  \int_0^{2 \pi} \int_0^\pi  \int_{0}^{\infty} r^2 \sin(\theta)\, e^{i G r \cos(\theta)}\, \delta(r-R)
+f(\vec{G}) &= \int_{V}^{} \! \rho (\vec{r}) \; \mathrm e^{i\vec{G}\cdot\vec{r}}\, \mathrm{d}V =
+   \frac{1}{e} \;\int_{V}^{} \! q(\vec{r}) \; \mathrm e^{i\vec{G}\cdot\vec{r}}\, \mathrm{d}V\\
+   &=\frac{q_0}{e}\;   \int_0^{2 \pi} \int_0^\pi  \int_{0}^{\infty} r^2 \sin(\theta)\, \mathrm e^{i G r \cos(\theta)}\, \delta(r-R)
    \,\mathrm{d} r\, \mathrm{d}\theta\, \mathrm{d} \phi
 \intertext{Mit der Substitution $u = \cos(\theta)\,;\; \mathrm{d} \theta =  -\frac{\mathrm{d} u}{\sin(\theta)}
 \,;\; \theta \in [0,\pi] \Rightarrow u \in [+1,-1]$ ergibt das:}
-  &=2 \pi \cdot q_0 \int_{-1}^{+1}  \int_{0}^{\infty} r^2 e^{i G r u}\, \delta(r-R)
+  &=2 \pi \cdot \frac{q_0}{e}\; \int_{-1}^{+1} \int_{0}^{\infty} r^2 \mathrm e^{i G r u}\, \delta(r-R)
    \,\mathrm{d} r\, \mathrm{d} u\\
-\int_{-1}^{+1} e^{i G r u} \, \mathrm{d} u &= \frac{1}{G r} \left[e^{i G r u} \right]_{u = -1}^{u = +1} =
-  \frac{1}{G r} \left[e^{i G r} - e^{-i G r} \right] = \frac{2}{G r} \cdot \sin(G r)\\
-f(\vec{G}) &= 2 \pi \cdot q_0 \int_{0}^{\infty} r^2 \frac{2}{G r} \cdot \sin(G r) \, \delta(r-R)
+\int_{-1}^{+1} \mathrm e^{i G r u} \, \mathrm{d} u &= \frac{1}{i G r} \left[\mathrm e^{i G r u} \right]_{u = -1}^{u = +1} =
+  \frac{1}{i G r} \left[\mathrm e^{i G r} - \mathrm e^{-i G r} \right] = \frac{2}{G r} \cdot \sin(G r)\\
+f(\vec{G}) &= 2 \pi \cdot \frac{q_0}{e}\; \int_{0}^{\infty} r^2 \frac{2}{G r} \cdot \sin(G r) \, \delta(r-R)
    \,\mathrm{d} r\\
-   &= 4 \pi \cdot q_0 \cdot R^2 \frac{\sin(G R)}{G R}
+   &= 4 \pi \cdot \frac{q_0}{e}\; \cdot R^2 \; \frac{\sin(G R)}{G R}
 \intertext{Mit $q_0$ gemäß \eqref{eq-q} wird das:}
-  f(\vec{G}) &= 360 \; e \; \cdot  \frac{\sin(G R)}{G R}
+  f(\vec{G}) &= 360  \cdot  \frac{\sin(G R)}{G R}
 \end{align*}
 \subsubsection*{c)}
 Die Ladungsverteilung $q(\vec{r}) = q_0\delta(R-r)$ ist eine scharf begrenzte Kugeloberfläche.
