@@ -96,10 +96,28 @@ $a = \unit{286,6}{\pico \meter}$, es handelt sich also vermutlich um
 
 \subsection*{Aufgabe 7}
 \subsubsection*{a)}
+$\int_{}^{} \! \, \mathrm{d}$
+Ein $C_60$ Molekül mit Radius $R$ besitzt die Gesamtladung: $Q=60\cdot 6e=360e$. Daraus lässt sich $q_0$ bestimmen mit Hilfe von $q(\vec{r})=q_0\delta(R-|\vec{r}|) = q_0\delta(R-r)$:
 
+\begin{align*}
+Q   &= \int_{V}^{} \! q(\vec{r})\, \mathrm{d}V = \int_{0}^{\pi} \! \cos(\theta)\, \mathrm{d}\theta\int_{0}^{2\pi} \! \, \mathrm{d}\phi \int_{0}^{\infty} \! q_0\delta(r-R)\, \mathrm{d}r\\
+    &= 4\pi q_0\\
+    &\rightarrow q_0 = \frac{Q}{4\pi}=\frac{360e}{4\pi}
+\end{align*}
 \subsubsection*{b)}
-
+\begin{align*}
+f(\vec{G})  &= \frac{1}{e}\int_{V}^{} \! q(\vec{r})e^{i\vec{G}\cdot\vec{r}}\, \mathrm{d}V \\
+            &=q_0\int_{0}^{\pi} \! \sin(\theta)\, \mathrm{d}\theta  \int_{0}^{2\pi} \! \mathrm{d}\phi \int_{0}^{\infty} \! \delta(r-R)e^{iGr\cos{\theta}}\, \mathrm{d}r\\
+            &= 2\pi\cdot q_0\int_{0}^{\pi} \! sin(\theta)e^{iGR\cos(\theta)}\, \mathrm{d}\theta\\
+            &=\frac{2\pi q_0}{i\cdot G\cdot R}\left[e^{G\cdot R\cdot\cos(\theta)}\right]_{0}^{\pi}\\
+            &=\frac{Q}{i2GRe}(e^{-iGR}-e^{iGR})\\
+            &=\frac{Q}{GRe}\sin{GR} = \frac{360}{GR}\sin(GR)
+\end{align*}
 \subsubsection*{c)}
+Die Ladungsverteilung $q(\vec{r}) = q_0\delta(R-r)$ ist eine scharf begrenzte Kugeloberfläche. Der für die Beugung an dieser Ladungsverteilung wichtige Formfaktor $f(\vec{G})$ ergibt sich aus einer Fourier Transformation der Ladungsverteilung, 
+bzw. im Expirement würde der Formfaktor bestimmt und hieraus durch Rück-Transformation die Ladungsverteilung gefunden werden. Durch die scharfe Begerenzung im Ortsraum ergibt sich im Impulsraum eine oszillierende Funktion, deren Frequenz von der Ausdehnung im Ortsraum ($R$) abhängt. 
+Würde man eine durch eine Gauß-Funktion beschriebene Ladungsverteilung (z.b. exponentiell abfallende Aufhenthaltswahrscheinlichkeit des Elektrons beim Wasserstoff) betrachten, erhielte man, dadurch, dass sie im Ortsraum nicht scharf begrenzt ist, im Impulsraum keine oszillierende
+Funktion, sondern vielmehr wider eine Gauß-Kurve.
 
 \end{document}
 
