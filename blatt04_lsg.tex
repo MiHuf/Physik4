@@ -52,31 +52,44 @@ die nur noch von der Struktur des Gitters abhängen.  Dabei ist $R$ derAbstand
 zum nächsten Nachbarn. Das ergibt für die potentielle Energie:
 \begin{align}
 \label{eq-U2}
-  U(R) = 2 N \varepsilon \cdot \left[ A_{12} \left(\frac{\sigma}{R}\right)^{12} -
+  U(R) = \frac{1}{2} N \varepsilon \cdot \left[ A_{12} \left(\frac{\sigma}{R}\right)^{12} -
   A_6 \left(\frac{\sigma}{R}\right)^{6} \right] =
-  2 N \varepsilon \cdot \left( A_{12} \sigma^{12} R^{-12} -
+  \frac{1}{2} N \varepsilon \cdot \left( A_{12} \sigma^{12} R^{-12} -
   A_6 \sigma^6 R^{-6} \right)
 \end{align}
 Im Gleichgewichtsabstand $R_0$ hat $U(R)$ ein Minimum, dazu differenzieren
 wir \eqref{eq-U2}:
 \begin{align}
 \label{eq-DU}
-  \frac{\mathrm{d}}{\mathrm{d} R} U(R) = - 2 N \varepsilon \cdot
+  \frac{\mathrm{d}}{\mathrm{d} R} U(R) = - \frac{1}{2} N \varepsilon \cdot
     \left(12 A_{12} \sigma^{12} R^{-13} - 6 A_6 \sigma^6 R^{-7} \right)
 \end{align}
 Nullsetzen von \eqref{eq-DU} liefert schließlich:
-\begin{align*}
-  \left. \frac{\mathrm{d}}{\mathrm{d} R} U(R) \right|_{R_0} = 0 \;& \Rightarrow\;
-  12 A_{12} \sigma^{12} R_0^{-13} = 6 A_6 \sigma^6 R_0^{-7} \; \Rightarrow\;
-  2 A_{12} \sigma^{12} R_0^{-6} = A_6 \sigma^6\\
-  \;& \Rightarrow\; R_0 = \left( 2 \cdot \frac{A_{12}}{A_6}\right)^{1/6} \cdot \sigma
-\end{align*}
-
-
-
-
+\begin{align}
+  \nonumber
+  \left. \frac{\mathrm{d}}{\mathrm{d} R} U(R) \right|_{R_0} = 0 \quad& \Rightarrow\;
+  12 A_{12} \sigma^{12} R_0^{-13} = 6 A_6 \sigma^6 R_0^{-7} \quad \Rightarrow\;
+  2 A_{12} \sigma^6 R_0^{-6} = A_6 \\
+  \label{eq-R0}
+  \;& \Rightarrow\; R_0 = \left(\frac{2 \cdot A_{12}}{A_6}\right)^{1/6} \cdot \sigma
+\end{align}
 
 \subsubsection*{b)}
+Die Bindungsenergie pro Atom $\frac{U(R}{N}$ im Gleichgewichtsabstand $R_0$
+ergibt sich aus \eqref{eq-R0} eingesetzt in \eqref{eq-U2}:
+\begin{align*}
+  \frac{U(R_0)}{N} &= \frac{1}{2} \varepsilon \left[ A_{12}  \left(
+  \left(\frac{2 \cdot A_{12}}{A_6}\right)^{1/6}\right)^{-12} -
+  A_6 \left(
+  \left(\frac{2 \cdot A_{12}}{A_6}\right)^{1/6} \right)^{-6}
+  \right] =  - \frac{A_6^2}{2 \cdot A_{12}} \cdot  \varepsilon
+\intertext{Mit den Zahlenwerten aus dem Aufgabenblatt wird die Bindungsenergie pro Atom}
+ \frac{U(R_0)}{N} &= - 8,610161 \cdot \varepsilon = -\unit{26,69}{\milli\electronvolt}
+ \intertext{und für den Gleichgewichtsabstand $R_0$ eines Atoms zum nächsten Nachbarn
+ ergibt Gleichung \eqref{eq-R0}:}
+ R_0 &=1,09002 \cdot \sigma = \unit{303,07}{\pico\meter}
+\end{align*}
+
 
 \subsubsection*{c)}
 
