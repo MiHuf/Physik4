@@ -25,6 +25,56 @@
 \begin{document}
 \subsection*{Aufgabe 8}
 \subsubsection*{a)}
+Gegeben seien zwei einzelne Ne-Atome im Abstand $r$. Duch die induzierten
+Dipolmomente "`sieht"' jedes Atoms das andere als Lennard-Jones-Potential der Form
+\begin{align}
+  \varphi(r)_{LJ} = 4 \varepsilon \left[ \left(\frac{\sigma}{r}\right)^{12} -
+    \left(\frac{\sigma}{r}\right)^{6} \right]
+\end{align}
+Die Parameter $\varepsilon$ und $\sigma$ hängen nur von der Atomsorte ab.
+In einem Kristall mit $N$ Atomen mit dem Abstand $r_{ij}$ zwischen dem
+$i$-ten und $j$-ten Atom muss das Lennard-Jones-Potential über alle Atome
+aufsummiert werden. Damit wird die gesamte potentielle Energie $U$:
+\begin{align}
+\label{eq-U}
+  U = \frac{1}{2} N \sum_{i \ne j} 4 \varepsilon
+  \left[ \left(\frac{\sigma}{r_{ij}}\right)^{12} -
+  \left(\frac{\sigma}{r_{ij}}\right)^{6} \right]
+\end{align}
+Der Faktor 1/2 stellt sicher, dass jedes Atom nur einmal gezählt wird.
+Gleichung \eqref{eq-U} lässt sich vereinfachen mit der Einführung von
+(dimensionslosen) Gittersummen
+\begin{align*}
+  A_6 & = \left . \sum_{i \ne j} \left(\frac{R}{r_{ij}}\right)^6 \right .\qquad
+  A_{12} = \sum_{i \ne j} \left(\frac{R}{r_{ij}}\right)^{12}
+\end{align*}
+die nur noch von der Struktur des Gitters abhängen.  Dabei ist $R$ derAbstand
+zum nächsten Nachbarn. Das ergibt für die potentielle Energie:
+\begin{align}
+\label{eq-U2}
+  U(R) = 2 N \varepsilon \cdot \left[ A_{12} \left(\frac{\sigma}{R}\right)^{12} -
+  A_6 \left(\frac{\sigma}{R}\right)^{6} \right] =
+  2 N \varepsilon \cdot \left( A_{12} \sigma^{12} R^{-12} -
+  A_6 \sigma^6 R^{-6} \right)
+\end{align}
+Im Gleichgewichtsabstand $R_0$ hat $U(R)$ ein Minimum, dazu differenzieren
+wir \eqref{eq-U2}:
+\begin{align}
+\label{eq-DU}
+  \frac{\mathrm{d}}{\mathrm{d} R} U(R) = - 2 N \varepsilon \cdot
+    \left(12 A_{12} \sigma^{12} R^{-13} - 6 A_6 \sigma^6 R^{-7} \right)
+\end{align}
+Nullsetzen von \eqref{eq-DU} liefert schließlich:
+\begin{align*}
+  \left. \frac{\mathrm{d}}{\mathrm{d} R} U(R) \right|_{R_0} = 0 \;& \Rightarrow\;
+  12 A_{12} \sigma^{12} R_0^{-13} = 6 A_6 \sigma^6 R_0^{-7} \; \Rightarrow\;
+  2 A_{12} \sigma^{12} R_0^{-6} = A_6 \sigma^6\\
+  \;& \Rightarrow\; R_0 = \left( 2 \cdot \frac{A_{12}}{A_6}\right)^{1/6} \cdot \sigma
+\end{align*}
+
+
+
+
 
 \subsubsection*{b)}
 
