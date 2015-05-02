@@ -96,14 +96,14 @@ Gleichgewichtszustand $R_0$ macht man eine Taylor-Entwicklung für das
 Lennard-Jones-Potential bis zum zweiten Grad:
 \begin{align*}
   u(x) = u(R - R_0) = \left. u(x) \right|_{x = 0} +
-    a \cdot \left.\frac{\mathrm d u(x)}{\mathrm d x} \right|_{x = 0} \cdot x
-    + \frac{1}{2} \left. \frac{\mathrm d^2 u(x)}{\mathrm d x^2} \right|_{x = 0}
-     \cdot x^2
+    \left.\frac{\mathrm d u(x)}{\mathrm d x} \right|_{x = 0} \cdot x +
+    \frac{1}{2} \left.\frac{\mathrm d^2 u(x)}{\mathrm d x^2} \right|_{x = 0}
+    \cdot x^2
 \end{align*}
 Durch die Wahl des Nullpunkts verschwindet hier der lineare Term.
-Ein Vergleich mit dem Potential $U(x) = - \int_{-\infty}^x F(x') dx'$ eines
-Federpendels $F = - k \cdot x$, also $U(x) = \frac{1}{2} k x^2$ ergibt
-mit \eqref{eq-DU} die Federkonstante:
+Ein Vergleich einem Federpendel, Kraftgesetz $F = - k \cdot x$,
+Potential $U(x) = -\int F(x') dx' = \frac{1}{2} k x^2 + C$ ergibt
+mit \eqref{eq-DU} die Federkonstante des Ne-Atoms:
 \begin{align*}
 k &=  \left. \frac{\mathrm d^2 u(x)}{\mathrm d x^2} \right|_{x = 0} =
   \frac{1}{2} \varepsilon \cdot \left(12 \cdot 13 \cdot A_{12} \cdot \sigma^{12} \cdot R_0^{-14}
@@ -112,15 +112,18 @@ k &=  \left. \frac{\mathrm d^2 u(x)}{\mathrm d x^2} \right|_{x = 0} =
     - 21 \cdot \left(\frac{A_6}{2 \cdot A_{12}}\right)^{4/3}\right)
 \intertext{Mit den Zahlenwerten der Aufgabenstellung:}
 k &= 12,7635 \cdot \frac{\varepsilon}{\sigma^2} =
-  \unit{0,511967}{\frac{\electronvolt}{\nano\meter^2}} = \unit{0,08203}{\frac{\newton}{\meter}}
+  \unit{0,511967}{\frac{\electronvolt}{\nano\meter^2}} =
+  \unit{0,511967}{\cdot 10^{18}}{\frac{\electronvolt}{\meter^2}} =
+  \unit{0,08203}{\frac{\newton}{\meter}}
 \intertext{Mit der Masse $M_{\text{Neon}} = \unit{3,35}{\cdot 10^{-26}}{\kilogram}$ lässt sich dann die Schwingungsfrequenz berechnen:}
-\omega_0 &= \sqrt{\frac{k}{M}} =
+\omega_0 &= \sqrt{\frac{k}{M}} = \unit{1,56467}{\cdot 10^{12}}{\hertz} \qquad
+  f = \unit{249}{\giga\hertz}
 \intertext{Die Nullpunkts-Energie wird dann:}
-E_0 &= \frac{1}{2} \hbar \omega_0 =
+E_0 &= \frac{1}{2} \hbar \omega_0 = \unit{8,250}{\cdot 10^{-23}}{J} = \unit{0,515}{\milli\electronvolt}
 \end{align*}
-
-
-
+Das Buch von Gross und Marx kommt auf Seite 106 zu dem Ergebnis
+$E_0 = \unit{8}{\milli\electronvolt}$ wir finden aber keinen Fehler in unserer
+Rechnung.
 
 \subsection*{Aufgabe 9}
 \subsubsection*{a)}
