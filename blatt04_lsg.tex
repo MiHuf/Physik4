@@ -127,11 +127,44 @@ E_0 &= \frac{1}{2} \hbar \omega_0 = \unit{8,250}{\cdot 10^{-23}}{J} = \unit{0,51
 \end{align*}
 Das Buch von Gross und Marx kommt auf Seite 106 zu dem Ergebnis
 $E_0 = \unit{8}{\milli\electronvolt}$ wir finden aber keinen Fehler in unserer
-Rechnung.
+Rechnung.1
 
 \subsection*{Aufgabe 9}
 \subsubsection*{a)}
+Wir betrachten das $n-te$ Molekül in einem Kristallgitter mit zweiatomiger Basis. Die Koordinaten der beiden Atome beschreiben wir mit Relativkoordinaten bezüglich ihrer Ruhelage $u_n$ und $v_n$. Die beiden Atome eines Moleküls koppeln mit der konstanten $C_1 = 10C$ und mit dem Nachbarmolekül über $C_2 = C$. Dadurch ergeben sich die Bewegungsgleichungen für die beiden Atome im Molekül zu:
+\begin{align*}
+M\frac{\partial^2 u_n}{\partial t^2} = C_1\cdot (v_n-u_n)+C_2(v_{n-1}-u_n)=10Cv_n-11Cu_n+Cv_{n-1}\\
+M\frac{\partial^2 v_n}{\partial t^2} = C_1\cdot (u_n-v_n)+C_2(u_{n+1}-v_n) = 10Cu_n-11Cv_n+Cu_{n+1}
+\end{align*}
+Daraus ergibt sich:
 
+\begin{align*}
+M\frac{\partial^2 u_n}{\partial t^2}+C(11u_n-v_n-v_{n-1})=0\\
+M\frac{\partial^2 v_n}{\partial t^2}+C(11v_n-10u_n-u_{n+1})=0
+\end{align*}
+Einsetzen des Ansatzes $u_n(t)=u_0\mathrm{e}^{i(qna-\omega t)}$ und $v_n(t)=v_0\mathrm{e}^{i(qna-\omega t)}$ ergibt sich:
+\begin{align*}
+(-u_0M\omega^2+11Cu_0-Cv_0-Cv_0\mathrm{e}^{-iqa}=(11C-M\omega^2)u_0-v_0C(1+\mathrm{e}^{-iqa})=0\\
+(-v_0M\omega^2+11Cv_0-u_0C(10-\mathrm{e}^{iqa})=(11C-M\omega^2)v_0-u_0C(10-\mathrm{e}^{iqa})=0
+\end{align*}
+
+Dadurch ergibt sich die dynamische Matrix:
+
+\begin{align*}
+\begin{pmatrix}
+11C & C(1+\mathrm{e}^{-iqa})\\
+C(10-\mathrm{e}^{iqa}) & 11C
+\end{pmatrix}
+\end{align*}
+Die Determinante ist $M\omega^2$ und somit ist:
+\begin{align*}
+\omega(q)&=\left(\frac{1}{M}det\begin{pmatrix}
+11C & C(1+\mathrm{e}^{-iqa})\\
+C(10-\mathrm{e}^{iqa}) & 11C
+\end{pmatrix}\right)^{\frac{1}{2}}
+= \left(\frac{(11C)^2-C^2(10-\mathrm{e}^{iqa})(1+\mathrm{e}^{-iqa}}{M}\right)^{\frac{1}{2}}\\
+&=\left(\frac{(11C)^2-C^2(9+10\mathrm{e}^{-iqa}-\mathrm{e}^{iqa}}{M}\right)^{\frac{1}{2}}
+\end{align*}
 \subsubsection*{b)}
 
 \subsubsection*{c)}
