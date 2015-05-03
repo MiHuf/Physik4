@@ -56,16 +56,16 @@ die nur noch von der Struktur des Gitters abhängen.  Dabei ist $R$ derAbstand
 zum nächsten Nachbarn. Das ergibt für die potentielle Energie:
 \begin{align}
 \label{eq-U2}
-  U(R) = \frac{1}{2} N \varepsilon \cdot \left[ A_{12} \left(\frac{\sigma}{R}\right)^{12} -
+  U(R) = 2 N \varepsilon \cdot \left[ A_{12} \left(\frac{\sigma}{R}\right)^{12} -
   A_6 \left(\frac{\sigma}{R}\right)^{6} \right] =
-  \frac{1}{2} N \varepsilon \cdot \left( A_{12} \sigma^{12} R^{-12} -
+  2 N \varepsilon \cdot \left( A_{12} \sigma^{12} R^{-12} -
   A_6 \sigma^6 R^{-6} \right)
 \end{align}
 Im Gleichgewichtsabstand $R_0$ hat $U(R)$ ein Minimum, dazu differenzieren
 wir \eqref{eq-U2}:
 \begin{align}
 \label{eq-DU}
-  \frac{\mathrm{d}}{\mathrm{d} R} U(R) = - \frac{1}{2} N \varepsilon \cdot
+  \frac{\mathrm{d}}{\mathrm{d} R} U(R) = - 2 N \varepsilon \cdot
     \left(12 A_{12} \sigma^{12} R^{-13} - 6 A_6 \sigma^6 R^{-7} \right)
 \end{align}
 Nullsetzen von \eqref{eq-DU} liefert schließlich:
@@ -82,13 +82,13 @@ Nullsetzen von \eqref{eq-DU} liefert schließlich:
 Die Bindungsenergie $u(R)$ pro Atom im Gleichgewichtsabstand $R_0$
 ergibt sich aus \eqref{eq-R0} eingesetzt in \eqref{eq-U2}:
 \begin{align*}
-  u(R_0) &:= \frac{U(R_0)}{N} = \frac{1}{2} \varepsilon \left[ A_{12}  \left(
+  u(R_0) &:= \frac{U(R_0)}{N} = 2 \varepsilon \left[ A_{12}  \left(
   \left(\frac{2 \cdot A_{12}}{A_6}\right)^{1/6}\right)^{-12} -
   A_6 \left(
   \left(\frac{2 \cdot A_{12}}{A_6}\right)^{1/6} \right)^{-6}
-  \right] =  - \frac{A_6^2}{2 \cdot A_{12}} \cdot  \varepsilon
+  \right] =  - \frac{A_6^2}{A_{12}} \cdot  \varepsilon
 \intertext{Mit den Zahlenwerten aus dem Aufgabenblatt wird die Bindungsenergie pro Atom}
-  u(R_0) &= - 8,610161 \cdot \varepsilon = -\unit{26,69}{\milli\electronvolt}
+  u(R_0) &= - 1,72206 \cdot \varepsilon = -\unit{5,3383}{\micro\electronvolt}
  \intertext{und für den Gleichgewichtsabstand $R_0$ eines Atoms zum nächsten Nachbarn
  ergibt Gleichung \eqref{eq-R0}:}
  R_0 &=1,0902 \cdot \sigma = \unit{303,07}{\pico\meter}
@@ -110,20 +110,20 @@ Potential $U(x) = -\int F(x') dx' = \frac{1}{2} k x^2 + C$ ergibt
 mit \eqref{eq-DU} die Federkonstante des Ne-Atoms:
 \begin{align*}
 k &=  \left. \frac{\mathrm d^2 u(x)}{\mathrm d x^2} \right|_{x = 0} =
-  \frac{1}{2} \varepsilon \cdot \left(12 \cdot 13 \cdot A_{12} \cdot \sigma^{12} \cdot R_0^{-14}
-    - 6 \cdot 7 \cdot A_6  \sigma^6 \cdot R_0^{-8} \right)\\
-  &= \frac{\varepsilon}{\sigma^2} \cdot \left(78 \cdot \left(\frac{A_6}{2 \cdot A_{12}}\right)^{7/3}
-    - 21 \cdot \left(\frac{A_6}{2 \cdot A_{12}}\right)^{4/3}\right)
+  2 \varepsilon \cdot \left(12 \cdot 13 \cdot A_{12} \cdot \sigma^{12} \cdot R_0^{-14}
+    - 6 \cdot 7 \cdot A_6 \cdot  \sigma^6 \cdot R_0^{-8} \right)\\
+  &= \frac{\varepsilon}{\sigma^2} \cdot \left(312 \cdot \left(\frac{A_6}{2 \cdot A_{12}}\right)^{7/3}
+    - 84 \cdot \left(\frac{A_6}{2 \cdot A_{12}}\right)^{4/3}\right)
 \intertext{Mit den Zahlenwerten der Aufgabenstellung:}
-k &= 12,7635 \cdot \frac{\varepsilon}{\sigma^2} =
-  \unit{0,511967}{\frac{\electronvolt}{\nano\meter^2}} =
-  \unit{0,511967}{\cdot 10^{18}}{\frac{\electronvolt}{\meter^2}} =
-  \unit{0,08203}{\frac{\newton}{\meter}}
+k &= 51,0539 \cdot \frac{\varepsilon}{\sigma^2} =
+  \unit{2,04787}{\frac{\electronvolt}{\nano\meter^2}} =
+  \unit{2,04787}{\cdot 10^{18}}{\frac{\electronvolt}{\meter^2}} =
+  \unit{0,328104}{\frac{\newton}{\meter}}
 \intertext{Mit der Masse $M_{\text{Neon}} = \unit{3,35}{\cdot 10^{-26}}{\kilogram}$ lässt sich dann die Schwingungsfrequenz berechnen:}
-\omega_0 &= \sqrt{\frac{k}{M}} = \unit{1,56467}{\cdot 10^{12}}{\hertz} \qquad
-  f = \unit{249}{\giga\hertz}
+\omega_0 &= \sqrt{\frac{k}{M}} = \unit{3,12956}{\cdot 10^{12}}{\hertz} \qquad
+  f = \unit{498}{\giga\hertz}
 \intertext{Die Nullpunkts-Energie wird dann:}
-E_0 &= \frac{1}{2} \hbar \omega_0 = \unit{8,250}{\cdot 10^{-23}}{J} = \unit{0,515}{\milli\electronvolt}
+E_0 &= \frac{1}{2} \hbar \omega_0 = \unit{1,6502}{\cdot 10^{-22}}{J} = \unit{1,03}{\milli\electronvolt}
 \end{align*}
 Das Buch von Gross und Marx kommt auf Seite 106 zu dem Ergebnis
 $E_0 = \unit{8}{\milli\electronvolt}$ wir finden aber keinen Fehler in unserer
