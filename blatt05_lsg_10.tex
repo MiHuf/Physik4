@@ -5,14 +5,14 @@ $f =$ 200 MHz, die Energie eines einzelnen Phonons ist dann $E = h f =
 \unit{6,626}{\cdot 10^{-34}}{\joule\second} \cdot \unit{200}{\mega\hertz} =
 \unit{1,325}{\cdot 10^{-25}}{\joule}$. Wenn der Ultraschallimpuls reflexionsfrei
 auf der Fläche $A = \unit{1}{\centi\meter\squared}$ eingekoppelt wird, wird die
-Energie $E = I \cdot A \cdot t = \unit{1}{\milli\watt\per\centi\meter\squared}
+Energie $\Delta U = I \cdot A \cdot \Delta t = \unit{1}{\milli\watt\per\centi\meter\squared}
 \cdot \unit{1}{\centi\meter\squared} \cdot \unit{10}{\micro\second} =
 \unit{1}{\cdot 10^{-8}}{\joule}$ auf den Kristall übertragen. Damit werden dann
 $7,546 \cdot 10^{16}$ Phononen erzeugt.
 \subsubsection*{b)}
 Da die Temperatur $T = \unit{4,2}{\kelvin}$ klein gegen die Debye-Temperatur
 $\varTheta_D = \unit{640}{\kelvin}$ ist, können wir mit akkustischen Phononen im
-Debye-Modell rechnen. Für $T \ll \varTheta_D$ gilt:
+Debye-Modell rechnen. Für $T \ll \varTheta_D$:
 \begin{align}
 \label{eq-cv}
   c_V = 3 k_B N \cdot \frac{4 \pi^4}{5} \left(\frac{T}{\varTheta_D}\right)^3
@@ -25,14 +25,29 @@ damit ergibt sich für die Anzahl $N$ der Atome im Kristall:
   = 4,997 \cdot 10^{22}
 \intertext{$N$ eingesetzt in \eqref{eq-cv} ergibt dann: }
   c_V &= \frac{12 \pi^4}{5} \cdot 4,997 \cdot 10^{22} \cdot
-    \unit {1,381}{\cdot 10^{-23}}{\joule\per\kelvin}
+    \unit{1,381}{\cdot 10^{-23}}{\joule\per\kelvin}
     \cdot \left(\frac{\unit{4,2}{\kelvin}}{\unit{640}{\kelvin}} \right)^3
-    = \unit{4,56}{\cdot 10^{-5}}{\joule\per\kelvin}\\
+    = \unit{4,558}{\cdot 10^{-5}}{\joule\per\kelvin}\\
   \Delta T &= \frac{\Delta U}{c_V} =
-    \frac{\unit{1}{\cdot 10^{-8}}{\joule}}{\unit{4,56}{\cdot 10^{-5}}{\joule\per\kelvin}} =
-    \unit{2,19}{\cdot 10^{-4}}{\kelvin}
+    \frac{\unit{1}{\cdot 10^{-8}}{\joule}}{\unit{4,558}{\cdot 10^{-5}}{\joule\per\kelvin}} =
+    \unit{2,194}{\cdot 10^{-4}}{\kelvin}
 \end{align*}
 Wegen $\Delta T \ll T$ ist es zulässig, die Temperatur-Änderung mit
 konstantem $ c_V$ zu ermitteln.
 
 \subsubsection*{c)}
+In der Vorlesung (27.4.15, Folie \#10) wurde gezeigt, dass für die Zustandsdichte
+$D(\omega)$ im Debye Modell gilt:
+\begin{align*}
+  D(\omega) &= \frac{9 \cdot N}{\omega_D^3} \cdot \omega^2
+%  \qquad \text{unabhängig von $T$ solange $T \ll \varTheta_D$ gilt.}
+\intertext{Mit der Debye-Frequenz $\omega_D = k_b \cdot \varTheta_D / \hbar$.
+Damit wird an der Stelle $\omega_1 := 2 \pi \cdot \unit{200}{\mega\hertz}$:}
+\left. \frac{\mathrm d N}{\mathrm d \omega}\right|_{\omega_1} &=
+D\left(\omega_1 \right) = \frac{9 \cdot N}{\omega_D^3} \cdot \omega_1^2 =
+\frac{9 \cdot 4,997 \cdot 10^{22}} {\left(
+\frac{\unit{1,381}{\cdot 10^{-23}}{\joule\per\kelvin} \cdot \unit{640}{\kelvin}}
+{\unit{1,055}{\cdot 10^{-45}}{\joule\second}}\right)^3}
+\cdot (2 \pi \cdot \unit{2}{\cdot 10^8}{\second^{-1}})^2
+\end{align*}
+
