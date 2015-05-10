@@ -1,2 +1,12 @@
 \subsection*{Aufgabe 11}
-Mit $D(\omega)=\frac{V}{(2\pi)^3}\int_{\omega=const} \frac{dS_q}{|\nabla_q w(q)|}$
+Es ist im allgemeinen Fall:
+\begin{align*}
+D(E)=\frac{1}{\Delta E}\int_{k(E)}^{k(E+\Delta E)} Z(k) d^3k\end{align*} 
+wobei sich das Volumenintegral im k-Raum abhängig von der Dimension vereinfacht:
+\begin{align*}
+Z_1(k) &= \frac{L}{2\pi} \rightarrow \int_{\frac{E}{c}}^{\frac{E+\Delta E}{c}} Z_1(k) dk = \frac{L}{2\pi} \frac{\Delta E}{c} \rightarrow D(E)=\frac{L}{2c\pi}\\
+Z_2(k) &= \frac{A}{(2\pi)^2} \rightarrow \int_{\frac{E}{c}}^{frac{E+\Delta E}{c}} Z_2(k) d^2k = \frac{A}{(2\pi)^2} 2\pi k \Delta k =\frac{A}{2\pi} \frac{k}{c} \Delta E = \frac{A}{2\pi}\frac{E}{c^2} \Delta E \\
+&\rightarrow D_2(E) = \frac{A}{2\pi}\frac{E}{c^2}\\
+Z_3(k) &= \frac{V}{(2\pi)^3} \rightarrow \int_{\frac{E}{c}}^{frac{E+\Delta E}{c}} Z_3(k) d^3k = \frac{V}{(2\pi)^3}\int_{\frac{E}{c}}^{frac{E+\Delta E}{c}} d^3k = \frac{V}{(2\pi)^3}4\pi k^2 \Delta k = 2\frac{V}{(2\pi)^2} \frac{E^2}{c^3} \Delta E\\
+&\rightarrow D_3(E) = 2\frac{V}{(2\pi)^2} \frac{E^2}{c^3}
+\end{align*}
