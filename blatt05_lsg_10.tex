@@ -60,13 +60,13 @@ $\hbar \omega_0$ ist bei Phononen (Bosonen mit Spin = 0) gegeben durch die
 Bose-Einstein-Statistik:
 \begin{align*}
   n(\omega_0, T) &= \frac{1}{\mathrm e^{\frac{\hbar \omega_0}{k_B T}} - 1}
-  \qquad \text{bei der Frequenz $f_0$ ist }\frac{\hbar \omega_0}{k_B} =
+  \qquad \text{bei der Frequenz $f_0$ ist }T_0 := \frac{\hbar \omega_0}{k_B} =
   \frac{h f_0}{k_B} = \unit{9,598475}{\cdot 10^{-3}}{\kelvin}
-\intertext{Nach der Thermalisierung und dem Tempeeraturanstieg um $\Delta T$
-sich die Besetzungswahrscheinlichkeit bei der Frequenz $f_0$}
+\intertext{Nach dem Temperaturanstieg um $\Delta T$ und nach Thermalisierung
+ändert sich die Besetzungswahrscheinlichkeit bei der Frequenz $f_0$ um $\Delta n$:}
   \Delta n &= n(\omega_0, T + \Delta T) -  n(\omega_0, T) =
-  \frac{1}{\mathrm e^{\frac{\unit{9,598475}{\cdot 10^{-3}}{\kelvin}}{T + \Delta T}} - 1} -
-  \frac{1}{\mathrm e^{\frac{\unit{9,598475}{\cdot 10^{-3}}{\kelvin}}{T}} - 1}
+  \frac{1}{\mathrm e^{\frac{T_0}{T + \Delta T}} - 1} -
+  \frac{1}{\mathrm e^{\frac{T_0}{T}} - 1}
 \intertext {mit den Zahlenwerten $T = \unit{4,2}{\kelvin}$ und
 $\Delta T = \unit{2,194}{\cdot 10^{-4}}{\kelvin}$ ergibt sich:}
   \Delta n &= 0,0229 = 2,29 \%
