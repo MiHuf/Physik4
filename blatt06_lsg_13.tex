@@ -7,23 +7,28 @@ Das Gleichungssystem:
 V_G & \frac{\hbar^2(k-G)^2}{2m}-V_0-E\\
 \end{pmatrix}
 \begin{pmatrix}
-a\\
-b\\
+A\\
+B\\
 \end{pmatrix}
 =0\\
 \end{align*}
-Ist genau dann eindeutig lösbar, wenn die Determinante der Matrix verschwindet. Mit den Abkürzungen $E_{k} = \frac{\hbar^2k^2}{2m}$, $E_{k-G} = \frac{\hbar^2(k-G)^2}{2m}$ und $E'=E +V_0$ lässt sich mit Hilfe dieser Bedingung nach E' auflösen:
+Ist genau dann eindeutig lösbar, wenn die Determinante der Matrix verschwindet.
+Mit den Abkürzungen $E_{k} = \frac{\hbar^2k^2}{2m}$, $E_{k-G} = \frac{\hbar^2(k-G)^2}{2m}$
+und $E'=E +V_0$ lässt sich mit dieser Bedingung $E'$ berechnen:
 \begin{align*}
-\begin{vmatrix}
+&\begin{vmatrix}
 E_k-E' & V_G\\
 V_G & E_{k-G}-E'\\
 \end{vmatrix} = 0\\
-\Leftrightarrow (E_k-E')(E_{k-G}-E')-V_G^2 = 0\\
-\Leftrightarrow E'^2-(E_k+E_{k-G})E+E_kE_{k-G}-V_G^2 = 0\\
-\Leftrightarrow E'_\pm =\frac{E_k+E_{k-G}}{2} \pm \sqrt{\left(\frac{E_k+E_{k-G}}{2}\right)^2+V_G^2-E_kE_{k-G}}\\
-\Leftrightarrow E'_\pm =\frac{E_k+E_{k-G}}{2} \pm \sqrt{\left(\frac{E_k-E_{k-G}}{2}\right)^2+V_G^2} \\
-\Leftrightarrow E'_\pm =\frac{\hbar^2}{4m}(k^2+(k-G)^2) \pm \sqrt{\frac{1}{4}\left(\frac{\hbar^2}{2m}\right)^2(k^2-(k-G)^2)^2+V_G^2}\\
-\Leftrightarrow E'_\pm =\frac{\hbar^2}{4m}((\frac{\pi}{a}+\kappa)^2+((\frac{\pi}{a}+\kappa)-\frac{2\pi}{a})^2) \pm \sqrt{\frac{1}{4}\left(\frac{\hbar^2}{2m}\right)^2((\frac{\pi}{a}+\kappa)^2-((\frac{\pi}{a}+\kappa)-\frac{2\pi}{a})^2)^2+V_G^2}
+\Leftrightarrow\quad& (E_k-E')(E_{k-G}-E')-V_G^2 = 0\\
+\Leftrightarrow\quad& E'^2-(E_k+E_{k-G})E+E_kE_{k-G}-V_G^2 = 0\\
+\Leftrightarrow\quad& E'_\pm =\frac{E_k+E_{k-G}}{2} \pm \sqrt{\left(\frac{E_k+E_{k-G}}{2}\right)^2+V_G^2-E_kE_{k-G}}\\
+\Leftrightarrow\quad& E'_\pm =\frac{E_k+E_{k-G}}{2} \pm \sqrt{\left(\frac{E_k-E_{k-G}}{2}\right)^2+V_G^2} \\
+\Leftrightarrow\quad& E'_\pm =\frac{\hbar^2}{4m}(k^2+(k-G)^2) \pm \sqrt{\frac{1}{4}\left(\frac{\hbar^2}{2m}\right)^2(k^2-(k-G)^2)^2+V_G^2}\\
+\begin{split}
+ \Leftrightarrow\quad& E'_\pm =\frac{\hbar^2}{4m}\left(\left(\frac{\pi}{a}+\kappa\right)^2+\left(\left(\frac{\pi}{a}+\kappa\right)-\frac{2\pi}{a}\right)^2\right) \\
+& \quad\quad \pm \sqrt{\frac{1}{4}\left(\frac{\hbar^2}{2m}\right)^2\left(\left(\frac{\pi}{a}+\kappa\right)^2-\left(\left(\frac{\pi}{a}+\kappa\right)-\frac{2\pi}{a}\right)^2\right)^2+V_G^2}
+\end{split}
 \end{align*}
 \subsubsection*{b)}
 
