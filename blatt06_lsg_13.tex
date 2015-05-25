@@ -1,10 +1,37 @@
 \subsection*{Aufgabe 13}
 \subsubsection*{a)}
-Das Gleichungssystem:
+In einem schwachen Potential $V(z) = - V_0 + 2 V_g \cos(G \cdot z)$ mit $G = \frac{2 \pi}{a}$
+werde die zeitunabhängige Schrödinger-Gleichung
+$\mathcal{H} \Psi = (\frac{p^2}{2 m} + V(z))\Psi = E \Psi$ mit dem Ansatz ebener Wellen gelöst:
+\begin{align*}
+  \Psi_k(z) &= A \cdot \mathrm e^{i k z} + B \cdot \mathrm e^{i (k-G) z}
+\end{align*}
+Also:
+\begin{align}
+\nonumber
+0 &= (\mathcal{H} - E) \Psi_k(z) =
+\left(-\frac{\hbar^2}{2 m} \frac{\partial^2}{\partial z^2}  - V_0 + 2 V_g \cos(G \cdot z) -E\right)
+\left (A \cdot \mathrm e^{i k z} + B \cdot \mathrm e^{i (k-G) z} \right) \\
+\begin{split}
+&= \left\lbrace  A \left[ \left(\frac{\hbar^2 k^2}{2 m} -V_0 - E \right) + 2 V_g \cos(G \cdot z) \right]  \right.\\
+& \qquad \left. + B \left[ \left(\frac{\hbar^2 (k-G)^2}{2 m} -V_0 - E \right) + 2 V_g \cos(G \cdot z) \right] \mathrm e^{- i G z} \right \rbrace \mathrm e^{ i k z}\\
+\end{split}
+\end{align}
+Die letzte Gleichung lässt sich nur erfüllen, wenn die geschweifte Klammer verschwindet.
+Ferner muss sie für alle $z$ erfüllt sein, also insbesodere für $z = 0$ und für
+$z = \frac{a}{2} \; \Leftrightarrow \; G \cdot z = \pi$. Für diese $z$-Werte wird dann:
+\begin{align*}
+  0 &= A \left(\frac{\hbar^2 k^2}{2 m} -V_0 - E + 2 V_g \right) + B  \left(\frac{\hbar^2 (k-G)^2}{2 m} -V_0 - E + 2 V_g \right) \\
+  0 &= A \left(\frac{\hbar^2 k^2}{2 m} -V_0 - E - 2 V_g \right) - B  \left(\frac{\hbar^2 (k-G)^2}{2 m} -V_0 - E - 2 V_g \right)
+\end{align*}
+
+??? Aber wie kommt man nun zu dem homogenen Gleichungssystem ???
+
+Das homogene Gleichungssystem
 \begin{align*}
 \begin{pmatrix}
-\frac{\hbar^2k^2}{2m}-V_0-E & V_G\\
-V_G & \frac{\hbar^2(k-G)^2}{2m}-V_0-E\\
+\frac{\hbar^2k^2}{2m}-V_0-E & V_g\\
+V_g & \frac{\hbar^2(k-G)^2}{2m}-V_0-E\\
 \end{pmatrix}
 \begin{pmatrix}
 A\\
@@ -12,22 +39,22 @@ B\\
 \end{pmatrix}
 =0\\
 \end{align*}
-Ist genau dann eindeutig lösbar, wenn die Determinante der Matrix verschwindet.
+ist nur dann nicht trivial lösbar, wenn die Determinante der Matrix verschwindet.
 Mit den Abkürzungen $E_{k} = \frac{\hbar^2k^2}{2m}$, $E_{k-G} = \frac{\hbar^2(k-G)^2}{2m}$
 und $E'=E +V_0$ lässt sich mit dieser Bedingung $E'$ berechnen:
 \begin{align*}
 &\begin{vmatrix}
-E_k-E' & V_G\\
-V_G & E_{k-G}-E'\\
+E_k-E' & V_g\\
+V_g & E_{k-G}-E'\\
 \end{vmatrix} = 0\\
-\Leftrightarrow\quad& (E_k-E')(E_{k-G}-E')-V_G^2 = 0\\
-\Leftrightarrow\quad& E'^2-(E_k+E_{k-G})E+E_kE_{k-G}-V_G^2 = 0\\
-\Leftrightarrow\quad& E'_\pm =\frac{E_k+E_{k-G}}{2} \pm \sqrt{\left(\frac{E_k+E_{k-G}}{2}\right)^2+V_G^2-E_kE_{k-G}}\\
-\Leftrightarrow\quad& E'_\pm =\frac{E_k+E_{k-G}}{2} \pm \sqrt{\left(\frac{E_k-E_{k-G}}{2}\right)^2+V_G^2} \\
+\Leftrightarrow\quad& (E_k-E')(E_{k-G}-E')-V_g^2 = 0\\
+\Leftrightarrow\quad& E'^2-(E_k+E_{k-G})E+E_kE_{k-G}-V_g^2 = 0\\
+\Leftrightarrow\quad& E'_\pm =\frac{E_k+E_{k-G}}{2} \pm \sqrt{\left(\frac{E_k+E_{k-G}}{2}\right)^2+V_g^2-E_kE_{k-G}}\\
+\Leftrightarrow\quad& E'_\pm =\frac{E_k+E_{k-G}}{2} \pm \sqrt{\left(\frac{E_k-E_{k-G}}{2}\right)^2+V_g^2} \\
 \Leftrightarrow\quad& E'_\pm =\frac{\hbar^2}{4m}(k^2+(k-G)^2) \pm \sqrt{\frac{1}{4}\left(\frac{\hbar^2}{2m}\right)^2(k^2-(k-G)^2)^2+V_G^2}\\
 \begin{split}
  \Leftrightarrow\quad& E'_\pm =\frac{\hbar^2}{4m}\left(\left(\frac{\pi}{a}+\kappa\right)^2+\left(\left(\frac{\pi}{a}+\kappa\right)-\frac{2\pi}{a}\right)^2\right) \\
-& \quad\quad \pm \sqrt{\frac{1}{4}\left(\frac{\hbar^2}{2m}\right)^2\left(\left(\frac{\pi}{a}+\kappa\right)^2-\left(\left(\frac{\pi}{a}+\kappa\right)-\frac{2\pi}{a}\right)^2\right)^2+V_G^2}
+& \quad\quad \pm \sqrt{\frac{1}{4}\left(\frac{\hbar^2}{2m}\right)^2\left(\left(\frac{\pi}{a}+\kappa\right)^2-\left(\left(\frac{\pi}{a}+\kappa\right)-\frac{2\pi}{a}\right)^2\right)^2+V_g^2}
 \end{split}
 \end{align*}
 \subsubsection*{b)}
