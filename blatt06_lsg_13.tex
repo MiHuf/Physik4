@@ -3,61 +3,139 @@
 In einem schwachen Potential $V(z) = - V_0 + 2 V_g \cos(G \cdot z)$ mit $G = \frac{2 \pi}{a}$
 werde die zeitunabhängige Schrödinger-Gleichung
 $\mathcal{H} \Psi = (\frac{p^2}{2 m} + V(z))\Psi = E \Psi$ mit dem Ansatz ebener Wellen gelöst:
-\begin{align*}
+\begin{align}
+\label{eq-wf}
   \Psi_k(z) &= A \cdot \mathrm e^{i k z} + B \cdot \mathrm e^{i (k-G) z}
-\end{align*}
+\end{align}
 Also:
 \begin{align}
 \nonumber
-0 &= (\mathcal{H} - E) \Psi_k(z) =
-\left(-\frac{\hbar^2}{2 m} \frac{\partial^2}{\partial z^2}  - V_0 + 2 V_g \cos(G \cdot z) -E\right)
+0 &= (\mathcal{H} - E(k)) \Psi_k(z) \\
+\nonumber
+ &= \left(-\frac{\hbar^2}{2 m} \frac{\partial^2}{\partial z^2}  - V_0 + 2 V_g \cos(G \cdot z) -E(k)\right)
 \left (A \cdot \mathrm e^{i k z} + B \cdot \mathrm e^{i (k-G) z} \right) \\
 \begin{split}
-&= \left\lbrace  A \left[ \left(\frac{\hbar^2 k^2}{2 m} -V_0 - E \right) + 2 V_g \cos(G \cdot z) \right]  \right.\\
-& \qquad \left. + B \left[ \left(\frac{\hbar^2 (k-G)^2}{2 m} -V_0 - E \right) + 2 V_g \cos(G \cdot z) \right] \mathrm e^{- i G z} \right \rbrace \mathrm e^{ i k z}\\
+&= \left\lbrace  A \left[ \left(\frac{\hbar^2 k^2}{2 m} -V_0 - E(k)\right) + 2 V_g \cos(G \cdot z) \right]  \right.\\
+& \qquad \left. + B \left[ \left(\frac{\hbar^2 (k-G)^2}{2 m} -V_0 - E(k) \right) + 2 V_g \cos(G \cdot z) \right] \mathrm e^{- i G z} \right \rbrace \mathrm e^{ i k z}\\
 \end{split}
 \end{align}
 Die letzte Gleichung lässt sich nur erfüllen, wenn die geschweifte Klammer verschwindet.
 Ferner muss sie für alle $z$ erfüllt sein, also insbesodere für $z = 0$ und für
 $z = \frac{a}{2} \; \Leftrightarrow \; G \cdot z = \pi$. Für diese $z$-Werte wird dann:
-\begin{align*}
-  0 &= A \left(\frac{\hbar^2 k^2}{2 m} -V_0 - E + 2 V_g \right) + B  \left(\frac{\hbar^2 (k-G)^2}{2 m} -V_0 - E + 2 V_g \right) \\
-  0 &= A \left(\frac{\hbar^2 k^2}{2 m} -V_0 - E - 2 V_g \right) - B  \left(\frac{\hbar^2 (k-G)^2}{2 m} -V_0 - E - 2 V_g \right)
-\end{align*}
+\begin{align}
+\begin{split}
+  0 &= A \left(\frac{\hbar^2 k^2}{2 m} -V_0 - E(k) + 2 V_g \right) + B  \left(\frac{\hbar^2 (k-G)^2}{2 m} -V_0 - E(k) + 2 V_g \right) \\
+  0 &= A \left(\frac{\hbar^2 k^2}{2 m} -V_0 - E(k) - 2 V_g \right) - B  \left(\frac{\hbar^2 (k-G)^2}{2 m} -V_0 - E(k) - 2 V_g \right)
+\end{split}
+\end{align}
 
-??? Aber wie kommt man nun zu dem homogenen Gleichungssystem ???
-
-Das homogene Gleichungssystem
-\begin{align*}
+Weitere Umformungen führen dann zu dem homogenen linearen Gleichungssystem (LGS)
+aus dem Aufgabenblatt:
+\begin{align}
+\label{eq-M1}
 \begin{pmatrix}
-\frac{\hbar^2k^2}{2m}-V_0-E & V_g\\
-V_g & \frac{\hbar^2(k-G)^2}{2m}-V_0-E\\
+\frac{\hbar^2k^2}{2m}-V_0-E(k) & V_g\\
+V_g & \frac{\hbar^2(k-G)^2}{2m}-V_0-E(k)\\
 \end{pmatrix}
 \begin{pmatrix}
-A\\
-B\\
+A\\ B\\
 \end{pmatrix}
-=0\\
+= \begin{pmatrix}
+0\\ 0\\
+\end{pmatrix}
+\end{align}
+Oder mit den Abkürzungen
+\begin{align*}
+& E_{k} = \frac{\hbar^2k^2}{2m}\; ; \quad E_{k-G} = \frac{\hbar^2(k-G)^2}{2m}\; ;
+\quad \text{und}\quad E'(k)=E(k) +V_0
 \end{align*}
-ist nur dann nicht trivial lösbar, wenn die Determinante der Matrix verschwindet.
-Mit den Abkürzungen $E_{k} = \frac{\hbar^2k^2}{2m}$, $E_{k-G} = \frac{\hbar^2(k-G)^2}{2m}$
-und $E'=E +V_0$ lässt sich mit dieser Bedingung $E'$ berechnen:
+\begin{align}
+&\begin{pmatrix}
+\label{eq-M2}
+E_k-E'(k) & V_g\\
+V_g & E_{k-G}-E'(k)\\
+\end{pmatrix}
+\begin{pmatrix}
+A\\ B\\
+\end{pmatrix}
+= \begin{pmatrix}
+0\\ 0\\
+\end{pmatrix}
+\end{align}
+Das LGS ist nur dann nicht trivial lösbar, wenn die Determinante der Matrix
+von \eqref{eq-M1} oder \eqref{eq-M2} verschwindet. Mit dieser Bedingung lässt
+sich $E'(k)$ berechnen:
+
 \begin{align*}
 &\begin{vmatrix}
-E_k-E' & V_g\\
-V_g & E_{k-G}-E'\\
+E_k-E'(k) & V_g\\
+V_g & E_{k-G}-E'(k)\\
 \end{vmatrix} = 0\\
 \Leftrightarrow\quad& (E_k-E')(E_{k-G}-E')-V_g^2 = 0\\
 \Leftrightarrow\quad& E'^2-(E_k+E_{k-G})E+E_kE_{k-G}-V_g^2 = 0\\
 \Leftrightarrow\quad& E'_\pm =\frac{E_k+E_{k-G}}{2} \pm \sqrt{\left(\frac{E_k+E_{k-G}}{2}\right)^2+V_g^2-E_kE_{k-G}}\\
 \Leftrightarrow\quad& E'_\pm =\frac{E_k+E_{k-G}}{2} \pm \sqrt{\left(\frac{E_k-E_{k-G}}{2}\right)^2+V_g^2} \\
-\Leftrightarrow\quad& E'_\pm =\frac{\hbar^2}{4m}(k^2+(k-G)^2) \pm \sqrt{\frac{1}{4}\left(\frac{\hbar^2}{2m}\right)^2(k^2-(k-G)^2)^2+V_G^2}\\
+\Leftrightarrow\quad& E'_\pm =\frac{\hbar^2}{4m}(k^2+(k-G)^2) \pm \sqrt{\frac{1}{4}\left(\frac{\hbar^2}{2m}\right)^2(k^2-(k-G)^2)^2+V_g^2}\\
 \begin{split}
  \Leftrightarrow\quad& E'_\pm =\frac{\hbar^2}{4m}\left(\left(\frac{\pi}{a}+\kappa\right)^2+\left(\left(\frac{\pi}{a}+\kappa\right)-\frac{2\pi}{a}\right)^2\right) \\
 & \quad\quad \pm \sqrt{\frac{1}{4}\left(\frac{\hbar^2}{2m}\right)^2\left(\left(\frac{\pi}{a}+\kappa\right)^2-\left(\left(\frac{\pi}{a}+\kappa\right)-\frac{2\pi}{a}\right)^2\right)^2+V_g^2}
 \end{split}
 \end{align*}
+Nebenrechnung:
+\begin{align*}
+\left(\frac{\pi}{a}+\kappa\right)^2+\left(\left(\frac{\pi}{a}+\kappa\right)-\frac{2\pi}{a}\right)^2
+&= \left(\frac{\pi}{a}+\kappa\right)^2 + \left(\frac{\pi}{a}+\kappa\right)^2 - 2 \left(\frac{\pi}{a}+\kappa\right)
+\left(\frac{2 \pi}{a}\right) + \left(\frac{2 \pi}{a}\right)^2 \\
+& = 2 \left(\frac{\pi^2}{a^2} + \frac{2 \pi}{a}\kappa + \kappa^2 - 2\frac{\pi^2}{a^2} - \frac{2 \pi}{a}\kappa + 2\frac{\pi^2}{a^2}  \right) \\
+&= 2 \left( \frac{\pi^2}{a^2} + \kappa^2 \right)
+\intertext{und Analog:}
+\left(\frac{\pi}{a}+\kappa\right)^2-\left(\left(\frac{\pi}{a}+\kappa\right)-\frac{2\pi}{a}\right)^2
+&= \left(\frac{\pi}{a}+\kappa\right)^2 - \left(\frac{\pi}{a}+\kappa\right)^2 + 2 \left(\frac{\pi}{a}+\kappa\right)
+\left(\frac{2 \pi}{a}\right) - \left(\frac{2 \pi}{a}\right)^2 \\
+& = 4 \frac{\pi}{a}\cdot \kappa
+\end{align*}
+Damit wird:
+\begin{align}
+\nonumber
+  E'_\pm(k) &=\frac{\hbar^2}{2 m}\left(\left(\frac{\pi}{a}\right)^2 + \kappa^2\right)
+  \pm \sqrt{4 \left(\frac{\hbar^2}{2 m}\right) \left(\frac{\pi}{a}\cdot \kappa \right)^2 + V_g^2}\\
+\label{eq-Ek}
+  & = \frac{\hbar^2}{2 m}\left(\left(\frac{\pi}{a}\right)^2 + \kappa^2\right)
+  \pm |V_g|\sqrt{1 + \frac{4}{V_g^2}\left(\frac{\hbar^2}{2 m}\right) \left(\frac{\pi}{a}\cdot \kappa \right)^2 }
+\end{align}
+Wegen $\kappa \ll \frac{\pi}{a}$ lässt sich die Wurzel entwickeln
+$\sqrt{1 + x} \approx 1 + \frac{1}{2}x$ und es gilt:
+\begin{align}
+  E'_\pm(k) &\approx \frac{\hbar^2}{2 m}\left(\left(\frac{\pi}{a}\right)^2 + \kappa^2\right)
+  \pm  \left(|V_g| + \frac{2}{|V_g|}\left(\frac{\hbar^2}{2 m}\right) \left(\frac{\pi}{a}\cdot \kappa \right)^2 \right)
+\end{align}
+
+Für den Koeffizienten $B$ der Wellenfunktion \eqref{eq-wf} ergibt sich mit \eqref{eq-M1} bzw. \eqref{eq-M2}:
+\begin{align}
+\nonumber
+0 &= \left(\frac{\hbar^2k^2}{2m}-V_0-E(k)\right)\cdot  A + V_g \cdot B =
+V_g \cdot A + \left(\frac{\hbar^2(k-G)^2}{2m}-V_0-E(k)\right) \cdot B \\
+\Rightarrow \quad & B = A \cdot \frac{\frac{\hbar^2k^2}{2m}-V_0-E(k)-V_g}
+   {\frac{\hbar^2(k-G)^2}{2m}-V_0-E(k)-V_g}
+= A \cdot \frac{E_k - E'(k)-V_g}{E_{k-G} - E'(k)-V_g}
+\end{align}
+
 \subsubsection*{b)}
+Am Zonenrand ($\kappa = 0$) ergibt sich für $E'_\pm(k)$ nach \eqref{eq-Ek}
+mit $\frac{\pi}{a} = k$:
+\begin{align*}
+  E'_+ &= \frac{\hbar^2}{2 m} \cdot k^2 + V_g = E_k + V_g \\
+\Rightarrow & \quad  B_+ = A \cdot \frac{E_k - E'_+(k) - V_g}{E_{k-G}  - E'_+(k) - V_g} =
+  A \cdot \frac{E_k - E_k - V_g - V_g}{E_{k-G}  - E_k - V_g - V_g} =
+  A \cdot \frac{- 2 V_g}{E_{k-G} - E_k - 2 V_g} \\
+\Rightarrow & \quad  \Psi_+ = A \cdot \left(\mathrm e^{i k z}
+  - \frac{2 V_g}{E_{k-G} - E_k - 2 V_g} \cdot \mathrm e^{i (k-G) z}  \right) \\
+  E'_- &= \frac{\hbar^2}{2 m} \cdot k^2 - V_g = E_k - V_g \\
+\Rightarrow & \quad  B_- = A \cdot \frac{E_k - E'_-(k) - V_g}{E_{k-G}  - E'_+(k) - V_g} =
+  A \cdot \frac{E_k - E_k + V_g - V_g}{E_{k-G}  - E_k + V_g - V_g} =
+  A \cdot \frac{0}{E_{k-G}  - E_k} = 0 \\
+\Rightarrow & \quad  \Psi_- = A \cdot \mathrm e^{i k z}
+\end{align*}
 
 \subsubsection*{c)}
 
