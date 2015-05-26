@@ -6,6 +6,7 @@ $\mathcal{H} \Psi = (\frac{p^2}{2 m} + V(z))\Psi = E \Psi$ mit dem Ansatz ebener
 \begin{align}
 \label{eq-wf}
   \Psi_k(z) &= A \cdot \mathrm e^{i k z} + B \cdot \mathrm e^{i (k-G) z}
+  \quad \text{mit} \quad k = \frac{\pi}{a} + \kappa
 \end{align}
 Also:
 \begin{align}
@@ -46,8 +47,8 @@ A\\ B\\
 \end{align}
 Oder mit den Abkürzungen
 \begin{align*}
-& E_{k} = \frac{\hbar^2k^2}{2m}\; ; \quad E_{k-G} = \frac{\hbar^2(k-G)^2}{2m}\; ;
-\quad \text{und}\quad E'(k)=E(k) +V_0
+& E_{k} := \frac{\hbar^2k^2}{2m}\; ; \quad E_{k-G} := \frac{\hbar^2(k-G)^2}{2m}\; ;
+\quad \text{und}\quad E'(k) := E(k)+V_0
 \end{align*}
 \begin{align}
 &\begin{pmatrix}
@@ -78,7 +79,7 @@ V_g & E_{k-G}-E'(k)\\
 \Leftrightarrow\quad& E'_\pm =\frac{\hbar^2}{4m}(k^2+(k-G)^2) \pm \sqrt{\frac{1}{4}\left(\frac{\hbar^2}{2m}\right)^2(k^2-(k-G)^2)^2+V_g^2}\\
 \begin{split}
  \Leftrightarrow\quad& E'_\pm =\frac{\hbar^2}{4m}\left(\left(\frac{\pi}{a}+\kappa\right)^2+\left(\left(\frac{\pi}{a}+\kappa\right)-\frac{2\pi}{a}\right)^2\right) \\
-& \quad\quad \pm \sqrt{\frac{1}{4}\left(\frac{\hbar^2}{2m}\right)^2\left(\left(\frac{\pi}{a}+\kappa\right)^2-\left(\left(\frac{\pi}{a}+\kappa\right)-\frac{2\pi}{a}\right)^2\right)^2+V_g^2}
+& \qquad\qquad \pm \sqrt{\frac{1}{4}\left(\frac{\hbar^2}{2m}\right)^2\left(\left(\frac{\pi}{a}+\kappa\right)^2-\left(\left(\frac{\pi}{a}+\kappa\right)-\frac{2\pi}{a}\right)^2\right)^2+V_g^2}
 \end{split}
 \end{align*}
 Nebenrechnung:
@@ -124,7 +125,7 @@ V_g \cdot A + \left(\frac{\hbar^2(k-G)^2}{2m}-V_0-E(k)\right) \cdot B \\
 Am Zonenrand ($\kappa = 0$) ergibt sich für $E'_\pm(k)$ nach \eqref{eq-Ek}
 mit $\frac{\pi}{a} = k$:
 \begin{align*}
-  E'_+ &= \frac{\hbar^2}{2 m} \cdot k^2 + V_g = E_k + V_g \\
+  E'_+ &= \frac{\hbar^2}{2 m} \cdot k^2 + V_g  = E_k + V_g \\
 \Rightarrow & \quad  B_+ = A \cdot \frac{E_k - E'_+(k) - V_g}{E_{k-G}  - E'_+(k) - V_g} =
   A \cdot \frac{E_k - E_k - V_g - V_g}{E_{k-G}  - E_k - V_g - V_g} =
   A \cdot \frac{- 2 V_g}{E_{k-G} - E_k - 2 V_g} \\
@@ -138,6 +139,42 @@ mit $\frac{\pi}{a} = k$:
 \end{align*}
 
 \subsubsection*{c)}
+Wir wählen für das Elektron eine Energie $\tilde E$ in der Mitte der Bandlücke.
+Dafür gilt dann mit \eqref{eq-Ek}:
+\begin{align*}
+\tilde E(k) &= \frac{1}{2} (E'_+(k) + E'_-(k)) =
+  \frac{\hbar^2}{2 m}\left(\left(\frac{\pi}{a}\right)^2 + \kappa^2\right) =
+  \frac{\hbar^2 k^2}{2 m} + \frac{\hbar^2 \kappa^2}{2 m} \\
+  \Rightarrow  \quad \kappa &= \frac{\sqrt{2 m}}{\hbar} \sqrt{\tilde E - \frac{\hbar^2 k^2}{2 m}}
+\end{align*}
+Da $\frac{\hbar^2 k^2}{2 m} > \tilde E$, ist der Radikand negativ, $\kappa$ somit imaginär.
+Die Wellenfunktion \eqref{eq-wf} wird dann mit einem rellen $\tilde \kappa$:
+\begin{align}
+   \Psi^{(1)}_k(z) &= \left( A \cdot \mathrm e^{i\pi\frac{z}{a}} +
+     B \cdot \mathrm e^{i\pi\frac{z}{a}}\cdot \mathrm e^{i G z}\right)\cdot \mathrm e^{\tilde \kappa z}
+     \quad \text{mit} \quad \tilde \kappa :=\frac{\sqrt{2 m}}{\hbar} \sqrt{\frac{\hbar^2 k^2}{2 m} - \tilde E}
+\end{align}
+Sie steigt mit wachsendem $z$ exponentiell an.
 
 \subsubsection*{d)}
+Für das gegebene Problem lautet die Wellenfunktion:
+\begin{align*}
+  \Psi(z) &= \begin{cases}
+    \Psi^{(1)}(z) \quad\text{für}\quad z < 0\\
+    \Psi^{(2)}(z) \quad\text{für}\quad z \ge 0\\
+  \end{cases}
+\intertext{mit}
+\Psi^{(1)}(z) &= \left( A \cdot \mathrm e^{i\pi\frac{z}{a}} +
+     B \cdot \mathrm e^{i\pi\frac{z}{a}}\cdot \mathrm e^{i G z}\right)\cdot \mathrm e^{\tilde \kappa z} \\
+\Psi^{(2)}(z) &= \mathrm e^{- q z}\quad\text{mit}\quad q = \frac{1}{\hbar}\sqrt{2 m (V_0 - E)}
+\end{align*}
+Sie steigt exponentiell an bis $z = 0$ und fällt dann exponentiell wieder ab,
+hat also ein Maximum bei $z = 0$. Da die Aufenthaltswahrscheinlichkeit propotional
+zu $\Psi^*(z) \cdot \Psi(z)$ ist, ist diese ebenfalls bei $z = 0$ maximal. Elektronen
+der Energie $\tilde E$ werden also fast ausschließlich an der Oberfläche bzw.
+am rechten Rand der linearen Kette sein.
+
+
+
+
 
