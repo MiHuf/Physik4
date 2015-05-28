@@ -73,7 +73,7 @@ E_k-E'(k) & V_g\\
 V_g & E_{k-G}-E'(k)\\
 \end{vmatrix} = 0\\
 \Leftrightarrow\quad& (E_k-E')(E_{k-G}-E')-V_g^2 = 0\\
-\Leftrightarrow\quad& E'^2-(E_k+E_{k-G})E+E_kE_{k-G}-V_g^2 = 0\\
+\Leftrightarrow\quad& E'^2-(E_k+E_{k-G})E'+E_kE_{k-G}-V_g^2 = 0\\
 \Leftrightarrow\quad& E'_\pm =\frac{E_k+E_{k-G}}{2} \pm \sqrt{\left(\frac{E_k+E_{k-G}}{2}\right)^2+V_g^2-E_kE_{k-G}}\\
 \Leftrightarrow\quad& E'_\pm =\frac{E_k+E_{k-G}}{2} \pm \sqrt{\left(\frac{E_k-E_{k-G}}{2}\right)^2+V_g^2} \\
 \Leftrightarrow\quad& E'_\pm =\frac{\hbar^2}{4m}(k^2+(k-G)^2) \pm \sqrt{\frac{1}{4}\left(\frac{\hbar^2}{2m}\right)^2(k^2-(k-G)^2)^2+V_g^2}\\
@@ -137,22 +137,22 @@ mit $\frac{\pi}{a} = k$ und $E_{k-G} = \frac{\hbar^2(\frac{\pi}{a}-\frac{2\pi}{a
   = A \\
 \Rightarrow & \quad  \Psi_- = 2A\cos{\frac{\pi z}{a}}
 \end{align*}
+Die Wellenfunktion ist hier also entartet.
 
 \subsubsection*{c)}
 Wir wählen für das Elektron eine Energie $\tilde E$ in der Mitte der Bandlücke.
 Dafür gilt dann mit \eqref{eq-Ek}:
 \begin{align*}
 \tilde E(k) &= \frac{1}{2} (E'_+(k) + E'_-(k)) =
-  \frac{\hbar^2}{2 m}\left(\left(\frac{\pi}{a}\right)^2 + \kappa^2\right) =
-  \frac{\hbar^2 k^2}{2 m} + \frac{\hbar^2 \kappa^2}{2 m} \\
-  \Rightarrow  \quad \kappa &= \frac{\sqrt{2 m}}{\hbar} \sqrt{\tilde E - \frac{\hbar^2 k^2}{2 m}}
+  \frac{\hbar^2}{2 m}\left(\left(\frac{\pi}{a}\right)^2 + \kappa^2\right) \\
+  \Rightarrow  \quad \kappa &= \frac{\sqrt{2 m}}{\hbar} \sqrt{\tilde E - \frac{\hbar^2}{2 m} \left(\frac{\pi}{a}\right)^2}
 \end{align*}
-Da $\frac{\hbar^2 k^2}{2 m} > \tilde E$, ist der Radikand negativ, $\kappa$ somit imaginär.
+Da $\frac{\hbar^2}{2 m}\left(\frac{\pi}{a}\right)^2 > \tilde E$, ist der Radikand negativ, $\kappa$ somit imaginär.
 Die Wellenfunktion \eqref{eq-wf} wird dann mit einem rellen $\tilde \kappa$:
 \begin{align}
    \Psi^{(1)}_k(z) &= \left( A \cdot \mathrm e^{i\pi\frac{z}{a}} +
      B \cdot \mathrm e^{i\pi\frac{z}{a}}\cdot \mathrm e^{i G z}\right)\cdot \mathrm e^{\tilde \kappa z}
-     \quad \text{mit} \quad \tilde \kappa :=\frac{\sqrt{2 m}}{\hbar} \sqrt{\frac{\hbar^2 k^2}{2 m} - \tilde E}
+     \quad \text{mit} \quad \tilde \kappa :=\frac{\sqrt{2 m}}{\hbar} \sqrt{\frac{\hbar^2}{2 m}\left(\frac{\pi}{a}\right)^2 - \tilde E}
 \end{align}
 Sie steigt mit wachsendem $z$ exponentiell an.
 
