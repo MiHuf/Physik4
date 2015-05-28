@@ -123,19 +123,19 @@ V_g \cdot A + \left(\frac{\hbar^2(k-G)^2}{2m}-V_0-E(k)\right) \cdot B \\
 
 \subsubsection*{b)}
 Am Zonenrand ($\kappa = 0$) ergibt sich für $E'_\pm(k)$ nach \eqref{eq-Ek}
-mit $\frac{\pi}{a} = k$:
+mit $\frac{\pi}{a} = k$ und $E_{k-G} = \frac{\hbar^2(\frac{\pi}{a}-\frac{2\pi}{a})^2}{2m} = \frac{\hbar^2(\frac{\pi}{a})^2}{2m} = E_k$:
 \begin{align*}
   E'_+ &= \frac{\hbar^2}{2 m} \cdot k^2 + V_g  = E_k + V_g \\
 \Rightarrow & \quad  B_+ = A \cdot \frac{E_k - E'_+(k) - V_g}{E_{k-G}  - E'_+(k) - V_g} =
-  A \cdot \frac{E_k - E_k - V_g - V_g}{E_{k-G}  - E_k - V_g - V_g} =
-  A \cdot \frac{- 2 V_g}{E_{k-G} - E_k - 2 V_g} \\
-\Rightarrow & \quad  \Psi_+ = A \cdot \left(\mathrm e^{i k z}
-  - \frac{2 V_g}{E_{k-G} - E_k - 2 V_g} \cdot \mathrm e^{i (k-G) z}  \right) \\
+  A \cdot \frac{E_k - E_k - V_g - V_g}{E_{k}  - E_k - V_g - V_g} =
+  A \\
+\Rightarrow & \quad  \Psi_+ = A \cdot \left(\mathrm e^{i \frac{\pi}{a} z}
+  + \mathrm e^{-i \frac{\pi}{a} z}  \right) =2A\cos{\frac{\pi z}{a}}\\
   E'_- &= \frac{\hbar^2}{2 m} \cdot k^2 - V_g = E_k - V_g \\
 \Rightarrow & \quad  B_- = A \cdot \frac{E_k - E'_-(k) - V_g}{E_{k-G}  - E'_+(k) - V_g} =
-  A \cdot \frac{E_k - E_k + V_g - V_g}{E_{k-G}  - E_k + V_g - V_g} =
-  A \cdot \frac{0}{E_{k-G}  - E_k} = 0 \\
-\Rightarrow & \quad  \Psi_- = A \cdot \mathrm e^{i k z}
+  A \cdot \frac{E_k - E_k + V_g - V_g}{E_{k}  - E_k + V_g - V_g} =
+  = A \\
+\Rightarrow & \quad  \Psi_- = 2A\cos{\frac{\pi z}{a}}
 \end{align*}
 
 \subsubsection*{c)}
