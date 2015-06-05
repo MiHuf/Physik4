@@ -1,7 +1,22 @@
 \subsection*{Aufgabe 16}
 \subsubsection*{a)}
+Im Modell quasifreier Elektronen wird angenommen, dass die Elektronen das Kernpotential als sehr schwach wahrnehmen, da sie sich in äußeren Schalen befinden und das Kernpotential weitesgehend abgeschirmt ist. Dadurch lassen sich die Zustände als freie Elektronen mit dem Kernpotential als kleine Störung beschreiben, was eine Darstellung mit ebenen Wellen $\mathrm{e}^{ikr}$ ermöglicht.\\
+Im \textit{tight-binding} Modell werden sehr "tief" liegende Elektronen betrachtet, für die das Kernpotential dominant ist gegenüber anderen Wechselwirkungen. Eine Beschreibung mit ebenen Wellen ist daher nun nicht mehr möglich, sondern vielmehr müssen atomare Wellenfunktionen $\phi_A^i$ benutzt werden um die Elektronen zu beschreiben. Dabei wird häufig eine Linearkombinationen von atomren Wellenfunktionen angesetzt (LCAO \textit{Linear Combination of Atomic Orbitals}), da sich die Atomorbitale gegenseitig beeinflussen.\\
+Versucht man die Schrödingergelichung für dieses Problem nun zu lösen, so kann man die sogenannte \textit{Einelektronen-Näherung} benutzen. Dabei wird das Potential des Atoms, welches dem Ort des Elektron am nächsten ist als dominantes Potential $V_A$ und die Potentiale aller anderen Atome in einem kleinen Störpotential $\tilde{V_A}$ zusammengefasst.\\
 
 \subsubsection*{b)}
-
+Das Austauschintegral: $ \beta_i = \int \mathrm{d}V \phi_A^i(r-R')\tilde{V}(r-R)\phi_A^i(r-R)$ führt in der Energieeigenwertgleichung $E(k) = E_A^i -\alpha^i-\beta^i\sum \mathrm{e}^{ik(R-R')}$ zu einer $k$-abhängigkeit der Energie und somit zu eiener endlichen breite des Bandes, die nur von dem Wert Austauschintegral abhängt.
 \subsubsection*{c)}
+Für einen eindimensionalen Kristall im Modell stark gebundener Elektronen ist mit $ka<<1$:
+\begin{align*}
+&\sum \mathrm{e}^{ik(R-R')} = 2\cos{2a}
+\Rightarrow E(k) &= E_A^i -\alpha^i-\beta^i\cdot2\cos{2a} \approx E_A^i -\alpha^i-\beta^i\cdot2\left(1-\frac{(ka)^2}{2}\right)\\
+\Rightarrow &= E_A^i -\alpha^i-\beta^i\cdot2-\beta^i(ka)^2
+\end{align*}
 
+Der Vergleich mit dem freien Elektronengas ($E(k) = \frac{\hbar^2 k^2}{m_{\mathrm{eff}}}$ und $\frac{1}{\hbar}\frac{\delta^2 E}{\delta k^2} = \frac{1}{m_{\mathrm{eff}}}$ liefert für die Effektive Masse:
+\begin{align*}
+\frac{1}{m_{\mathrm{eff}}} &= \frac{1}{\hbar}\frac{\delta^2 E}{\delta k^2} \\
+ &= \frac{1}{\hbar} 2\beta^ia^2
+\end{align*}
+Die effektive Masse ist also gerade umgekehrt proportional zum Wert des Austauschintegrals $\beta^i$
