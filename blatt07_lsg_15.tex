@@ -15,7 +15,7 @@ $\vec \kappa$ ein:
   E_0 = \frac{\hbar^2}{2 m_e} \left(\frac{2 \pi}{a}\right)^2
 \intertext{Damit wird die Dispersionsrelation}
 \label{eq-disp1}
-&\epsilon_{h_1, h_2, h_3}(\vec k) = (\kappa_x-h_1+h_2+h_3 )^2 +
+&\epsilon_{h_1, h_2, h_3}(\vec \kappa) = (\kappa_x-h_1+h_2+h_3 )^2 +
    (\kappa_y+h_1-h_2+h_3 )^2 + (\kappa_z+h_1+h_2-h_3 )^2
 \end{align}
 
@@ -99,9 +99,10 @@ n = 4:\quad & \epsilon_{\bar1\bar10}(x) = \epsilon_{\bar10\bar1}(x) = \epsilon_{
 % \caption{zu Aufgabe 15 b)}
 \end{wrapfigure}
 \subsubsection*{b)}
-Überschneidungen gibt es zwischen der 1. und 2. Kurve bei $x = 0,5$, zwischen der
-2. und 3. Kurve bei $x = 0$ (im L-Punkt) und zwischen der 3. und 4. Kurve bei
-$x = 0,5$ (im $\Gamma$-Punkt). An diesen Stellen erwarten wir Aufspaltungen der Bänder.
+Überschneidungen gibt es zwischen der 1. und 2. Kurve bei $x = 0,5$ (im L-Punkt),
+zwischen der 2. und 3. Kurve bei $x = 0$ (im $\Gamma$-Punkt) sowie zwischen
+der 3. und 4. Kurve bei $x = 0,5$ (im L-Punkt).
+An diesen Stellen erwarten wir Aufspaltungen der Bänder.
 \newline
 \newpage
 
@@ -122,13 +123,40 @@ im L-Punkt.
 \newline
 
 \subsubsection*{d)}
-Die Dichte im Ortsraum ist bei einem fcc-Gitter (4 Atome pro Einheitszelle):
-\begin{align*}
-n = Z\cdot\frac{4}{a^3}
-\end{align*}
-und im k-Raum:
-\begin{align*}
-n = \frac{2\cdot\frac{4\pi}{3}k_f}{(2\pi)^3}
-\end{align*}
-Setzt man beide gleich, so ergibt sich für $k_f$
-
+Ein fcc-Kristall, Gitterkonstante $a$ mit Atomen der Wertigkeit $Z$ und dem Volumen
+$V$ enthält $N = Z \cdot 4 \cdot \frac{V}{a^3}$ freie Elektronen (4 Atome pro
+Elementarzelle). Die gleiche Anzahl von Elektronen erhält man, wenn man im
+reziproken Raum die Zahl der besetzten Zustände innerhalb einer Kugel mit dem
+Radius $k_F$ des Fermi-Wellenvektors bestimmt:
+$N = 2 \cdot \frac{V}{(2 \pi)^3} \cdot \frac{4}{3} \pi k_F^3$. (Der Faktor
+2 berücksichtigt die beiden Spin-Richtungen.) Also:
+\begin{align}
+\nonumber
+& N = Z \cdot 4 \cdot \frac{V}{a^3} = 2 \cdot \frac{V}{(2 \pi)^3} \cdot \frac{4}{3} \pi k_F^3 \,;
+ \quad \Rightarrow \; \left(k_F\right)^3 = \left(\frac{3 Z}{2 \pi} \right) \cdot \left(\frac{2 \pi}{a} \right)^3
+\intertext{Das ergibt für die Fermi-Energie}
+\label{eq-EF}
+& E_F =  \frac{\hbar^2}{2 m_e} \cdot k_F^2 =   \frac{\hbar^2}{2 m_e} \cdot
+  \left(\frac{3 Z}{2 \pi} \right)^{2/3} \cdot \left(\frac{2 \pi}{a} \right)^2
+\end{align}
+Wir gehen davon aus, dass in der Aufgabenstellung tatsächlich der X-Punkt und
+nicht der L-Punkt aus Aufgabenteil a) gemeint ist.
+Für den X-Punkt ist $\kappa_y = \kappa_z = 0$, damit modifiziert sich \eqref{eq-disp1}
+für die [100] - Richtung zu
+$\epsilon_{h_1, h_2, h_3}(\vec k) = (\kappa_x-h_1+h_2+h_3 )^2 + (h_1-h_2+h_3 )^2 + (h_1+h_2-h_3 )^2$
+und für das unterste Band mit $h_1 =  h_2 =  h_3 = 0$ ergibt sich
+$\epsilon_{000}(x) = x^2$ mit $x := \kappa_x$. Im X-Punkt ist $x_X = 1/2$, somit
+$\epsilon_X = 1/4$ und
+$E_X = \frac{1}{4} \cdot \frac{\hbar^2}{2 m_e} \left(\frac{2 \pi}{a}\right)^2$.
+Mit \eqref{eq-EF} ist dann das gesuchte Verhältnis:
+\begin{align}
+& \frac{E_F}{E_X} = \frac{\epsilon_F}{\epsilon_X} =
+  4 \left(\frac{3 Z}{2 \pi} \right)^{2/3} =
+  \left(\frac{12}{\pi}\right)^{2/3} \cdot Z^{2/3} =
+  \sqrt[3]{\frac{144}{\pi^2}} \cdot Z^{2/3} \approx 2{,}44 \cdot Z^{2/3}
+\end{align}
+Für $Z = 1 \cdots 8$ ergeben sich dann Werte $\frac{\epsilon_F}{\epsilon_X} = $
+2,44; 3,88; 5,08; 6,16; 7,14; 8,07; 8,94; 9,77. Wir trauen uns zwar zu, acht
+entsprechende Horizontal-Linien zu zeichnen. Diese lassen sich aber nicht sinnvoll
+in das Bild von 1b) einzeichnen, da deren Abszisse in eine andere Richtung zeigt
+(L-Punkt versus X-Punkt) und die Ordinate anders normiert ist.
