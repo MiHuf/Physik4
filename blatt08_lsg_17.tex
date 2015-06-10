@@ -54,32 +54,18 @@ Basisvektoren im inversen Gitter ergibt sich:
   \vec b_2 =  \frac{2 \pi}{\frac{1}{2} \sqrt{3} a^2} (\vec e_3 \times \vec a_1) =
   \frac{2 \pi}{a} \begin{pmatrix} 0 \\ 2 / \sqrt{3} \\ 0 \end{pmatrix}
 \end{align*}
-Eine Drehung des Koordinatensytems um die z-Achse liefert dann inverse Basisvektoren
-mit der gewünschten Ausrichtung: Eine elementaren Translation in x-Richtung:
+Man verifiziert leicht: $\vec a_i \cdot \vec b_j = 2 \pi \delta_{ij}$. Jetzt wieder
+zweidimensional: Im Real-Raum hat ein Atom im Koordinatenursprung 6 nächste Nachbarn
+mit den Koordinaten $R_n\;;\;n = 1, \cdots , 6$ im Gegen-Uhrzeigersinn:
 \begin{align*}
-  \vec b_1' = \frac{2 \pi}{a} \begin{pmatrix} 2 / \sqrt{3} \\ 0 \\ 0 \end{pmatrix}  \;; \qquad
-  \vec b_2' =  \frac{2 \pi}{a} \begin{pmatrix} 1  / \sqrt{3} \\ 1\\ 0 \end{pmatrix}
-\end{align*}
-Jetzte wieder zweidimensional: Im real-Raum hat ein Atom im Koordinatenursprung
-6 nächste Nachbarn mit den Koordinaten:
-\begin{align*}
-R_n &= a \cdot  \begin{pmatrix} \cos(n \times 60^\circ)\\ \sin(n \times 60^\circ) \end{pmatrix}\;; \qquad
-  n = 0, \cdots , 5 \\
 \left\lbrace R_n\right\rbrace &= \left\lbrace
-  \begin{pmatrix}a\\0\end{pmatrix}, \begin{pmatrix}\frac{a}{2}\\\frac{a}{2}\sqrt{3}\end{pmatrix}, \begin{pmatrix}-\frac{a}{2}\\\frac{a}{2}\sqrt{3}\end{pmatrix},
-  \begin{pmatrix}-a\\0\end{pmatrix}, \begin{pmatrix}-\frac{a}{2}\\-\frac{a}{2}\sqrt{3}\end{pmatrix}, \begin{pmatrix}\frac{a}{2}\\-\frac{a}{2}\sqrt{3}\end{pmatrix}
+ \vec a_1,\; \vec a_1 + \vec a_2,\; \vec a_2, -\vec a_1,\; -\vec a_1 - \vec a_2,\; - \vec a_2
   \right\rbrace
+\intertext{Für die Dispersion gilt im LCAO-Modell mit der "`nächste-Nachbarn-Annäherung"':}
+\epsilon(\vec k) &= \epsilon'_\alpha + |A| \sum_{n = 1}^6 \mathrm e^{i \vec k \vec R_n}
+\intertext{Für das unterste Band ist $\vec k =  \frac{a}{2 \pi}\left(1 \cdot k_x \vec b_1 + 1 \cdot k_y \vec b_2 \right)$, damit wird}
+\left\lbrace \vec k \vec R_n \right\rbrace &= \left\lbrace
+  a k_x\;, \;a k_x + a k_y\;, \;a k_y\;, \;-a k_x\;, \;-a k_x- a k_y\;, \;-a k_y \right\rbrace \\
+\sum_{n = 1}^6 \mathrm e^{i \vec k \vec R_n} &=
 \end{align*}
-Für die Dispersion gilt im LCAO-Modell mit der "`nächste-Nachbarn-Annäherung"':
-\begin{align*}
-  \epsilon(\vec k) = \epsilon'_\alpha + |A| \sum_{n = 0}^5 \mathrm e^{i \vec k \vec R_n}
-  =  \epsilon'_\alpha + |A| \sum_{n = 0}^5 (\cos (\vec k \vec R_n) + i \sin(\vec k \vec R_n))
-\end{align*}
-Für das unterste Band ist $\vec k = 1 \cdot k_x \vec b_1' + 1 \cdot k_y \vec b_2'$,
-\footnote{Ist das so richtig? Hier bin ich mir unsicher ob man mit den
-inversen Gittervektoren rechnen muss}
-damit wird:
-\begin{align*}
-  \vec k \vec R_n  =  2 \pi \left(\frac{2}{\sqrt{3}} k_x\cos(n \cdot 60^\circ) + \frac{1}{\sqrt{3}} k_y\cos(n \cdot 60^\circ) + k_y \sin(n \cdot 60^\circ)\right)
-\end{align*}
-Oder: $\vec k = 1 \cdot k_x \vec e_x + 1 \cdot k_y \vec e_y$ ???
+
