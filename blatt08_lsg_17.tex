@@ -77,13 +77,13 @@ damit wird die Summe in \eqref{eq-disp2}:}
 = \sum_{n = 1}^3 \left[ \mathrm e^{i \vec k \vec R_n} +  \mathrm e^{- i \vec k \vec R_{n}} \right]
 = \sum_{n = 1}^3  2 \left[\cos(\vec k \vec R_n)  \right]\\
 \nonumber
-&= 2\left[\cos(\vec a_1 \cdot \vec k)+\cos((\vec a_1 -\vec a_2)\cdot \vec k)+\cos((\vec a_1 +\vec a_2)\cdot \vec k)\right]
+&= 2\left[\cos(\vec a_1 \cdot \vec k)+\cos((\vec a_1 + \vec a_2)\cdot \vec k)+\cos(\vec a_2 \cdot \vec k)\right]
 \intertext{Mit $\vec k = \begin{pmatrix}k_x\\k_y\end{pmatrix}$ und \eqref{eq-a} lauten die Skalarpordukte:}
 \nonumber
 \sum_{n = 1}^6 \mathrm e^{i \vec k \vec R_n} &=
-  2\left[\cos(ak_x)+\cos\left(\frac{a}{2}k_x -
-  \frac{\sqrt{3}a}{2}k_y\right)+\cos\left(\frac{a}{2}k_x + \frac{\sqrt{3}a}{2}k_y\right)\right]
-\intertext{Wegen $\cos(\alpha + \beta) + \cos(\alpha - \beta) = 2 \cos(\alpha)cos(\beta)$ ist das identisch mit}
+  2\left[\cos(ak_x)+\cos\left(\frac{a}{2}k_x + \frac{\sqrt{3}a}{2}k_y\right)+
+  \cos\left(- \frac{a}{2}k_x + \frac{\sqrt{3}a}{2}k_y\right)\right]
+\intertext{Wegen $\cos(-\alpha) = \cos(\alpha)$ und  $\cos(\alpha + \beta) + \cos(\alpha - \beta) = 2 \cos(\alpha)cos(\beta)$ ist das identisch mit}
 \nonumber
 \sum_{n = 1}^6 \mathrm e^{i \vec k \vec R_n} &=
   2 \left[ \cos(a k_x) + 2 \cos \left(\frac{a}{2}k_x \right)\cos \left(\frac{\sqrt{3}a}{2}k_y \right) \right]
