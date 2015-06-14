@@ -1,6 +1,24 @@
 \subsection*{Aufgabe 18}
-
+Im folgenden ist zu zeigen, dass die LCAO: $ \phi_{\vec k}(\vec r) := \sum_{\vec R} \mathrm{e}{i\vec k\cdot \vec R}\psi_A(\vec r - \vec R)$ die Eigenschaften einer Bloch Funktion erfüllt.
 \subsubsection*{a)}
-
+Zu zeigen ist, dass sich bei einer Verschiebung von $\vec k$ um einen reziproken Gittervektor $\vec G$ die Wellenfunktion nicht ändert:
+\begin{align*}
+\phi_{(\vec k+\vec G)}(\vec r) \overset{!}{=} \phi_{\vec k}(\vec r)\\
+\sum_{\vec R} \mathrm{e}^{i(\vec k+\vec G)\cdot \vec R}\psi_A(\vec r - \vec R) {!}{=} \sum_{\vec R} \mathrm{e}^{i\vec k\cdot \vec R}\psi_A(\vec r - \vec R)\\
+\sum_{\vec R} \mathrm{e}^{i\vec G \cdot \vec R}\mathrm{e}^{i\vec k\cdot \vec R}\psi_A(\vec r - \vec R) \overset{!}{=} \sum_{\vec R} \mathrm{e}^{i\vec k\cdot \vec R}\psi_A(\vec r - \vec R)\\
+\intertext{Da $\vec G \cdot \vec R = n2\pi$ ist $\mathrm{e}^{i\vec G \cdot \vec R} = 1$ und wir erhalten:}\\
+\sum_{\vec R} \mathrm{e}^{i(\vec k\cdot \vec R}\psi_A(\vec r - \vec R) \overset{!}{=} \sum_{\vec R} \mathrm{e}^{i\vec k\cdot \vec R}\psi_A(\vec r - \vec R)\\
+\end{align*}
+Die letzte Gleichung ist eindeutig erfüllt somit stimmt auch die ursprüngliche Annahme
 \subsubsection*{b)}
+Zu zeigen ist, dass sich bei der Verschiebung um einen beliebigen Gittervektor $R'$ die Wellenfunktion nicht ändert:
+\begin{align*}
+\phi_{\vec k}(\vec r+\vec R') \overset{!}{=} \phi_{\vec k}(\vec r)\\
+\sum_{\vec R} \mathrm{e}^{i\vec k\cdot \vec R}\psi_A(\vec r + \vec R' - \vec R) \overset{!}{=} \sum_{\vec R} \mathrm{e}^{i\vec k\cdot \vec R}\psi_A(\vec r - \vec R)\\
+\sum_{\vec R} \mathrm{e}^{i\vec k\cdot \vec R}\psi_A(\vec r + (\vec R' - \vec R)) \overset{!}{=} \sum_{\vec R} \mathrm{e}^{i\vec k\cdot \vec R}\psi_A(\vec r - \vec R)\\
+\intertext{Mit $\vec R'' = \vec R' -\vec R$ wobei $\vec R''$ wieder ein Gittervektor ist:}\\
+\sum_{\vec R''} \mathrm{e}^{i\vec k\cdot \vec R}\psi_A(\vec r + \vec R'') \overset{!}{=} \sum_{\vec R} \mathrm{e}^{i\vec k\cdot \vec R}\psi_A(\vec r - \vec R)\\
+\end{align*}
+
+Diese Gleichung ist eindeutig erfüllt, da sich die Summen nur in ihrer Bennenung unterscheiden. Anschaulich lässt sich auch sagen: bBei einer Summation über alle Gitterplätze macht es keinen unterschied, wenn man das gesammte Gitter um beliebig viele Gitterplätze in eine Richtung weiterbewegt, der Wert der Summe kann sich dadurch nicht ändern
 
