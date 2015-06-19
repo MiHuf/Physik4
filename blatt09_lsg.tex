@@ -10,7 +10,11 @@
 \usepackage{fancyhdr}
 \usepackage{units}
 \usepackage{comment}  % mehrzeilige Kommentare
-
+\usepackage{cancel} %Brueche kuerzen
+\usepackage[table]{xcolor}
+\usepackage{tabularx}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}} % linksbündig mit Breitenangabe
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}} % zentriert mit Breiten
 % Grafik
 \usepackage{graphicx}
 \usepackage{subfigure}
@@ -31,13 +35,13 @@
 \newcommand*{\ZZ}{\mathbb Z}
 \begin{document}
 \begin{center}
-\begin{tabular}{|l|c|c|c|c|}
+\begin{tabular}{|L{3cm}|C{1cm}|C{1cm}|C{1cm}|}
 \hline
-Aufgabe:\quad &\quad 20 \quad&\quad 21 \quad&\quad \quad&\quad $\sum$ \quad\\
+Aufgabe:&\cellcolor{blue!25}20 &\cellcolor{blue!25} 21 &\cellcolor{blue!25} $\sum$\\
 \hline
-mögliche Punkte: \quad& 5 & 5 &  & 10 \\
+mögliche Punkte: & 5 & 5 & 10 \\
 \hline
-erreichte Punkte: &  &  &  & \\
+erreichte Punkte: &  &  & \\
 \hline
 \end{tabular}
 \end{center}
