@@ -1,8 +1,51 @@
 \subsection*{Aufgabe 20}
 
 \subsubsection*{a)}
+Gegeben ist die parabolische Dispersionsrelation für ein Material:
+\begin{align*}
+  E(\vec k) = \frac{\hbar ^2}{2} \left( \frac{k_x^2}{m_x} + \frac{k_y^2}{m_y} + \frac{k_z^2}{m_z}\right)
+\end{align*}
+Die Fermi-Fläche ist also ein Rotationsellipsoid.
+Wenn sich das Material, in einem Magnetfeld in $z$-Richtung befindet, bewegen sich die
+Elektronen auf Orbits in der in der $x$-$y$-Ebene auf entsprechenden
+Schnitten durch das Rotationsparaboloid. Algebraische Umformungen liefern:
+\begin{align*}
+  &E - \frac{\hbar^2 k_z^2}{2 m_z} = \left( \frac{\hbar ^2 k_x^2}{2 m_x} + \frac{\hbar ^2 k_y^2}{2 m_y} \right)\\
+  & 1 = \left( \frac{\hbar ^2 k_x^2}{2 m_x \cdot \left(E - \frac{\hbar^2 k_z^2}{2 m_z} \right)} +
+    \frac{\hbar ^2 k_y^2}{2 m_y \cdot \left(E - \frac{\hbar^2 k_z^2}{2 m_z} \right)} \right)
+\end{align*}
+Das ist die Gleichung einer Ellipse $1 = \frac{k_x^2}{a^2} + \frac{k_y^2}{b^2}$ mit den Halbachsen
+\begin{align*}
+  a = \sqrt{\frac{2 m_x}{\hbar^2} \cdot \left( E - \frac{\hbar^2 k_z^2}{2 m_z} \right) }\;; \qquad
+  b = \sqrt{\frac{2 m_y}{\hbar^2} \cdot \left( E - \frac{\hbar^2 k_z^2}{2 m_z} \right) }
+\end{align*}
+Die Fläche einer Ellipse beträgt $A = \pi  \cdot a  \cdot b$, also:
+\begin{align*}
+A_k(E, k_z) &= \frac{2 \pi}{\hbar^2} \cdot \sqrt{m_x \cdot m_y}\left( E - \frac{\hbar^2 k_z^2}{2 m_z} \right)
+\intertext{Damit wird:}
+\frac{\partial A_k}{\partial E} &= \frac{2 \pi}{\hbar^2} \cdot \sqrt{m_x \cdot m_y}\\
+T_C &= \frac{\hbar^2}{e B} \cdot \frac{\partial A_k}{\partial E} = \frac{2 \pi}{e B}  \cdot \sqrt{m_x \cdot m_y}
+\end{align*}
+Die Umlaufzeit ist also unabhängig von $k_z$.
 
 \subsubsection*{b)}
+Für die Zyklotronmasse $m^*$ gilt dann:
+\begin{align*}
+  m^* = \frac{\hbar^2}{2 \pi} \cdot \frac{\partial A_k}{\partial E} = \sqrt{m_x \cdot m_y}
+\end{align*}
 
 \subsubsection*{c)}
+Gegeben sei ein Magnetfeld $\vec B = B \cdot \begin{pmatrix} n_x \\n_y \\n_z \end{pmatrix}$,
+und die Bewegungsgleichung für ein Elektron
+\begin{align*}
+\begin{pmatrix} m_x&0&0 \\0&m_y&0 \\0&0&m_z\end{pmatrix} \frac{\partial}{\partial t} \vec v=
+ q \, \vec v \times \vec B = q B \begin{pmatrix}n_z v_y - n_y v_z \\ n_x v_z - n_z v_x \\ n_y v x - n_x v_y\end{pmatrix}
+\end{align*}
+Mit dem Ansatz $\vec v = \vec v_0 \mathrm e^{i \omega t}$ ergibt sich
+$\frac{\partial}{\partial t} \vec v = i \omega \vec v$ sowie:
+\begin{align*}
+\begin{pmatrix}\frac{i \omega m_x}{q B}&0&0\\0&\frac{i \omega m_y}{q B}&0\\0&0\frac{i \omega m_z}{q B}\\\end{pmatrix}
+  \cdot \begin{pmatrix}v_x\\v_y \\ v_z\end{pmatrix} =\begin{pmatrix}n_z v_y - n_y v_z \\ n_x v_z - n_z v_x \\ n_y v x - n_x v_y\end{pmatrix}
+\end{align*}
+
 
