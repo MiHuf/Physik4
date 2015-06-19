@@ -7,7 +7,7 @@ Gegeben ist die parabolische Dispersionsrelation für ein Material:
 \end{align*}
 Die Fermi-Fläche ist also ein Rotationsellipsoid.
 Wenn sich das Material, in einem Magnetfeld in $z$-Richtung befindet, bewegen sich die
-Elektronen auf Orbits in der in der $x$-$y$-Ebene auf entsprechenden
+Elektronen auf Orbits in der $x$-$y$-Ebene auf entsprechenden
 Schnitten durch das Rotationsparaboloid. Algebraische Umformungen liefern:
 \begin{align*}
   &E - \frac{\hbar^2 k_z^2}{2 m_z} = \left( \frac{\hbar ^2 k_x^2}{2 m_x} + \frac{\hbar ^2 k_y^2}{2 m_y} \right)\\
@@ -55,7 +55,20 @@ n_z&\frac{i \omega m_y}{q B}&-n_x \\ -n_y&n_x&\frac{i \omega m_z}{q B} \end{pmat
 \end{align*}
 Dieses lineare Gleichungssytem hat nur dann eine nicht-triviale Lösung für $\vec v$,
 wenn die Determinate verschwindet, also:
-
-Das muss ich noch weiter rechnen!!!
-
-
+\begin{align*}
+  0 \overset{!}= \mathrm{Det} \begin{pmatrix}\frac{i \omega m_x}{q B}&-n_z& n_y \\
+n_z&\frac{i \omega m_y}{q B}&-n_x \\ -n_y&n_x&\frac{i \omega m_z}{q B} \end{pmatrix} &=
+\left(\frac{i \omega}{q B}\right)^3\cdot m_x m_y m_z - n_z n_x n_y + n_y n_z n_x +\\
+& \quad + \left(\frac{i \omega}{q B}\right)\cdot (n_x^2 m_x + n_y^2 m_y + n_z^2 m_z)
+\end{align*}
+Für nicht-triviale Lösungen $\omega \ne 0$ können wir diese Gleichung durch
+$\left(\frac{i \omega}{q B}\right)$ dividieren und erhalten:
+\begin{align*}
+  & 0 = - \left(\frac{\omega}{q B}\right)^2 \cdot m_x m_y m_z + (n_x^2 m_x + n_y^2 m_y + n_z^2 m_z)\\
+  &\Rightarrow \quad \omega = q B \; \sqrt{\frac{n_x^2 m_x + n_y^2 m_y + n_z^2 m_z}{m_x m_y m_z}}
+\intertext{Ein Vergleich mit der Formel $\omega_C = q B/m^*$ für die
+Zyklotronmasse liefert dann das gesuchte Ergebnis:}
+& m^* = \sqrt{\frac{m_x m_y m_z}{n_x^2 m_x + n_y^2 m_y + n_z^2 m_z}}
+\end{align*}
+Insbesondere findet man für ein Magnetfeld in $z$-Richtung ($n_x = n_y = 0$)
+das Ergebnis vom Aufgabenteil b).
