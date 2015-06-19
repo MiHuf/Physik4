@@ -39,13 +39,23 @@ Gegeben sei ein Magnetfeld $\vec B = B \cdot \begin{pmatrix} n_x \\n_y \\n_z \en
 und die Bewegungsgleichung für ein Elektron
 \begin{align*}
 \begin{pmatrix} m_x&0&0 \\0&m_y&0 \\0&0&m_z\end{pmatrix} \frac{\partial}{\partial t} \vec v=
- q \, \vec v \times \vec B = q B \begin{pmatrix}n_z v_y - n_y v_z \\ n_x v_z - n_z v_x \\ n_y v x - n_x v_y\end{pmatrix}
+ q \, \vec v \times \vec B = q B \begin{pmatrix}n_z v_y - n_y v_z \\ n_x v_z - n_z v_x \\ n_y v_x - n_x v_y\end{pmatrix}
 \end{align*}
 Mit dem Ansatz $\vec v = \vec v_0 \mathrm e^{i \omega t}$ ergibt sich
 $\frac{\partial}{\partial t} \vec v = i \omega \vec v$ sowie:
 \begin{align*}
-\begin{pmatrix}\frac{i \omega m_x}{q B}&0&0\\0&\frac{i \omega m_y}{q B}&0\\0&0\frac{i \omega m_z}{q B}\\\end{pmatrix}
-  \cdot \begin{pmatrix}v_x\\v_y \\ v_z\end{pmatrix} =\begin{pmatrix}n_z v_y - n_y v_z \\ n_x v_z - n_z v_x \\ n_y v x - n_x v_y\end{pmatrix}
+& \begin{pmatrix}\frac{i \omega m_x}{q B}&0&0\\0&\frac{i \omega m_y}{q B}&0\\0&0&\frac{i \omega m_z}{q B}\\\end{pmatrix}
+  \cdot \begin{pmatrix}v_x\\v_y\\v_z\end{pmatrix} =
+  \begin{pmatrix}n_z v_y - n_y v_z \\ n_x v_z - n_z v_x \\ n_y v_x - n_x v_y\end{pmatrix} =
+  \begin{pmatrix}0 & n_z &  - n_y \\ -n_z & 0 & n_x \\ n_y & -n_x & 0 \end{pmatrix}
+  \cdot \begin{pmatrix}v_x\\v_y\\v_z\end{pmatrix} \\
+&\Rightarrow \quad \begin{pmatrix}\frac{i \omega m_x}{q B}&-n_z& n_y \\
+n_z&\frac{i \omega m_y}{q B}&-n_x \\ -n_y&n_x&\frac{i \omega m_z}{q B} \end{pmatrix}
+  \cdot \begin{pmatrix}v_x\\v_y\\v_z\end{pmatrix} = 0;
 \end{align*}
+Dieses lineare Gleichungssytem hat nur dann eine nicht-triviale Lösung für $\vec v$,
+wenn die Determinate verschwindet, also:
+
+Das muss ich noch weiter rechnen!!!
 
 
