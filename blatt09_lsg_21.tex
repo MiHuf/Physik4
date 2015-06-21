@@ -5,29 +5,29 @@ In Aufgabe 15 d) haben wir für den Fermi-Wellenvektor $k_F$ eines fcc-Kristalls
 Gitterkonstanten $a$ bestehend aus Atomen der Wertigkeit $Z$ im Modell
 den folgenden Ausdruck hergeleitet:
 \begin{align}
-k_F^2 =   
-  \left(\frac{3 Z}{2 \pi} \right)^{2/3} \cdot \left(\frac{2 \pi}{a} \right)^2 \label{eq:k_F}
+\label{eq:k_F} k_F^2 =
+  \left(\frac{3 Z}{2 \pi} \right)^{2/3} \cdot \left(\frac{2 \pi}{a} \right)^2
 \end{align}
 
-Wir gehen von freien Elektronen aus und somit von Fermikuglen. Eine Extremalbahn hat dann die Form eines Kreises mit dem Radius $k_F$. Womit wir
+Wir gehen von freien Elektronen aus und somit von Fermikuglen. Eine Extremalbahn
+hat dann die Form eines Kreises mit dem Radius $k_F$ und der Fläche
 \begin{align}
  A_k = \pi k_F^2 \label{eq:A_k}
 \end{align}
-womit sich für die Oszillationsperiode
+womit sich für die Oszillationsperiode$
+ \Delta \left(\frac 1B\right)$
+ergibt:
 \begin{align}
- \Delta \left(\frac 1B\right) \label {eq:D_B} 
+\label{eq:D_B}
+ \Delta \left(\frac 1B\right) = 2\pi\frac{e}{\hbar A_k} \overset{\eqref{eq:A_k}}{=} 2\frac{\cancel{\pi}e}{\cancel{\pi} \hbar k_F^2} \overset{\eqref{eq:k_F}}{=}
+ 2\frac{e}{\hbar \left(\frac{3 Z}{2 \pi} \right)^{2/3} \cdot \left(\frac{2 \pi}{a} \right)^2}
+\intertext {Für Cu mit Z = 1 wird das:}
+\nonumber
 \end{align}
 
-ergibt:
-\begin{align*}
- \Delta \left(\frac 1B\right) = 2\pi\frac{e}{\hbar A_k} \overset{\eqref{eq:A_k}}{=} 2\frac{\cancel{\pi}e}{\cancel{\pi} \hbar k_F^2} \overset{\eqref{eq:k_F}}{=}  
- 2\frac{e}{\hbar \left(\frac{3 Z}{2 \pi} \right)^{2/3} \cdot \left(\frac{2 \pi}{a} \right)^2}
-\end{align*}
-WERTIGKEIT VON CU FEHLT
-
-
 \subsubsection*{b)}
-Zu eienr gegebenen Oszillationsperiode können wir die dazugehörige eingeschlossene Fläche $A_k$ über \eqref{eq:D_B} ausdrücken als:
+Zu einer gegebenen Oszillationsperiode können wir die dazugehörige
+eingeschlossene Fläche $A_k$ über \eqref{eq:D_B} ausdrücken als:
 \begin{align}
  A_k= 2\pi \frac{e}{\hbar \Delta \left(\frac 1B\right)}
 \end{align}
@@ -48,16 +48,29 @@ womit wir für die gemessenen Kurven folgende Werte erhalten:
  \end{tabular}
 \end{align*}
 
-Aus dem Modell freier Eletronen haben wir mit \eqref{eq:A_k} $A_k = \pi k_F^2 = $ erwartet. Die Fermi Fläche von Kupfer ist aber gegenüber der Fermikugel stark verformt. 
-Wir erhalten verschiedene Bauchbahnen (Bahnen 1-3) die dem Modell freier Elektronen am nächsten kommen. In diesen Bereichen ist die Fermi Fläche von Kupfer nur leicht 
-verformt und es kommt somit nur zu vergleichweise kleinen Korrekturen.In den Bereichen, wo die Fermi Kugel dem Brillouin-Zonenrand sehr nahe kommt bilden sich
-Hälse aus (siehe Bild auf dem Übungsblatt) die Umlaufbahnen in den Hälsen sind sehr viel kleiner als die in den Bäuchen, weshalb sich viel größere Oszillationen ergeben
+Aus dem Modell freier Eletronen haben wir mit \eqref{eq:A_k} $A_k = \pi k_F^2$ erwartet.
+Die Fermi Fläche von Kupfer ist aber gegenüber der Fermikugel stark verformt.
+Wir erhalten verschiedene Bauchbahnen (Bahnen 1-3) die dem Modell freier Elektronen am nächsten kommen.
+In diesen Bereichen ist die Fermi Fläche von Kupfer nur leicht
+verformt und es kommt somit nur zu vergleichweise kleinen Korrekturen.
+In den Bereichen, wo die Fermi-Kugel dem Brillouin-Zonenrand sehr nahe kommt bilden sich
+Hälse aus (siehe Bild auf dem Übungsblatt); die Umlaufbahnen in den Hälsen sind
+sehr viel kleiner als die in den Bäuchen, weshalb sich viel größere Oszillationen ergeben
 ($\approx$ 1 Größenordnung). Dies entspricht gerade dem 4. gemessenen Wert.
 
 \subsubsection*{c)}
-
-Die Homogenität muss im Bereich von $\Delta\left(\frac 1B\right)$ liegen, damit die Oszillationen beobachtet werden können. Bei einem Magnetfeld mit einer Stärke 
-von $B=5T$ ergibt sich eine Homogenität von:
+Die Probe befinde sich in einem inhomogenen Magnetfeld dessen Stärke zwischen
+$B - \delta B$ und $B + \delta B$ variiert, das führt dann zu einer Überlagerung
+von entsprechend verschobenen Sägezahn-Spektren. Der Effekt verschwindet vollständig,
+wenn gilt:
 \begin{align*}
- \frac{\Delta \left(\frac 1B\right)}{0.2T^{-1}} \le \frac{38\cdot 10-5}{0.2} = 1.9\cdot 10^{-3}
+  & \frac{1}{B_n} = \frac{1}{B_{n-1}} +  \Delta \left(\frac 1B\right) \overset{!}=
+  \frac{1}{B_{n-1} - \delta B} = \frac{1}{B_{n-1} \left(1 - \frac{\delta B_{n-1}}{B_{n-1}}\right)}
+  \approx \frac{1}{B_{n-1}} \left(1  + \frac{\delta B}{B_{n-1}} \right)\\
+  & \qquad \Leftrightarrow \quad \Delta \left(\frac 1B\right) =
+    \frac{1}{B_{n-1}} \cdot \frac{\delta B}{B_{n-1}}
+    \quad \Rightarrow \quad B \cdot \Delta \left(\frac 1B\right) = \frac{\delta B}{B}
 \end{align*}
+Für einen sichtbaren Effekt muss die Inho1mogenität $\delta B / B$ also deutlich
+kleiner als $B \cdot \Delta \left(\frac 1B\right)$ sein, das bedeutet für
+$B=5\,$T z.B. in der $<$100$>$-Richtung $\delta B / B \ll 7{,}8 \cdot 10^{-5}$.
