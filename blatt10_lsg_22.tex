@@ -1,6 +1,44 @@
 \subsection*{Aufgabe 22}
 
 \subsubsection*{a)}
+\begin{itemize}
+  \item {n-Bereich $x>0$}:
+Hier ist $N_A = 0$ und für die Dichte der Elektronen gilt in der Boltzmann-Näherung:
+\begin{align}
+\nonumber
+& n_c(T) = N_c^{eff}(T)\cdot e^{- \frac{E_c - \mu_n}{k_B T}}
+\intertext{Bei vollständiger Ionisierung der Störstellen gilt $n_c(T) = N_D$,
+  Umformungen liefern dann:}
+\nonumber
+& k_B T \cdot \ln \left(\frac{N_D}{N_c^{eff}}\right) = - (E_c - \mu_n)\; ; \quad \Rightarrow \quad
+  \mu_n = E_c - k_B T \cdot \ln \left(\frac{N_c^{eff}}{N_D}\right)
+\intertext{Bei Raumtemperatur $T = 20^\circ$C = 293,15\,K ist $k_B T =$ 25,26\,meV,
+mit den Zahlenwerten aus dem Aufgabenblatt ergibt sich dann:}
+\label{eq-un}
+&\mu_n = E_c - \text{25,26\,meV} \cdot \ln \left(\frac{2{,}8\cdot10^{19}}{1 \cdot10^{17}}\right)
+= E_c - \text{43,67\,meV}
+\end{align}
+  \item {p-Bereich $x<0$}: Analog ist hier $N_D = 0$ und für die Löcherdichte gilt:
+\begin{align}
+\nonumber
+& p_v(T) = P_v^{eff}(T)\cdot e^{- \frac{\mu_p - E_v}{k_B T}} = N_A\\
+\nonumber
+&\quad \Rightarrow \quad k_B T \cdot \ln \left(\frac{N_A}{P_v^{eff}}\right) = E_v - \mu_p
+\; ; \quad \Rightarrow \quad \mu_p = E_v + k_B T \cdot \ln \left(\frac{P_v^{eff}}{N_A}\right)
+\intertext{Mit Zahlenwerten:}
+\label{eq-up}
+&\mu_p = E_v + \text{25,26\,meV} \cdot \ln \left(\frac{1{,}0\cdot10^{19}}{5\cdot10^{16}}\right)
+= E_v + \text{133,84\,meV}
+\end{align}
+\end{itemize}
+Bei Störstellenerschöpfung sind die Ladungsträgerdichten und somit die chemischen
+Potentiale unabhängig von der Akzeptor-- bzw. Donator--Energie.
+Aus \eqref{eq-un} und \eqref{eq-up} ergibt sich für die Diffusionspannung als
+Abstand der beiden chemischen Potentiale:
+\begin{align*}
+V_D = \mu_n - \mu_p = E_c - E_v - \text{177,51\,meV} =
+   \text{1,12\,eV} - \text{177,51\,meV} = \text{0,94\,eV}
+\end{align*}
 
 \subsubsection*{b)}
 
