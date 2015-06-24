@@ -41,5 +41,28 @@ V_D = \mu_n - \mu_p = E_c - E_v - \text{276,17\,meV} =
 \end{align*}
 
 \subsubsection*{b)}
+Wir nehmen an, dass nur im Intervall $[-w_p, w_n]$ nicht kompensierte Akzeptoren
+(p-Bereich, $z < 0$) bzw. Donatoren (n-Bereich, $z > 0$) existieren.
+Dann können wir für die Ladungsdichte $\rho(z)$ ansetzen:
+\begin{align*}
+\rho(z) =
+  \begin{cases}
+    0 & \quad \text{ für } \; z < -w_p \\
+    -e N_A& \quad \text{ für } \; z \in [-w_p, 0] \\
+    e N_D& \quad \text{ für } \; z \in [0, w_n] \\
+    0& \quad \text{ für } \; z > w_n
+  \end{cases}
+\intertext{Mit $\frac{\partial^2}{\partial z^2} \Phi(z) = - \frac{\rho(z)}{\epsilon \epsilon_0}$ ergibt sich:}
+\frac{\partial^2}{\partial z^2} \Phi(z) =
+  \begin{cases}
+    0 & \quad \text{ für } \; z < -w_p \\
+    + \frac{e N_A}{\epsilon \epsilon_0} & \quad \text{ für } \; z \in [-w_p, 0] \\
+    - \frac{e N_D}{\epsilon \epsilon_0} & \quad \text{ für } \; z \in [0, w_n] \\
+    0& \quad \text{ für } \; z > w_n
+  \end{cases}
+\end{align*}
+
+
+
 
 \subsubsection*{c)}
