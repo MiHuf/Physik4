@@ -41,10 +41,12 @@ V_D = \mu_n - \mu_p = E_c - E_v - \text{276,17\,meV} =
 \end{align*}
 
 \subsubsection*{b)}
-Wir nehmen an, dass nur im Intervall $[-w_p, w_n]$ Raumladungen durch nicht
-kompensierte Akzeptoren (p-Bereich, $z < 0$) bzw. Donatoren (n-Bereich, $z > 0$)
-existieren. Dann können wir für die Ladungsdichte $\rho(z)$ ansetzen:
-\begin{align*}
+Wir nehmen an, dass nur in dem Intervall $[-w_p, w_n]$ der Breite
+$w = w_p + w_n$ Raumladungen durch nicht kompensierte Akzeptoren 
+(p-Bereich, $z < 0$) bzw. Donatoren (n-Bereich, $z > 0$) existieren.
+Dann können wir für die Ladungsdichte $\rho(z)$ ansetzen:
+\begin{align}
+\label{eq-rho}
 \rho(z) =
   \begin{cases}
     0 & \quad \text{ für } \; z < -w_p \\
@@ -52,25 +54,36 @@ existieren. Dann können wir für die Ladungsdichte $\rho(z)$ ansetzen:
     e N_D& \quad \text{ für } \; z \in [0, w_n] \\
     0& \quad \text{ für } \; z > w_n
   \end{cases}
-\intertext{Mit der Potential-Gleichung
-$\frac{\partial^2}{\partial z^2} \Phi(z) = - \frac{\rho(z)}{\epsilon \epsilon_0}$
-und der Elektronen-Energie $V(z) = - e \Phi(z)$ ergibt sich:}
+\intertext{Mit der Poisson-Gleichung
+$\frac{\partial^2}{\partial z^2} V(z) = - \frac{\rho(z)}{\epsilon \epsilon_0}$
+für das elektrostatische Potential $V(z)$ ergibt sich:}
+\label{eq-d2V}
 \frac{\partial^2}{\partial z^2} V(z) =
   \begin{cases}
     0 & \quad \text{ für } \; z < -w_p \\
-    - \frac{e^2 N_A}{\epsilon \epsilon_0} & \quad \text{ für } \; z \in [-w_p, 0] \\
-    + \frac{e^2 N_D}{\epsilon \epsilon_0} & \quad \text{ für } \; z \in [0, w_n] \\
+    + \frac{e N_A}{\epsilon \epsilon_0} & \quad \text{ für } \; z \in [-w_p, 0] \\
+    - \frac{e N_D}{\epsilon \epsilon_0} & \quad \text{ für } \; z \in [0, w_n] \\
     0& \quad \text{ für } \; z > w_n
   \end{cases}
 \intertext{Zweimalige Integration liefert dann (wie schon in der Vorlesung angedeutet) den parabolischen Verlauf:}
+\label{eq-V}
 V(z) =   \begin{cases}
     V(-\infty) & \quad \text{ für } \; z < -w_p \\
-    V(-\infty) - \frac{e^2 N_A}{2 \epsilon \epsilon_0} (w_p + z)^2 & \quad \text{ für } \; z \in [-w_p, 0] \\
-    V(+\infty) + \frac{e^2 N_D}{2 \epsilon \epsilon_0} (w_n - z)^2 & \quad \text{ für } \; z \in [0, w_n] \\
+    V(-\infty) + \frac{e N_A}{2 \epsilon \epsilon_0} (w_p + z)^2 & \quad \text{ für } \; z \in [-w_p, 0] \\
+    V(+\infty) - \frac{e N_D}{2 \epsilon \epsilon_0} (w_n - z)^2 & \quad \text{ für } \; z \in [0, w_n] \\
     V(+\infty) & \quad \text{ für } \; z > w_n
   \end{cases}
-\end{align*}
-
+\end{align}
+Man verifiziert leicht, dass zweimaliges Differenzieren von \eqref{eq-V}
+wieder \eqref{eq-d2V} ergibt. Es müssen nun die Stetigkeitsbedingungen
+\begin{align}
+\label{eq-s1}
+& \left. \frac{\partial}{\partial z} V(z) \right|_{z = -0} = \left. \frac{\partial}{\partial z} V(z) \right|_{z = +0}
+\intertext{sowie}
+\label{eq-s2}
+& V(z = -0) = v(z = +0)
+\end{align}
+erfüllt sein.
 
 
 
