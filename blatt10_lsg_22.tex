@@ -42,7 +42,7 @@ V_D = \mu_n - \mu_p = E_c - E_v - \text{276,17\,meV} =
 
 \subsubsection*{b)}
 Wir nehmen an, dass nur in dem Intervall $[-w_p, w_n]$ der Breite
-$w = w_p + w_n$ Raumladungen durch nicht kompensierte Akzeptoren 
+$w = w_p + w_n$ Raumladungen durch nicht kompensierte Akzeptoren
 (p-Bereich, $z < 0$) bzw. Donatoren (n-Bereich, $z > 0$) existieren.
 Dann können wir für die Ladungsdichte $\rho(z)$ ansetzen:
 \begin{align}
@@ -75,16 +75,55 @@ V(z) =   \begin{cases}
   \end{cases}
 \end{align}
 Man verifiziert leicht, dass zweimaliges Differenzieren von \eqref{eq-V}
-wieder \eqref{eq-d2V} ergibt. Es müssen nun die Stetigkeitsbedingungen
+wieder \eqref{eq-d2V} ergibt. Die beiden Potentiale im Unendlichen sind gerade
+die chemischen Potentiale aus Aufgabenteil a). Es müssen nun Stetigkeitsbedingungen
+für die elektrische Feldstärke $\vec E(z) = - \vec \nabla V(z)$ und das Potential $V(z)$
+im Nullpunkt erfüllt sein:
 \begin{align}
 \label{eq-s1}
-& \left. \frac{\partial}{\partial z} V(z) \right|_{z = -0} = \left. \frac{\partial}{\partial z} V(z) \right|_{z = +0}
-\intertext{sowie}
+\left. \frac{\partial}{\partial z} V(z) \right|_{z = -0} &\overset{!}{=} \left. \frac{\partial}{\partial z} V(z) \right|_{z = +0} \\
 \label{eq-s2}
-& V(z = -0) = v(z = +0)
+V(z = -0) &\overset{!}{=} v(z = +0)
 \end{align}
-erfüllt sein.
-
-
+Aus \eqref{eq-s1} folgt:
+\begin{align*}
+  \frac{e N_A}{\epsilon \epsilon_0} (w_p + 0) =  \frac{e N_D}{2 \epsilon \epsilon_0} (w_n - 0)
+  \; ; \quad \Rightarrow \quad N_A w_p = N_D w_n\; ; \quad \Rightarrow \quad
+  w_n = \frac{N_A}{N_D} w_p
+\end{align*}
+und aus \eqref{eq-s2} folgt:
+\begin{align*}
+& \mu_p + \frac{e}{2 \epsilon \epsilon_0} N_A w_p^2 = + \mu_n - \frac{e}{2 \epsilon \epsilon_0} N_D w_n^2
+  \; ; \quad \Rightarrow \quad \frac{e}{2 \epsilon \epsilon_0} (N_A w_p^2 + N_D w_n^2) = \mu_n -  \mu_p = V_D\\
+& \frac{2 \epsilon \epsilon_0 V_D}{e} = N_A w_p^2  + N_D \left( \frac{N_A}{N_D} w_p \right)^2 =
+w_p^2 \left( N_A + \frac{N_A^2}{N_D} \right) = w_p^2 N_A \left(\frac{N_D + N_A}{N_D} \right) \\
+& \Rightarrow \quad w_p = \sqrt{\frac{2 \epsilon \epsilon_0 V_D}{e} \cdot  \left(\frac{N_D / N_A}{N_D + N_A} \right)}
+\intertext{und analog ergibt sich}
+& \qquad \;\; w_n = \sqrt{\frac{2 \epsilon \epsilon_0 V_D}{e} \cdot  \left(\frac{N_A / N_D}{N_D + N_A} \right)}
+\end{align*}
+Mit den $V_D$ aus Teil a) und den Zahlenwerten $N_A = 5 \cdot 10^{16}\;\text{cm}^{-3}$
+und $\;N_D = 10 \cdot 10^{16}\;\text{cm}^{-3}$ aus dem Aufgabenblatt wird dann:
+\begin{align*}
+& \sqrt{\frac{2 \epsilon \epsilon_0 V_D}{e \cdot(N_D + N_A) }} = \sqrt{\frac{2 \cdot 12 \cdot 8,854\cdot10^{-12}\;\text{As/Vm}
+  \cdot 0,84\;\text{V}}{1,602\cdot10^{-19}\;\text{As} \cdot 15\cdot 10^{16}\;\text{cm}^{-3}}}
+  = \unit{8,618}{\micro\meter}  \\
+& \Rightarrow \quad w_p = \unit{12,2}{\micro\meter}
+\; ; \qquad w_n = \unit{6,09}{\micro\meter}
+\; ; \qquad w = w_p +  w_n = \unit{18,3}{\micro\meter}
+\end{align*}
 
 \subsubsection*{c)}
+Durch Auffüllen von Löchern im p-Bereich mit Elektronen aus dem n-Bereich entsteht
+im p-Bereich eine negative Raumladung, im n-Bereich eine positive. Die elektrische
+Feldstärke ist also entgegengesetzt zur z-Achs, d.h. negativ.
+
+Eine externe Spannung mit dem Pluspol am n-Bereich vergrößert dieses Feld, dadurch
+vergrößert sich die Verarmungsszone und der Abstand zwischen korrespondierenden
+Bändern der p-Zone und der n-Zone: Sperr-Richtung.
+
+Umgekehrt: Eine Spannung mit dem Pluspol am p-Bereich verkleinert das Feld, dadurch
+verkleinert sich die Verarmungsszone und der Abstand zwischen korrespondierenden
+Bändern der p-Zone und der n-Zone: Durchlass-Richtung.
+
+Siehe auch die schönen Bilder im Skript auf Seite 163.
+
