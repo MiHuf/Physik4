@@ -1,29 +1,28 @@
 \subsection*{Aufgabe 23}
 
 \subsubsection*{a)}
-Bei einem zweidimensionalen Elektronensystem befinden sich die Elektronen auf Energieniveaus $\lambda =0,1,2...$, die die Form von Kreisen haben mit der Energie 
+Bei einem zweidimensionalen Elektronensystem befinden sich die Elektronen auf Energieniveaus $\lambda =0,1,2...$, die die Form von Kreisen haben mit der Energie
 \begin{align*}
  E = \hbar\omega_c\left(\lambda+\frac 12\right)
-\end{align*} 
+\end{align*}
 wobei $\omega_c$ die Zyklotronfrequenz ist. Die Entartung eines Niveaus ist dabei gerade $2N_L = 2\frac{eB}{h}$ Elektronen.
 
-Bei N Elektronen sind die ersten s Landau Niveaus, also bis zum Niveau s-1 komplett aufgefüllt und das Niveau s+1-te Niveau, also das s Niveau ist nur Teilweise gefülllt.
-Die gesamt Energie der vollständigen Niveaus ist dann:
-
+Bei N Elektronen seien die ersten $s$ Landau Niveaus, also von 0 bis zum Niveau $s-1$ komplett aufgefüllt und das  $s+1$-te Niveau, also das Niveau $s$ sei nur teilweise gefülllt.
+Die gesamt Energie der vollständige gefüllten  Niveaus ist dann:
 \begin{align}
- E_{tot}^s &= \sum_{n=0}^{s-1} 2N_L\hbar \omega_c\left(n+ \frac 12\right) 
+ E_{tot}^s &= \sum_{n=0}^{s-1} 2N_L\hbar \omega_c\left(n+ \frac 12\right)
  \intertext{Wir machen einen Indexshift und ziehen die Summen auseinander}
  &= 2N_L\hbar\omega_c\left(\sum_{n=1}^s n + \sum_{n=1}^s \frac 12\right)\\
  &= 2N_L\hbar\omega_c\left(\frac{s(s+1)}{2} + \frac 12 s\right) = 2N_L\omega_c = N_L\hbar\omega_c s^2
 \end{align}
-Das teilweise gefüllte s+1-te Niveau ist mit $N-2sN_L$ Elektronen besetzt und hat somit die Energie:
+Das teilweise gefüllte $s+1$-te Niveau ist mit $N-2sN_L$ Elektronen besetzt und hat somit die Energie:
 \begin{align*}
 E_{tot}^{s+1} = \hbar\omega_c\left(s+\frac 12\right)(N-2sN_L)
 \end{align*}
 Somit ergibt sich für die gesammte freie Energiedichte $U$:
 \begin{align*}
 U &=  \frac 1V \left(N_L\hbar\omega_c s^2+\hbar\omega_c\left(s+\frac 12\right)(N-2sN_L)\right)\\
-\intertext{Mit $\frac{N_L}{V}:= n_L$ und $\frac{N}{V} = n$ ergibt sich:}
+\intertext{Mit $\frac{N_L}{V} =: n_L$ und $\frac{N}{V} =: n$ ergibt sich:}
 & = \hbar\omega_c\left(n_L s^2+\left(s+\frac 12\right)(n-2sn_L)\right)\\
 &= \hbar\omega_c\left(n_L s^2+\left(s+\frac 12\right)(-2sn_L)+n\left(s+\frac 12\right)\right)\\
 &= \hbar\omega_c\left(n_L s^2-2n_L s^2-sn_L+n\left(s+\frac 12\right)\right)\\
@@ -31,16 +30,16 @@ U &=  \frac 1V \left(N_L\hbar\omega_c s^2+\hbar\omega_c\left(s+\frac 12\right)(N
 &= \hbar\omega_c\left(n\left(s+\frac 12\right)-n_L s(s+1)\right)\\
 \end{align*}
 \subsubsection*{b)}
-Mit $n_L = 2\frac{eB}{h}$ und $\omega_c = \frac{eB}{m^*}$ können wir die Magnetisierung M berechnen:
+Mit $n_L = 2\frac{eB}{h}$ und $\omega_c = \frac{eB}{m^*}$ können wir die Magnetisierung $M$ berechnen:
 \begin{align*}
-M &= \frac{\delta U}{\delta B}\\
- &= \frac{\delta}{\delta B} \left[\hbar\omega_c\left(n\left(s+\frac 12\right)-n_L s(s+1)\right)\right] \\
- &= \frac{\delta}{\delta B} \left[\hbar\frac{eB}{m^*}\left(n\left(s+\frac 12\right)-\frac{eB}{h} s(s+1)\right)\right]\\
+M &= \frac{\partial U}{\partial B}\\
+ &= \frac{\partial}{\partial B} \left[\hbar\omega_c\left(n\left(s+\frac 12\right)-n_L s(s+1)\right)\right] \\
+ &= \frac{\partial}{\partial B} \left[\hbar\frac{eB}{m^*}\left(n\left(s+\frac 12\right)-\frac{eB}{h} s(s+1)\right)\right]\\
  &= \hbar\left(\frac{en}{m^*}\left(s+\frac 12\right)-\frac{e^2B}{hm^*} s(s+1)\right)
 \end{align*}
 
 \subsubsection*{c)}
-Die Magnetiesierung ist offensichtlich linear in B. Setzen wir $B = \frac{hn}{2e(s+1)}$ so erhalten wir:
+Die Magnetiesierung ist offensichtlich linear in $B$. Setzen wir $B = \frac{hn}{2e(s+1)}$ so erhalten wir:
 \begin{align*}
 M &= \hbar\left(\frac{en}{m^*}\left(s+\frac 12\right)-\frac{e^2B}{hm^*} s(s+1)\right)\\
 M &= \hbar\left(\frac{en}{m^*}\left(s+\frac 12\right)-\frac{e^2\frac{hn}{2e(s+1)}}{hm^*} s(s+1)\right) \\
