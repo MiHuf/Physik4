@@ -1,0 +1,59 @@
+% DOCUMENT CLASS
+\documentclass[11pt]{article}
+%PACKAGES
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage[reqno,fleqn]{amsmath}
+\setlength\mathindent{10mm}
+\usepackage{amstext}
+\usepackage{amssymb}
+\usepackage{fancyhdr}
+\usepackage{units}
+\usepackage{comment}  % mehrzeilige Kommentare
+\usepackage{cancel} %Brueche kuerzen
+\usepackage[table]{xcolor}
+\usepackage{tabularx}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}} % linksbündig mit Breitenangabe
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}} % zentriert mit Breiten
+% Grafik
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{wrapfig}
+% Zahlenwerte mit Einheiten mittels \unit{Zahlenwert}{Einheit}
+\usepackage[thinspace,thinqspace,squaren,textstyle]{SIunits}
+% FORMATIERUNG
+\usepackage[paper=a4paper,left=25mm,right=25mm,top=25mm,bottom=25mm]{geometry}
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{1.5mm plus1mm minus1.5mm}
+% PAGESTYLE
+\pagestyle{fancy}
+\setlength\headheight{30pt}
+\lhead{Michael Hufschmidt, Mat. Nr. 6436122\\Florian Jochheim, Mat. Nr. 6508131}
+\rhead{Übungen zur Physik IV, SoSe 2015\\Blatt 11 zum 06.07.2015}
+%MATH SHORTCUTS
+\newcommand*{\NN}{\mathbb N}
+\newcommand*{\ZZ}{\mathbb Z}
+\begin{document}
+\begin{comment}
+\begin{center}
+\begin{tabular}{|L{3cm}|C{1cm}|C{1cm}|C{1cm}|}
+\hline
+Aufgabe:&\cellcolor{blue!25}24 &\cellcolor{blue!25} 25 &\cellcolor{blue!26} $\sum$\\
+\hline
+mögliche Punkte: & 5 & 5 & 10 \\
+\hline
+erreichte Punkte: &  &  & \\
+\hline
+\end{tabular}
+\end{center}
+\end{comment}
+
+\input{blatt11_lsg_24.tex}
+% \newpage
+\input{blatt11_lsg_25.tex}
+% \newpage
+\input{blatt11_lsg_26.tex}
+% \newpage
+
+\end{document}
+
