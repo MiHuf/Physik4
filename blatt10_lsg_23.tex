@@ -35,16 +35,24 @@ Mit $n_L = 2\frac{eB}{h}$ und $\omega_c = \frac{eB}{m^*}$ können wir die Magnet
 M &= \frac{\partial U}{\partial B}\\
  &= \frac{\partial}{\partial B} \left[\hbar\omega_c\left(n\left(s+\frac 12\right)-n_L s(s+1)\right)\right] \\
  &= \frac{\partial}{\partial B} \left[\hbar\frac{eB}{m^*}\left(n\left(s+\frac 12\right)-\frac{eB}{h} s(s+1)\right)\right]\\
- &= \hbar\left(\frac{en}{m^*}\left(s+\frac 12\right)-\frac{e^2B}{hm^*} s(s+1)\right)
+ &= \hbar\left(\frac{en}{m^*}\left(s+\frac 12\right)-\frac{2e^2B}{hm^*} s(s+1)\right)
 \end{align*}
 
 \subsubsection*{c)}
 Die Magnetiesierung ist offensichtlich linear in $B$. Setzen wir $B = \frac{hn}{2e(s+1)}$ so erhalten wir:
 \begin{align*}
-M &= \hbar\left(\frac{en}{m^*}\left(s+\frac 12\right)-\frac{e^2B}{hm^*} s(s+1)\right)\\
-M &= \hbar\left(\frac{en}{m^*}\left(s+\frac 12\right)-\frac{e^2\frac{hn}{2e(s+1)}}{hm^*} s(s+1)\right) \\
-&= \hbar\left(\frac{en}{m^*}\left(s+\frac 12\right) - \frac{en}{m^*}s+\frac{en}{m^*}\right)\\
+M &= -\hbar\left(\frac{en}{m^*}\left(s+\frac 12\right)-\frac{2e^2B}{hm^*} s(s+1)\right)\\
+M &= -\hbar\left(\frac{en}{m^*}\left(s+\frac 12\right)-\frac{2e^2\frac{hn}{2e(s+1)}}{hm^*} s(s+1)\right) \\
+&= -\hbar\left(\frac{en}{m^*}\left(s+\frac 12\right) - \frac{en}{m^*}s\right)\\
 &= -\frac{\hbar en}{2m^*} = -n \mu_B
 \end{align*}
 
-Obere Grenze fehlt noch...
+Und für $B = \frac{hn}{2es}$:
+\begin{align*}
+M &= \hbar\left(\frac{en}{m^*}\left(s+\frac 12\right)-\frac{2e^2B}{hm^*} s(s+1)\right)\\
+M &= \hbar\left(\frac{en}{m^*}\left(s+\frac 12\right)-\frac{2e^2\frac{hn}{2e(s)}}{hm^*} s(s+1)\right) \\
+&= \hbar\left(\frac{en}{m^*}\left(s+\frac 12\right) - \frac{en}{m^*}(s+1)\right)\\
+&= \frac{\hbar en}{2m^*} = n \mu_B
+\end{align*}
+
+Also steigt die Magnetisierung linear von $-n \mu_B$ auf $n \mu_B$ in dem gegebenem Bereich
