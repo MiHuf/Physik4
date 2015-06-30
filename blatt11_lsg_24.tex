@@ -1,20 +1,41 @@
 \subsection*{Aufgabe 24}
 
 \subsubsection*{a)}
-Magnetisierung $\vec M(\vec r, T)$, Magnetfeld $\vec H(\vec r, T)$, und Flußdichte
-$\vec B(\vec r, T)$ hängen mit der magnetischen Feldkonstante $\mu_0$ wie folgt zusammen:
+Hier auch gleich unsere Formelsammlung für den Spickzettel.
+Magnetisierung $\vec M(\vec r, t)$, Magnetfeld $\vec H(\vec r, t)$, und Flußdichte
+$\vec B(\vec r, t)$ hängen mit der magnetischen Feldkonstante $\mu_0$ wie folgt zusammen
+($n$ ist die Teilchenzahldichte, $F$ = freie Energie):
 \begin{align*}
-  \vec B &= \mu_0 (\vec H + \vec M) = \mu_r \mu_0 \vec H\; ;\qquad \vec M = \chi \cdot \vec H =  (\mu_r - 1) \vec H\\
+  [\vec m] = [\vec \mu] &= \frac{\text{J}}{\text{T}} = \text{A m}^2 \qquad \text{magnetisches Moment}\\
+  \vec M & = \frac{\vec m}{V} = - n \cdot \left(\frac{\partial F}{\partial B} \right)
+  \qquad \text{Magnetisierung = magn. Moment pro Volumen}\\
+  [M] = [H] &= \frac{\text{A}}{\text{m}} \\
+  \vec M &= \chi \cdot \vec H =  (\mu_r - 1) \vec H
+    \;;\quad \vec B = \mu_0 (\vec H + \vec M) = \mu_r \mu_0 \vec H \\
+  \chi & = \mu_r - 1 = \mu_0 \left(\frac{\partial M}{\partial B} \right)_{T, V}
+  = - n \mu_0 \left(\frac{\partial^2 F}{\partial B^2} \right)
+  \qquad \text{magnetische Suszeptibilität}\\
   [B] &= \text{T} = \frac{\text{V s}}{\text{m}^2} \\
-  [H] &= [M] = \frac{\text{A}}{\text{m}} \\
   [\mu_0] &= \frac{\text{V s}}{\text{A m}} \\
   [\epsilon_0] &= \frac{\text{A s}}{\text{V m}} \\
-  [\vec \mu] = [\vec m] &= \frac{\text{J}}{\text{T}} = \text{A m}^2 \qquad \text{magnetisches Moment}\\
   \mu_B &=  \frac{e \hbar}{2 m_e} = 9{,}274 \cdot 10^{-24}\frac{\text{J}}{\text{T}}
     = 9{,}274 \cdot 10^{-24}\text{A m}^2  \qquad \text{Bohrsches Magneton}
 \end{align*}
 
 \subsubsection*{b)}
+\begin{align*}
+<\mu> &= \mu_B \cdot \frac{\exp\left(+\frac{\mu_B B}{k_B T}\right) -
+  \mu_B\exp\left(-\frac{\mu_B B}{k_B T}\right)}
+  {\exp\left(+\frac{\mu_B B}{k_B T}\right) + \exp\left(-\frac{\mu_B B}{k_B T}\right) } \\
+\intertext{Ein fcc-Gitter enthält  4 Atome pro Elementarzelle (Volumen $= a^3$), also:}
+<M> &= \frac{4 \mu_B}{a^3}\cdot \frac{\exp\left(+\frac{\mu_B B}{k_B T}\right) -
+  \mu_B\exp\left(-\frac{\mu_B B}{k_B T}\right)}
+  {\exp\left(+\frac{\mu_B B}{k_B T}\right) + \exp\left(-\frac{\mu_B B}{k_B T}\right) } \\
+  &= \frac{2 \mu_B}{a^3}\cdot \frac{\exp\left(+\frac{\mu_B B}{k_B T}\right) -
+  \mu_B\exp\left(-\frac{\mu_B B}{k_B T}\right)}
+  {\cosh \left(-\frac{\mu_B B}{k_B T}\right) }
+\intertext{Mit $x := \frac{\mu_B B}{k_B T}$:}
+\end{align*}
 
 \subsubsection*{c)}
 
