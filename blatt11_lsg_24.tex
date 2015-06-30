@@ -12,8 +12,8 @@ $\vec B(\vec r, t)$ hängen mit der magnetischen Feldkonstante $\mu_0$ wie folgt
   [M] = [H] &= \frac{\text{A}}{\text{m}} \\
   \vec M &= \chi \cdot \vec H =  (\mu_r - 1) \vec H
     \;;\quad \vec B = \mu_0 (\vec H + \vec M) = \mu_r \mu_0 \vec H \\
-  \chi & = \mu_r - 1 = \mu_0 \left(\frac{\partial M}{\partial B} \right)_{T, V}
-  = - n \mu_0 \left(\frac{\partial^2 F}{\partial B^2} \right)
+  \chi & = \mu_r - 1 = \mu_0 \left(\frac{\partial M}{\partial B_{ext}} \right)
+  = - \frac{\mu_0}{V}  \left(\frac{\partial^2 F}{\partial B_{ext}^2} \right)_{T, V}
   \qquad \text{magnetische Suszeptibilität}\\
   [B] &= \text{T} = \frac{\text{V s}}{\text{m}^2} \\
   [\mu_0] &= \frac{\text{V s}}{\text{A m}} \\
@@ -21,27 +21,41 @@ $\vec B(\vec r, t)$ hängen mit der magnetischen Feldkonstante $\mu_0$ wie folgt
   \mu_B &=  \frac{e \hbar}{2 m_e} = 9{,}274 \cdot 10^{-24}\frac{\text{J}}{\text{T}}
     = 9{,}274 \cdot 10^{-24}\text{A m}^2  \qquad \text{Bohrsches Magneton}
 \end{align*}
+Fehler im Skript bei der Formal für $\chi$.
 
 \subsubsection*{b)}
+Fehler im Aufgabenzettel bei der Formel für $<\mu>$.
 \begin{align*}
 <\mu> &= \mu_B \cdot \frac{\exp\left(+\frac{\mu_B B}{k_B T}\right) -
-  \mu_B\exp\left(-\frac{\mu_B B}{k_B T}\right)}
-  {\exp\left(+\frac{\mu_B B}{k_B T}\right) + \exp\left(-\frac{\mu_B B}{k_B T}\right) } \\
+ \exp\left(-\frac{\mu_B B}{k_B T}\right)}
+  {\exp\left(+\frac{\mu_B B}{k_B T}\right) + \exp\left(-\frac{\mu_B B}{k_B T}\right) } =
+  \mu_B \cdot \frac{\sinh\left(\frac{\mu_B B}{k_B T}\right)}{\cosh\left(\frac{\mu_B B}{k_B T}\right)}\\
 \intertext{Ein fcc-Gitter enthält  4 Atome pro Elementarzelle (Volumen $= a^3$), also:}
-<M> &= \frac{4 \mu_B}{a^3}\cdot \frac{\exp\left(+\frac{\mu_B B}{k_B T}\right) -
-  \mu_B\exp\left(-\frac{\mu_B B}{k_B T}\right)}
-  {\exp\left(+\frac{\mu_B B}{k_B T}\right) + \exp\left(-\frac{\mu_B B}{k_B T}\right) } \\
-  &= \frac{2 \mu_B}{a^3}\cdot \frac{\exp\left(+\frac{\mu_B B}{k_B T}\right) -
-  \mu_B\exp\left(-\frac{\mu_B B}{k_B T}\right)}
-  {\cosh \left(-\frac{\mu_B B}{k_B T}\right) }
-\intertext{Mit $x := \frac{\mu_B B}{k_B T}$:}
+<M> &= \frac{4 \mu_B}{a^3}\cdot \tanh \left(\frac{\mu_B B}{k_B T}\right)
+\intertext{Im Grenzfall $T \rightarrow 0$ ergibt das}
+<M_S> &= \frac{4 \mu_B}{a^3} = \frac{4 \cdot 9{,}274 \cdot 10^{-24}\text{A m}^2}{8 \cdot 10^{-27} \text{m}^3}
+ = 4637 \frac{\text{A}}{\text{m}}
 \end{align*}
 
 \subsubsection*{c)}
+$J = \frac{1}{2}, L = 0$. Welche Seite im Skript?
 
 \subsubsection*{d)}
+\begin{align*}
+  \frac{\partial}{\partial x} \tanh(x) &= \frac{1}{\cosh^2 (x)} \\
+  \Rightarrow \quad \chi &= \mu_0 \left(\frac{\partial M}{\partial B}\right) =
+  \frac{4 \mu_B^2}{a^3 k_B T} \cdot \frac{1}{\cosh^2\left(\frac{\mu_B B}{k_B T}\right)}
+\end{align*}
 
 \subsubsection*{e)}
+Für hohe Temperaturen $T$ und kleine Magnetfelder $B$ ist $\frac{\mu_B B}{k_B T} \ll 1$
+und ich kann in der Formal für $M$ den $\tanh(x)$ entwickeln $\tanh(x) \approx x - \frac{1}{3}x^3$:
+\begin{align*}
+  M &\approx \frac{4 \mu_B}{a^3} \cdot \frac{\mu_B B}{k_B T}\\
+  \chi &\approx \frac{4 \mu_B^2}{a^3 k_B T} \propto \frac{1}{T}
+\end{align*}
+
+
 
 \subsubsection*{f)}
 
