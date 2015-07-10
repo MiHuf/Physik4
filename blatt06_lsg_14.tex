@@ -12,22 +12,20 @@ Für ein fcc-Gitter mit den primitiven Basisvektoren
 \vec{a}_2=\frac{a}{2}\begin{pmatrix}1\\0\\1\end{pmatrix}\\
 \vec{a}_3=\frac{a}{2}\begin{pmatrix}1\\1\\0\end{pmatrix}
 \end{align*}
-ergibt sich damit:
+ergibt sich mit $V = \vec{a}_1 \cdot (\vec{a}_2 \times \vec{a}_3) = \frac{a^3}{4}$:
 \begin{align*}
-\vec{b}_1 &= \frac{2\pi}{V}\left(\frac{a}{2}\begin{pmatrix}1\\0\\1\end{pmatrix}\times\frac{a}{2}\begin{pmatrix}1\\1\\0\end{pmatrix}\right) = \frac{a^2\pi}{2V}\begin{pmatrix}-1\\1\\1\end{pmatrix} = \frac{\pi}{2a}\begin{pmatrix}-1\\1\\1\end{pmatrix} \\
+\vec{b}_1 &= \frac{2\pi}{V}\left(\frac{a}{2}\begin{pmatrix}1\\0\\1\end{pmatrix}\times\frac{a}{2}\begin{pmatrix}1\\1\\0\end{pmatrix}\right) = \frac{a^2\pi}{2V}\begin{pmatrix}-1\\1\\1\end{pmatrix} = \frac{2 \pi}{a}\begin{pmatrix}-1\\1\\1\end{pmatrix} \\
 \vec{b}_2 &= \frac{2\pi}{V}\left(\frac{a}{2}\begin{pmatrix}1\\1\\0\end{pmatrix}\times\frac{a}{2}\begin{pmatrix}0\\1\\1\end{pmatrix}\right) = \frac{2\pi}{a}\begin{pmatrix}1\\-1\\1\end{pmatrix}\\
 \vec{b}_3 &= \left(\frac{a}{2}\begin{pmatrix}0\\1\\1\end{pmatrix}\times\frac{a}{2}\begin{pmatrix}1\\0\\1\end{pmatrix}\right) = \frac{2\pi}{a}\begin{pmatrix}1\\1\\-1\end{pmatrix}
 \end{align*}
-Der Abstand $\Gamma X$ ist im reziproken Raum der Abstand von $(0,0,0)$ zu $(1,0,0)$ und somit die Länge von $\vec{b}_1$:
-\begin{align*}
-\Gamma X = |\vec{b}_1| = \frac{\pi}{2a}\sqrt{3}
-\end{align*}
+Der Abstand $| \Gamma X |$ im reziproken Raum ist der Abstand vom Ursprung $\Gamma = (0,0,0)$ zum
+Rand der 1. Brillouin-Zone $X = \frac{2 \pi}{a}(1,0,0)$, also $| \Gamma X | = \frac{2 \pi}{a}$.
 
 \subsubsection*{b)}
 Beim Vergleich mit den Energiebändern von Kupfer (s. Vorlesung) lassen sich die Hochsymmetriepunkte aus dem Verlauf der Bindungsenergie ablesen:
 \begin{align*}
-\Gamma &\approx 100 \unit{eV}\qquad\text{Plateau maximaler  Intensität auf der linken Seite}\\
-X &\approx 176{,}5\unit{eV} \qquad\text{Tiefpunkt der Bindungsenergie}
+X &\approx 100 \unit{eV}\qquad\text{Plateau maximaler  Intensität auf der linken Seite}\\
+\Gamma &\approx 176{,}5\unit{eV} \qquad\text{Tiefpunkt der Bindungsenergie}
 \end{align*}
 \subsubsection*{c)}
 Wir berechnen die Länge des zugehörigen k-Vektors um abzuschätzen in der wievielten
